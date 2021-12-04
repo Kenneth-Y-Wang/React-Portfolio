@@ -158,3 +158,20 @@ font-family: 'Montserrat', sans-serif; */
   0% { opacity: 0%; }
   100% { opacity: 100%; }
 }
+
+/* project  */
+
+.project-image-holder {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.project-image-holder > img {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+  transition-duration: 0.5s;
+}

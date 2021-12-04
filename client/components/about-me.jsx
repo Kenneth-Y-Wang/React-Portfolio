@@ -3,10 +3,7 @@ import React from 'react';
 export default class AboutMe extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      aboutMe: false,
-      skills: false
-    };
+
     this.aboutMe = React.createRef();
     this.skills = React.createRef();
     this.aboutImg = React.createRef();
