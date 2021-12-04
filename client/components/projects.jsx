@@ -3,22 +3,60 @@ export default class Projects extends React.Component {
   constructor(props) {
     super(props);
     this.thriveVox = React.createRef();
+    this.thriveVoxImg = React.createRef();
     this.puppy = React.createRef();
+    this.puppyImg = React.createRef();
+    this.showThriveButton = this.showThriveButton.bind(this);
+    this.hideThriveButton = this.hideThriveButton.bind(this);
+    this.showPuppyButton = this.showPuppyButton.bind(this);
+    this.hidePuppyButton = this.hidePuppyButton.bind(this);
+
+  }
+
+  showThriveButton() {
+    this.thriveVox.current.className = 'hover-button-holder';
+    this.thriveVoxImg.current.className = ' overlay';
+
+  }
+
+  hideThriveButton() {
+    this.thriveVox.current.className = 'hover-button-holder hidden';
+    this.thriveVoxImg.current.className = 'overlay hidden';
+
+  }
+
+  showPuppyButton() {
+    this.puppy.current.className = 'hover-button-holder';
+    this.puppyImg.current.className = ' img-hover';
+
+  }
+
+  hidePuppyButton() {
+    this.puppy.current.className = 'hover-button-holder hidden';
+    this.puppyImg.current.className = '';
+
   }
 
   render() {
     return (
       <div className="container">
         <div className="about-row">
-          <div className="col-half project-image-holder">
+          <div onMouseEnter={this.showThriveButton} onMouseLeave={this.hideThriveButton} className="col-half project-image-holder">
             <img src="./images/150-1508074_black-and-white-music-headphones-life-hd-grayscale.jpg"></img>
-            <div className="hover-button-holder hidden">
+            <div ref={this.thriveVoxImg} className="overlay hidden"></div>
+            <div ref={this.thriveVox} className="hover-button-holder hidden">
+              <div style={{ color: 'white' }}className=" about-content-holder">
+               A full-stack web application for musicians and music lovers who want to find single/band members, share and discuss their musical interests and favorites
+              </div>
               <button className="skill-button">Enter App</button>
             </div>
           </div>
-          <div className="col-half project-image-holder">
-            <img src="./images/GettyImages-1133605325-scaled-e1617227898456.jpg"></img>
-            <div className="hover-button-holder hidden">
+          <div onMouseEnter={this.showPuppyButton} onMouseLeave={this.hidePuppyButton} className="col-half project-image-holder">
+            <img ref={this.puppyImg} src="./images/GettyImages-1133605325-scaled-e1617227898456.jpg"></img>
+            <div ref={this.puppy} className="hover-button-holder hidden">
+              <div className=" about-content-holder">
+                <p>A front-end web application for puppy lovers who seek entertainment from cute pictures, fun games, and organize their own pets’ daily activities</p>
+              </div>
               <button className="about-button">Enter App</button>
             </div>
           </div>
