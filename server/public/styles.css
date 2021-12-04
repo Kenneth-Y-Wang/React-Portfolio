@@ -65,16 +65,47 @@ font-family: 'Montserrat', sans-serif; */
 
 .about-image-holder {
   height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .about-image-holder > img {
   height: 300px;
   width: 100%;
   object-fit: cover;
+  transition-duration: 0.5s;
 }
 
-.about-image-holder > img:hover {
+.img-hover {
   opacity: 50%;
+}
+
+/* .about-image-holder > img:hover {
+  opacity: 50%;
+} */
+
+.hover-button-holder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+
+.hover-button-holder > button {
+  color: white;
+  font-family: Montserrat, sans-serif;
+  border: none;
+  border-bottom: 2px solid white;
+  background-color: transparent;
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
 }
 
 .about-content {
