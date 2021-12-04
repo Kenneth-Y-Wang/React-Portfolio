@@ -96,24 +96,65 @@ font-family: 'Montserrat', sans-serif; */
   justify-content: center;
   align-items: center;
   z-index: 5;
+  animation: fade-in linear 1s;
 }
 
 .hover-button-holder > button {
-  color: white;
   font-family: Montserrat, sans-serif;
-  border: none;
-  border-bottom: 2px solid white;
   background-color: transparent;
   font-size: 1rem;
   padding: 0.25rem 0.5rem;
+  transition-duration: 0.5s;
+}
+
+.about-button {
+  color: #adb5bd;
+  border: none;
+  border-bottom: 2px solid #adb5bd;
+}
+
+.skill-button {
+  color: white;
+  border: none;
+  border-bottom: 2px solid white;
+}
+
+.about-button:hover,
+.skill-button:hover {
+  transform: scale(1.2);
 }
 
 .about-content {
   height: 300px;
   background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-content-holder {
+  font-family: Montserrat, sans-serif;
+  width: 80%;
+  line-height: 1.5rem;
+  color: #6c757d;
+  text-align: justify;
+  animation: fade-in linear 1s;
+}
+
+.about-content-holder span {
+  font-weight: 600;
+  font-style: italic;
 }
 
 .skill-content {
   height: 300px;
   background-color: #dee2e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes fade-in {
+  0% { opacity: 0%; }
+  100% { opacity: 100%; }
 }
