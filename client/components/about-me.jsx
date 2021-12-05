@@ -45,7 +45,7 @@ export default class AboutMe extends React.Component {
           <div onMouseEnter={this.showAboutButton} onMouseLeave={this.hideAboutButton} className="col-two-fifth about-image-holder">
             <img ref={this.aboutImg} src="./images/pexels-pixabay-434337.jpg"></img>
             <div ref={this.aboutMe} className="hover-button-holder hidden">
-              <button className="about-button">About Me</button>
+             <a className="about-button" target="_blank" href="https://www.linkedin.com/in/kenneth-wang8/" rel="noreferrer">About Me</a>
             </div>
           </div>
           <div className="col-three-fifth about-content">
@@ -63,10 +63,10 @@ export default class AboutMe extends React.Component {
             </div>
           </div>
           <div onMouseEnter={this.showSkillButton} onMouseLeave={this.hideSkillButton} className="col-two-fifth about-image-holder">
-              <img ref={this.skillImg}src="./images/pexels-hasan-albari-1229861.jpg"></img>
-              <div ref={this.skills} className="hover-button-holder hidden">
-                <button className="skill-button">My Skills</button>
-              </div>
+            <img ref={this.skillImg}src="./images/pexels-hasan-albari-1229861.jpg"></img>
+            <div ref={this.skills} className="hover-button-holder hidden">
+              <a target="_blank" href="https://github.com/Kenneth-Y-Wang" rel="noreferrer" className="skill-button">My Skills</a>
+            </div>
           </div>
         </div>
       </div>

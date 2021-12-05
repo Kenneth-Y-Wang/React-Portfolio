@@ -1,6 +1,7 @@
 import React from 'react';
 import Home from './pages/home';
 import Navbar from './components/navbar';
+import Footer from './components/footer';
 
 export default class App extends React.Component {
 
@@ -20,6 +21,7 @@ export default class App extends React.Component {
       <>
         < Navbar scroll={this.scroll} contactMe={this.contactMe} pageTop={this.pageTop} />
         < Home scroll={this.scroll} contactMe={this.contactMe} pageTop={this.pageTop} />
+        < Footer />
       </>
     );
   }

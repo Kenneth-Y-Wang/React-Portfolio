@@ -16,6 +16,15 @@ font-family: 'Montserrat', sans-serif; */
   font-family: Montserrat, sans-serif;
 }
 
+.anchor-tag {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.anchor-tag:hover {
+  color: #adb5bd;
+}
+
 /* hero-section */
 
 .hero-section-holder {
@@ -82,10 +91,6 @@ font-family: 'Montserrat', sans-serif; */
   opacity: 50%;
 }
 
-/* .about-image-holder > img:hover {
-  opacity: 50%;
-} */
-
 .hover-button-holder {
   position: absolute;
   top: 0;
@@ -98,15 +103,18 @@ font-family: 'Montserrat', sans-serif; */
   align-items: center;
   z-index: 5;
   animation: fade-in linear 1s;
+  text-align: center;
 }
 
-.hover-button-holder > button {
+.hover-button-holder > a {
   width: 40%;
   font-family: Montserrat, sans-serif;
   background-color: transparent;
   font-size: 1rem;
   padding: 0.25rem 0.5rem;
   transition-duration: 0.5s;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .about-button {
@@ -124,8 +132,7 @@ font-family: 'Montserrat', sans-serif; */
 }
 
 .about-button:hover,
-.skill-button:hover,
-.contact-button:hover {
+.skill-button:hover {
   transform: scale(1.2);
 }
 
@@ -235,6 +242,11 @@ font-family: 'Montserrat', sans-serif; */
   color: #495057;
   border: none;
   display: inline-block;
+  cursor: pointer;
+}
+
+.contact-button:hover {
+  transform: scale(1.2);
 }
 
 .form-content {
@@ -285,4 +297,29 @@ font-family: 'Montserrat', sans-serif; */
   background-image: url("./images/pexels-fauxels-3184450.jpg");
   background-position: center;
   background-size: cover;
+  margin-bottom: 3rem;
+}
+
+/* footer  */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Montserrat, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 2rem;
+  padding: 0.5rem 2rem;
+  background-color: transparent;
+  border: none;
+  border-top: 2px solid #6c757d;
+}
+
+.footer-content {
+  font-weight: 400;
+  color: #343a40;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  text-decoration: none;
 }

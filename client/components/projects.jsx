@@ -48,7 +48,7 @@ export default class Projects extends React.Component {
               <div style={{ color: 'white' }}className=" about-content-holder">
                A full-stack web application for musicians and music lovers who want to find single/band members, share and discuss their musical interests and favorites
               </div>
-              <button className="skill-button">Enter App</button>
+              <a target="_blank" href="https://thrive-vox.herokuapp.com/" rel="noreferrer" className="skill-button">Enter App</a>
             </div>
           </div>
           <div onMouseEnter={this.showPuppyButton} onMouseLeave={this.hidePuppyButton} className="col-half project-image-holder">
@@ -57,7 +57,7 @@ export default class Projects extends React.Component {
               <div className=" about-content-holder">
                 <p>A front-end web application for puppy lovers who seek entertainment from cute pictures, fun games, and organize their own pets’ daily activities</p>
               </div>
-              <button className="about-button">Enter App</button>
+              <a target="_blank" href="https://kenneth-y-wang.github.io/puppy-paradise/" rel="noreferrer" className="about-button">Enter App</a>
             </div>
           </div>
         </div>
