@@ -7,8 +7,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   font-family: Orbitron, sans-serif;
-  background-color: #f1f3f5;
-  overflow-y: auto;
+  background-color: transparent;
   z-index: 10;
 }
 
