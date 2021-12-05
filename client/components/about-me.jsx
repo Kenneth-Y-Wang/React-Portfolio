@@ -58,8 +58,8 @@ export default class AboutMe extends React.Component {
         <div className="about-row">
           <div className="col-three-fifth skill-content">
             <div ref={this.skillCont} className="about-content-holder hidden">
-              <p><span>Strong</span>: JavaScript (ES5 and ES6) | HTML5 | CSS3 | React.js | jQuery | Flexbox | RESTful APIs | Socket IO | SQL | Node.js | Express</p>
-              <p><span>Tools</span>: Git | GitHub | VS Code | JSON | Heroku | PostgreSQL | Figma | React Dev Tools | Amazon Web Service | AutoCAD | MATLAB</p>
+              <p><span>Strong </span>: JavaScript (ES5 and ES6) | HTML5 | CSS3 | React.js | jQuery | Flexbox | RESTful APIs | Socket IO | SQL | Node.js | Express</p>
+              <p><span>Tools </span>: Git | GitHub | VS Code | JSON | Heroku | PostgreSQL | Figma | React Dev Tools | Amazon Web Service | AutoCAD | MATLAB</p>
             </div>
           </div>
           <div onMouseEnter={this.showSkillButton} onMouseLeave={this.hideSkillButton} className="col-two-fifth about-image-holder">

@@ -7,6 +7,7 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.contactMe = React.createRef();
+    this.pageTop = React.createRef();
     this.scroll = this.scroll.bind(this);
   }
 
@@ -17,8 +18,8 @@ export default class App extends React.Component {
   render() {
     return (
       <>
-        < Navbar scroll={this.scroll} contactMe={this.contactMe} />
-        < Home contactMe={this.contactMe} />
+        < Navbar scroll={this.scroll} contactMe={this.contactMe} pageTop={this.pageTop} />
+        < Home scroll={this.scroll} contactMe={this.contactMe} pageTop={this.pageTop} />
       </>
     );
   }

@@ -24,7 +24,7 @@ export default class ContactForm extends React.Component {
 
   render() {
     return (
-      <div ref={this.props.contactMe} id="contact-section" style={{ marginTop: '3rem' }}className="container text-center">
+      <div ref={this.props.contactMe} style={{ marginTop: '3rem' }}className="container text-center">
         <h1 className="contact-title ">Get in Touch, <span>Anytime!</span></h1>
         <button onClick={this.openForm} className="contact-button">Contact Me</button>
         <form className={this.state.formOpen ? 'col-three-fifth form-holder form-open' : 'col-three-fifth form-holder'} >
@@ -43,6 +43,7 @@ export default class ContactForm extends React.Component {
         <div className="col-three-fifth form-content-image">
           <p className=" contact-info col-three-fifth">For business inquiries and collaborations please contact me below and leave a link to your website or portfolio. I am looking forward to hearing from you!</p>
         </div>
+        <button onClick={() => this.props.scroll(this.props.pageTop)} className="contact-button" style={{ borderBottom: '2px solid #495057' }}>Back to Top</button>
       </div>
     );
   }
