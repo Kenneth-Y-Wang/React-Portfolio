@@ -10,7 +10,7 @@ export default function Home(props) {
       < HeroImage />
       < AboutMe />
       < Projects />
-      <ContactForm />
+      <ContactForm contactMe={props.contactMe} />
     </>
   );
 }
