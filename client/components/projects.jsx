@@ -45,6 +45,7 @@ export default class Projects extends React.Component {
             <img src="./images/150-1508074_black-and-white-music-headphones-life-hd-grayscale.jpg"></img>
             <div ref={this.thriveVoxImg} className="overlay hidden"></div>
             <div ref={this.thriveVox} className="hover-button-holder hidden">
+              <h2 className="col-four-fifth">ThriveVox</h2>
               <div style={{ color: 'white' }}className=" about-content-holder">
                A full-stack web application for musicians and music lovers who want to find single/band members, share and discuss their musical interests and favorites
               </div>
@@ -54,6 +55,7 @@ export default class Projects extends React.Component {
           <div onMouseEnter={this.showPuppyButton} onMouseLeave={this.hidePuppyButton} className="col-half project-image-holder">
             <img ref={this.puppyImg} src="./images/GettyImages-1133605325-scaled-e1617227898456.jpg"></img>
             <div ref={this.puppy} className="hover-button-holder hidden">
+              <h2 style={{ color: '#495057' }} className="col-four-fifth">Puppy Paradise</h2>
               <div className=" about-content-holder">
                 <p>A front-end web application for puppy lovers who seek entertainment from cute pictures, fun games, and organize their own pets’ daily activities</p>
               </div>
