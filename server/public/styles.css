@@ -20,6 +20,7 @@ font-family: 'Montserrat', sans-serif; */
   text-decoration: none;
   cursor: pointer;
   transition-duration: 0.5s;
+  font-size: 0.8rem;
 }
 
 .anchor-tag:visited {
@@ -178,6 +179,29 @@ font-family: 'Montserrat', sans-serif; */
 
 /* project  */
 
+.title-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #6c757d;
+  font-family: Montserrat, sans-serif;
+  text-align: center;
+}
+
+.title-row h1 {
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: #495057;
+}
+
+.title-sub {
+  color: #adb5bd;
+  font-size: 0.9rem;
+}
+
 .project-image-holder {
   height: 400px;
   display: flex;
@@ -246,7 +270,7 @@ font-family: 'Montserrat', sans-serif; */
 
 .contact-title {
   font-family: Montserrat, sans-serif;
-  color: #343a40;
+  color: #495057;
   font-weight: 400;
   margin-bottom: 0.5rem;
 }
@@ -306,6 +330,7 @@ font-family: 'Montserrat', sans-serif; */
   padding: 0 0.5rem;
   font-family: Montserrat, sans-serif;
   animation: fade-in linear 3.5s;
+  color: #495057;
 }
 
 .form-label {
@@ -384,4 +409,15 @@ font-family: 'Montserrat', sans-serif; */
   margin-top: 0.5rem;
   margin-bottom: 1rem;
   text-decoration: none;
+  font-size: 0.6rem;
+}
+
+@media screen and (min-width: 768px) {
+  .anchor-tag {
+    font-size: 1rem;
+  }
+
+  .footer-content {
+    font-size: 1rem;
+  }
 }

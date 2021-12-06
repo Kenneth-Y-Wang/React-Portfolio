@@ -58,7 +58,7 @@ export default class AboutMe extends React.Component {
         <div className="about-row">
           <div className="col-three-fifth skill-content">
             <div className={this.state.skills ? 'about-content-holder hidden' : 'about-content-holder'}>
-              <p><span>Strong </span>: JavaScript (ES5 and ES6) | HTML5 | CSS3 | React.js | jQuery | Flexbox | RESTful APIs | Socket IO | SQL | Node.js | Express</p>
+              <p><span>Technologies </span>: JavaScript (ES5 and ES6) | HTML5 | CSS3 | React.js | jQuery | Flexbox | RESTful APIs | Socket IO | SQL | Node.js | Express</p>
               <p><span>Tools </span>: Git | GitHub | VS Code | JSON | Heroku | PostgreSQL | Figma | React Dev Tools | Amazon Web Service | AutoCAD | MATLAB</p>
             </div>
             <div className={this.state.skills ? 'about-content-holder' : 'about-content-holder hidden'}>

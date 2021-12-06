@@ -40,6 +40,12 @@ export default class Projects extends React.Component {
   render() {
     return (
       <div className="container">
+        <div ref={this.props.myWorks} className="title-row col-full">
+          <div className="title-content">
+            <h1>My Works</h1>
+            <div className="title-sub">Click Image for Details</div>
+          </div>
+        </div>
         <div className="about-row">
           <div onMouseEnter={this.showThriveButton} onMouseLeave={this.hideThriveButton} className="col-half project-image-holder">
             <img src="./images/150-1508074_black-and-white-music-headphones-life-hd-grayscale.jpg"></img>
