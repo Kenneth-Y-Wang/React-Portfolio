@@ -50,7 +50,7 @@ export default class AboutMe extends React.Component {
               <p>By having experiences of being sales and business development director, I have an extensive and diverse background in sales and commerce in addition to an excellent track record of leveraging my business development skills and engineering knowledge to successfully support daily operations.</p>
            </div>
            <div className={this.state.about ? 'about-content-holder' : 'about-content-holder hidden'}>
-            <p>Please visit my</p>
+            <p>Click To Enter My</p>
             <h3>LinkedIn</h3>
            </div>
           </div>
@@ -62,7 +62,7 @@ export default class AboutMe extends React.Component {
               <p><span>Tools </span>: Git | GitHub | VS Code | JSON | Heroku | PostgreSQL | Figma | React Dev Tools | Amazon Web Service | AutoCAD | MATLAB</p>
             </div>
             <div className={this.state.skills ? 'about-content-holder' : 'about-content-holder hidden'}>
-              <p>Please visit my</p>
+              <p>Click To Enter My</p>
               <h3>GitHub</h3>
             </div>
           </div>

@@ -130,9 +130,9 @@ font-family: 'Montserrat', sans-serif; */
 }
 
 .skill-button {
-  color: white;
+  color: #f8f9fa;
   border: none;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid #f8f9fa;
   display: inline-block;
 }
 
@@ -193,6 +193,39 @@ font-family: 'Montserrat', sans-serif; */
   transition-duration: 0.5s;
 }
 
+.project-button-holder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  animation: fade-in linear 1s;
+  text-align: center;
+  padding-top: 3rem;
+  font-family: Montserrat, sans-serif;
+}
+
+.project-button-holder > a {
+  width: 40%;
+  background-color: transparent;
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+  transition-duration: 0.5s;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.project-content-holder {
+  font-family: Montserrat, sans-serif;
+  width: 80%;
+  margin: 3rem auto;
+  line-height: 1.5rem;
+  color: #495057;
+  text-align: center;
+  animation: fade-in linear 1s;
+}
+
 .overlay {
   position: absolute;
   top: 0;
@@ -203,11 +236,10 @@ font-family: 'Montserrat', sans-serif; */
   animation: fade-in linear 0.5s;
 }
 
-.hover-button-holder h2 {
-  color: white;
-  font-family: Montserrat, sans-serif;
-  margin-bottom: 0;
-  font-weight: 400;
+.project-button-holder h1 {
+  color: #f8f9fa;
+  font-weight: 300;
+  margin: 1rem auto;
 }
 
 /* contact  */
@@ -234,6 +266,7 @@ font-family: 'Montserrat', sans-serif; */
   margin-top: 0.25rem;
   margin-bottom: 1rem;
   color: #adb5bd;
+  font-family: Montserrat, sans-serif;
 }
 
 .form-holder {
