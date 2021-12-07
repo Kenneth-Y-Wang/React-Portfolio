@@ -6,6 +6,7 @@ font-family: 'Montserrat', sans-serif; */
 .name-title {
   font-family: Meddon, cursive;
   color: #343a40;
+  font-size: 0.8rem;
 }
 
 .anchor-holder {
@@ -157,7 +158,7 @@ font-family: 'Montserrat', sans-serif; */
   color: #495057;
   text-align: center;
   animation: fade-in linear 1s;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 
 .about-content-holder span {
@@ -399,7 +400,7 @@ font-family: 'Montserrat', sans-serif; */
   max-width: 1200px;
   margin: 0 auto;
   margin-top: 2rem;
-  padding: 0.5rem 2rem;
+  padding: 0.25rem 1rem;
   background-color: transparent;
   border: none;
   border-top: 2px solid #6c757d;
@@ -411,14 +412,28 @@ font-family: 'Montserrat', sans-serif; */
   margin-top: 0.5rem;
   margin-bottom: 1rem;
   text-decoration: none;
-  font-size: 0.5rem;
+  font-size: 0.45rem;
 }
 
 @media screen and (min-width: 768px) {
-  .anchor-tag,
   .footer-content,
   .about-content-holder,
-  .project-content-holder {
+  .project-content-holder,
+  .name-title {
+    font-size: 1rem;
+  }
+
+  .anchor-tag {
+    font-size: 0.8rem;
+  }
+
+  .footer {
+    padding: 0.5rem 2rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .anchor-tag {
     font-size: 1rem;
   }
 }

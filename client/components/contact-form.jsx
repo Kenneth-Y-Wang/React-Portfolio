@@ -77,7 +77,7 @@ export default class ContactForm extends React.Component {
          </div>
         </form>
         <div className="col-three-fifth form-content-image">
-          <p className=" contact-info col-three-fifth">For business inquiries and collaborations please contact me below and leave a link to your website or portfolio. I am looking forward to hearing from you!</p>
+          <p className=" contact-info col-three-fifth">For business inquiries and collaborations please contact me above and leave a link to your website or portfolio. I am looking forward to hearing from you!</p>
         </div>
         <button onClick={() => this.props.scroll(this.props.pageTop)} className="contact-button" style={{ borderBottom: '2px solid #495057' }}>Back to Top</button>
       </div>
