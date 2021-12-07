@@ -415,14 +415,8 @@ font-family: 'Montserrat', sans-serif; */
 }
 
 @media screen and (min-width: 768px) {
-  .anchor-tag {
-    font-size: 1rem;
-  }
-
-  .footer-content {
-    font-size: 1rem;
-  }
-
+  .anchor-tag,
+  .footer-content,
   .about-content-holder,
   .project-content-holder {
     font-size: 1rem;
