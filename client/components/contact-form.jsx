@@ -72,7 +72,7 @@ export default class ContactForm extends React.Component {
            <button style={{ borderBottom: '2px solid #495057' }} className="contact-button">Submit</button>
            <div className={this.state.msgStatus ? 'msg-status' : 'msg-status hidden'}>
               <p>Thank you for getting in touch! </p>
-              <p>I appreciate you contacting me. I will get back in touch with you soon! Have a great day!</p>
+              <p>I will get back in touch with you soon， have a great day!</p>
            </div>
          </div>
         </form>
