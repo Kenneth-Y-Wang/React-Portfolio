@@ -51,7 +51,7 @@ export default class AboutMe extends React.Component {
            </div>
            <div className={this.state.about ? 'about-content-holder' : 'about-content-holder hidden'}>
             <p>Click to enter my</p>
-            <h3>LinkedIn</h3>
+            <h3 style={{ fontWeight: 500 }} >LinkedIn</h3>
            </div>
           </div>
         </div>
@@ -63,7 +63,7 @@ export default class AboutMe extends React.Component {
             </div>
             <div className={this.state.skills ? 'about-content-holder' : 'about-content-holder hidden'}>
               <p>Click to enter my</p>
-              <h3>GitHub</h3>
+              <h3 style={{ fontWeight: 500 }}>GitHub</h3>
             </div>
           </div>
           <div onMouseEnter={this.showSkillButton} onMouseLeave={this.hideSkillButton} className="col-two-fifth about-image-holder">
