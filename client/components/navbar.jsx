@@ -11,6 +11,7 @@ export default class Navbar extends React.Component {
          <a className="anchor-tag" onClick={() => this.props.scroll(this.props.contactMe)} >Contact</a>
          <a className="anchor-tag"target="_blank" href="https://www.linkedin.com/in/kenneth-wang8/" rel="noreferrer">LinkedIn</a>
          <a className="anchor-tag"target="_blank" href="https://github.com/Kenneth-Y-Wang" rel="noreferrer">GitHub</a>
+         <a className="anchor-tag" href="#blog">Blog</a>
        </div>
       </div>
 
