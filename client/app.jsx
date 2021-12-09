@@ -54,7 +54,7 @@ export default class App extends React.Component {
   }
 
   renderPage() {
-    const { path, params } = this.state.route;
+    const { path } = this.state.route;
     if (path === '') {
       return < Home scroll={this.scroll} myWorks={this.myWorks} contactMe={this.contactMe} pageTop={this.pageTop} />;
     }
@@ -65,12 +65,17 @@ export default class App extends React.Component {
   }
 
   render() {
+    const { route } = this.state;
+    const contextValue = { route };
+
     return (
+    <AppContext.Provider value={contextValue} >
       <>
         < Navbar scroll={this.scroll} myWorks={this.myWorks} contactMe={this.contactMe} pageTop={this.pageTop} />
         {this.renderPage()}
         < Footer />
       </>
+    </AppContext.Provider>
     );
   }
 }

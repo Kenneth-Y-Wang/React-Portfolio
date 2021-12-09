@@ -1,4 +1,5 @@
 import React from 'react';
+import AppContext from '../lib/app-context';
 
 export default class Blog extends React.Component {
   constructor(props) {
@@ -16,3 +17,5 @@ export default class Blog extends React.Component {
     );
   }
 }
+
+Blog.contextType = AppContext;

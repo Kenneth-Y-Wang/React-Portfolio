@@ -422,10 +422,18 @@ font-family: 'Montserrat', sans-serif; */
   margin-bottom: 1rem;
   text-decoration: none;
   font-size: 0.45rem;
+  transition-duration: 0.5s;
+}
+
+.footer-content:hover {
+  color: #adb5bd;
+}
+
+.footer-content:visited {
+  color: #6c757d;
 }
 
 @media screen and (min-width: 768px) {
-  .footer-content,
   .about-content-holder,
   .button-content,
   .project-content-holder,
@@ -433,7 +441,8 @@ font-family: 'Montserrat', sans-serif; */
     font-size: 1rem;
   }
 
-  .anchor-tag {
+  .anchor-tag,
+  .footer-content {
     font-size: 0.8rem;
   }
 
@@ -443,7 +452,8 @@ font-family: 'Montserrat', sans-serif; */
 }
 
 @media screen and (min-width: 1280px) {
-  .anchor-tag {
+  .anchor-tag,
+  .footer-content {
     font-size: 1rem;
   }
 }
