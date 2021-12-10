@@ -78,6 +78,11 @@ body {
   padding: 0;
 }
 
+.col-one-fifth {
+  width: 30%;
+  padding: 0;
+}
+
 .mg-b-1 {
   margin-bottom: 1rem;
 }
@@ -116,6 +121,7 @@ body {
   .col-half,
   .col-one-third,
   .col-one-tenth,
+  .col-one-fifth,
   .col-three-fifth,
   .col-four-fifth,
   .col-two-fifth,
@@ -126,6 +132,10 @@ body {
 
   .col-one-tenth {
     width: 10%;
+  }
+
+  .col-one-fifth {
+    width: 20%;
   }
 
   .col-one-third {
@@ -170,6 +180,7 @@ body {
 
   .col-half,
   .col-one-third,
+  .col-one-fifth,
   .col-one-tenth,
   .col-three-fifth,
   .col-four-fifth,
@@ -181,6 +192,10 @@ body {
 
   .col-one-tenth {
     width: 10%;
+  }
+
+  .col-one-fifth {
+    width: 20%;
   }
 
   .col-one-third {
