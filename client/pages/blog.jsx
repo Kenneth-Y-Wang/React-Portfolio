@@ -137,7 +137,7 @@ export default class Blog extends React.Component {
               <h1><span>Welcome</span> to My Blog </h1>
               <div className={user ? 'title-sub hidden' : 'title-sub'}>Please <a onClick={this.signIn} >Sign-in</a> to create a post</div>
               <div className={loginUser !== '' ? 'title-sub' : 'title-sub hidden'}>Welcome, {loginUser} !</div>
-              <button onClick={handleSignOut} className={user ? 'title-sub' : 'title-sub hidden'}>Sign Out</button>
+              <button onClick={handleSignOut} className={user ? 'sign-out-button' : 'sign-out-button hidden'}>Sign Out</button>
             </div>
           </div>
           <div className="post-creation-holder col-full">

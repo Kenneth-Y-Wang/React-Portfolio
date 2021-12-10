@@ -442,7 +442,7 @@ font-family: 'Montserrat', sans-serif; */
 .title-sub a {
   color: #6c757d;
   cursor: pointer;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .post-creation-holder {
@@ -533,7 +533,7 @@ font-family: 'Montserrat', sans-serif; */
 }
 
 .sign-in-button {
-  width: 20%;
+  width: 40%;
   margin: 1rem auto;
   font-family: Montserrat, sans-serif;
   background-color: transparent;
@@ -568,6 +568,16 @@ font-family: 'Montserrat', sans-serif; */
 
 .error-message {
   color: #ef476f;
+}
+
+.sign-out-button {
+  color: #6c757d;
+  padding: 0.15rem 0.25rem;
+  background-color: transparent;
+  font-family: Montserrat, sans-serif;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
 }
 
 @media screen and (min-width: 768px) {
