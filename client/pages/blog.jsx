@@ -5,7 +5,7 @@ export default class Blog extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      sign: false,
+      sign: '',
       errorSignIn: false,
       username: '',
       password: '',
@@ -14,6 +14,8 @@ export default class Blog extends React.Component {
     };
     this.signIn = this.signIn.bind(this);
     this.signUp = this.signUp.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(event) {
@@ -23,6 +25,7 @@ export default class Blog extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
+    const { handleSignIn } = this.context;
     const { sign } = this.state;
     const req = {
       method: 'POST',
@@ -38,7 +41,8 @@ export default class Blog extends React.Component {
           this.setState({ sign: 'signIn' });
         } else if (result.user && result.token) {
           this.setState({ errorSignin: false });
-        // this.props.onSignIn(result);
+          handleSignIn(result);
+          this.setState({ sign: '' });
         } else {
           this.setState({ errorSignIn: true });
         }
@@ -57,14 +61,20 @@ export default class Blog extends React.Component {
     const welcomeMessage = this.state.sign === 'signIn'
       ? 'Please sign in to continue'
       : 'Create an account to get started!';
-
+    const { user, handleSignOut } = this.context;
+    let loginUser;
+    if (user) {
+      loginUser = user.username;
+    } else {
+      loginUser = '';
+    }
     return (
 
       <div className="container">
         <div className={this.state.sign === 'signIn' || this.state.sign === 'signUp' ? 'signin-modal-holder' : ' signin-modal-holder hidden'}>
           <div className="col-three-fifth signin-block">
             <h3>{welcomeMessage}</h3>
-            <form >
+            <form onSubmit={this.handleSubmit}>
               <div className="input-holder">
                 <label htmlFor="username" className="sign-in-label">
                   Username
@@ -75,7 +85,7 @@ export default class Blog extends React.Component {
                   id="username"
                   type="text"
                   name="username"
-                  // onChange={handleChange}
+                  onChange={this.handleChange}
                   className="sign-in-input"
                   value={this.state.username}
                   placeholder="Please enter your username..."
@@ -90,7 +100,7 @@ export default class Blog extends React.Component {
                   id="password"
                   type="password"
                   name="password"
-                  // onChange={handleChange}
+                  onChange={this.handleChange}
                   className="sign-in-input"
                   value={this.state.password}
                   placeholder="Please enter your password..."
@@ -105,7 +115,7 @@ export default class Blog extends React.Component {
                   id="email"
                   type="email"
                   name="email"
-                  // onChange={handleChange}
+                  onChange={this.handleChange}
                   className="sign-in-input"
                   value={this.state.email}
                   placeholder="Please enter your email..."
@@ -125,7 +135,9 @@ export default class Blog extends React.Component {
           <div style={{ border: 'none', marginBottom: '1rem' }} className="title-row col-full">
             <div className="title-content">
               <h1><span>Welcome</span> to My Blog </h1>
-              <div className="title-sub">Please <a onClick={this.signIn} >Sign-in</a> to create a post</div>
+              <div className={user ? 'title-sub hidden' : 'title-sub'}>Please <a onClick={this.signIn} >Sign-in</a> to create a post</div>
+              <div className={loginUser !== '' ? 'title-sub' : 'title-sub hidden'}>Welcome, {loginUser} !</div>
+              <button onClick={handleSignOut} className={user ? 'title-sub' : 'title-sub hidden'}>Sign Out</button>
             </div>
           </div>
           <div className="post-creation-holder col-full">
