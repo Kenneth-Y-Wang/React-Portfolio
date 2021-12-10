@@ -498,7 +498,7 @@ font-family: 'Montserrat', sans-serif; */
 
 .signin-block h3 {
   font-weight: 300;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   color: #6c757d;
 }
 
@@ -525,18 +525,26 @@ font-family: 'Montserrat', sans-serif; */
   background-color: transparent;
 }
 
+.sign-in-input::placeholder {
+  color: #adb5bd;
+  font-style: italic;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.7rem;
+}
+
 .sign-in-button {
-  width: 30%;
+  width: 20%;
   margin: 1rem auto;
   font-family: Montserrat, sans-serif;
   background-color: transparent;
-  font-size: 0.8rem;
+  font-size: 1rem;
   padding: 0.25rem 0.5rem;
   transition-duration: 0.5s;
-  color: #adb5bd;
+  color: #6c757d;
   border: none;
   display: block;
   cursor: pointer;
+  font-weight: 500;
 }
 
 .sign-in-submit {
@@ -552,6 +560,14 @@ font-family: 'Montserrat', sans-serif; */
   border-bottom: 2px solid #495057;
   display: block;
   cursor: pointer;
+}
+
+.error-message-holder {
+  height: 60px;
+}
+
+.error-message {
+  color: #ef476f;
 }
 
 @media screen and (min-width: 768px) {
