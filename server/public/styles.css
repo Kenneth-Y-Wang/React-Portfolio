@@ -474,6 +474,27 @@ font-family: 'Montserrat', sans-serif; */
   transform: scale(1.2);
 }
 
+.signin-modal-holder {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(0 0 0 / 40%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+
+.signin-block {
+  padding: 1.25rem 1rem;
+  background-color: white;
+  text-align: center;
+  border-radius: 3px;
+  animation: fade-in linear 0.7s;
+}
+
 @media screen and (min-width: 768px) {
   .about-content-holder,
   .button-content,

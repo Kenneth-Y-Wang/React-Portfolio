@@ -13,6 +13,11 @@ export default class Blog extends React.Component {
     return (
 
       <div className="container">
+        <div className="signin-modal-holder">
+          <div className="col-three-fifth signin-block">
+
+          </div>
+        </div>
         <div style={{ minHeight: 'calc(100vh - 190px' }}>
           <div style={{ border: 'none', marginBottom: '1rem' }} className="title-row col-full">
             <div className="title-content">
