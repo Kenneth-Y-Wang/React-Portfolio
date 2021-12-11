@@ -433,7 +433,7 @@ font-family: 'Montserrat', sans-serif; */
   color: #6c757d;
 }
 
-/* blog */
+/* blog, signin */
 
 .title-content span {
   font-family: Meddon, cursive;
@@ -494,12 +494,27 @@ font-family: 'Montserrat', sans-serif; */
   border-radius: 3px;
   animation: fade-in linear 0.7s;
   font-family: Montserrat, sans-serif;
+  position: relative;
 }
 
 .signin-block h3 {
   font-weight: 300;
   margin-bottom: 3rem;
   color: #6c757d;
+}
+
+.exit-sign {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  color: #495057;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+
+.exit-sign:hover {
+  transform: scale(1.2);
 }
 
 .input-holder {
