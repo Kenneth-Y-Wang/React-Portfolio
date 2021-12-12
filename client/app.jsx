@@ -16,6 +16,8 @@ export default class App extends React.Component {
     this.pageTop = React.createRef();
     this.scroll = this.scroll.bind(this);
     this.renderPage = this.renderPage.bind(this);
+    this.handleSignIn = this.handleSignIn.bind(this);
+    this.handleSignOut = this.handleSignOut.bind(this);
     this.state = {
       user: null,
       isAuthorizing: true,
@@ -30,24 +32,24 @@ export default class App extends React.Component {
         route: parseRoute(window.location.hash)
       });
     });
-    // const token = window.localStorage.getItem('react-context-jwt');
-    // const user = token ? decodeToken(token) : null;
-    // this.setState({ user, isAuthorizing: false });
+    const token = window.localStorage.getItem('react-context-jwt');
+    const user = token ? decodeToken(token) : null;
+    this.setState({ user, isAuthorizing: false });
   }
 
-  // handleSignIn(result) {
-  //   const { user, token } = result;
-  //   window.localStorage.setItem('react-context-jwt', token);
-  //   this.setState({ user });
-  // }
+  handleSignIn(result) {
+    const { user, token } = result;
+    window.localStorage.setItem('react-context-jwt', token);
+    this.setState({ user });
+  }
 
-  // handleSignOut() {
-  //   const leaveApp = confirm('Are you sure you want to sign out?');
-  //   if (leaveApp) {
-  //     window.localStorage.removeItem('react-context-jwt');
-  //     this.setState({ user: null });
-  //   }
-  // }
+  handleSignOut() {
+    const leaveApp = confirm('Are you sure you want to sign out?');
+    if (leaveApp) {
+      window.localStorage.removeItem('react-context-jwt');
+      this.setState({ user: null });
+    }
+  }
 
   scroll(ref) {
     ref.current.scrollIntoView({ behavior: 'smooth' });
@@ -65,8 +67,10 @@ export default class App extends React.Component {
   }
 
   render() {
-    const { route } = this.state;
-    const contextValue = { route };
+    if (this.state.isAuthorizing) return null;
+    const { route, user } = this.state;
+    const { handleSignIn, handleSignOut } = this;
+    const contextValue = { route, user, handleSignIn, handleSignOut };
 
     return (
     <AppContext.Provider value={contextValue} >

@@ -433,7 +433,7 @@ font-family: 'Montserrat', sans-serif; */
   color: #6c757d;
 }
 
-/* blog */
+/* blog, signin */
 
 .title-content span {
   font-family: Meddon, cursive;
@@ -442,7 +442,7 @@ font-family: 'Montserrat', sans-serif; */
 .title-sub a {
   color: #6c757d;
   cursor: pointer;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .post-creation-holder {
@@ -493,6 +493,107 @@ font-family: 'Montserrat', sans-serif; */
   text-align: center;
   border-radius: 3px;
   animation: fade-in linear 0.7s;
+  font-family: Montserrat, sans-serif;
+  position: relative;
+}
+
+.signin-block h3 {
+  font-weight: 300;
+  margin-bottom: 3rem;
+  color: #6c757d;
+}
+
+.exit-sign {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  color: #495057;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+
+.exit-sign:hover {
+  transform: scale(1.2);
+}
+
+.input-holder {
+  margin-bottom: 2rem;
+}
+
+.sign-in-label {
+  color: #495057;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.sign-in-input {
+  display: block;
+  width: 60%;
+  font-size: 1rem;
+  color: #495057;
+  padding: 0.25rem 0.5rem;
+  border: none;
+  border-bottom: 2px solid #495057;
+  margin: 0.25rem auto;
+  background-color: transparent;
+}
+
+.sign-in-input::placeholder {
+  color: #adb5bd;
+  font-style: italic;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.7rem;
+}
+
+.sign-in-button {
+  width: 40%;
+  margin: 1rem auto;
+  font-family: Montserrat, sans-serif;
+  background-color: transparent;
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+  transition-duration: 0.5s;
+  color: #6c757d;
+  border: none;
+  display: block;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.sign-in-submit {
+  width: 30%;
+  margin: 1rem auto;
+  font-family: Montserrat, sans-serif;
+  background-color: transparent;
+  font-size: 1.2rem;
+  padding: 0.25rem 0.5rem;
+  transition-duration: 0.5s;
+  color: #495057;
+  border: none;
+  border-bottom: 2px solid #495057;
+  display: block;
+  cursor: pointer;
+}
+
+.error-message-holder {
+  height: 60px;
+}
+
+.error-message {
+  color: #ef476f;
+}
+
+.sign-out-button {
+  color: #6c757d;
+  padding: 0.15rem 0.25rem;
+  background-color: transparent;
+  font-family: Montserrat, sans-serif;
+  text-decoration: underline;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
 }
 
 @media screen and (min-width: 768px) {
