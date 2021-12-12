@@ -22,7 +22,7 @@ export default class Blog extends React.Component {
   }
 
   signIn() {
-    this.setState({ sign: 'signIn' });
+    this.setState({ sign: 'signIn', signInAlert: false });
   }
 
   signUp() {
@@ -57,7 +57,16 @@ export default class Blog extends React.Component {
           </div>
           <div className="post-creation-holder col-full">
             <div className="shadow-holder col-full">
-             <div onClick={this.openBlog} className="post-button">Create a Post</div>
+              <div className="col-two-fifth">
+                <div onClick={() => {
+                  if (user) {
+                    this.openBlog();
+                  } else {
+                    this.setState({ signInAlert: true });
+                  }
+                }} className="post-button">Create a Post</div>
+                <div style={{ color: '#f8f9fa', fontSize: '.8rem', marginTop: '.5rem', marginBottom: 0, animation: 'fade-in linear 0.7s' }} className={this.state.signInAlert ? '' : 'hidden'}>Please sign in to continue..</div>
+             </div>
             </div>
           </div>
           <div className={this.state.blogOpen ? 'blog-form-holder blog-form-open' : 'blog-form-holder'}>

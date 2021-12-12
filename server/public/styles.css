@@ -462,6 +462,9 @@ font-family: 'Montserrat', sans-serif; */
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+  animation: fade-in linear 0.7s;
 }
 
 .blog-form-holder {
@@ -477,7 +480,7 @@ font-family: 'Montserrat', sans-serif; */
 }
 
 .post-button {
-  width: 40%;
+  width: 100%;
   font-family: Montserrat, sans-serif;
   background-color: transparent;
   font-size: 1.2rem;
