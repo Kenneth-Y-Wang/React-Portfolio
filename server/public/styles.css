@@ -590,6 +590,7 @@ font-family: 'Montserrat', sans-serif; */
   padding: 0.15rem 0.25rem;
   background-color: transparent;
   font-family: Montserrat, sans-serif;
+  text-decoration: underline;
   border: none;
   cursor: pointer;
   margin-top: 1rem;

@@ -39,12 +39,12 @@ export default class Blog extends React.Component {
 
       <div className="container">
         <AuthForm sign={this.state.sign} exitAuth={this.exitAuth} signUp={this.signUp} signIn={this.signIn} />
-        <div style={{ minHeight: 'calc(100vh - 190px' }}>
+        <div style={{ minHeight: 'calc(100vh - 190px)' }}>
           <div style={{ border: 'none', marginBottom: '1rem' }} className="title-row col-full">
             <div className="title-content">
-              <h1><span>Welcome</span> to My Blog </h1>
+              <h1 style={{ marginBottom: 0 }} ><span>Welcome</span> to My Blog </h1>
               <div className={user ? 'title-sub hidden' : 'title-sub'}>Please <a onClick={this.signIn} >Sign-in</a> to create a post</div>
-              <div className={loginUser !== '' ? 'title-sub' : 'title-sub hidden'}>Welcome, {loginUser} !</div>
+              <div className={loginUser !== '' ? 'title-sub' : 'title-sub hidden'} style={{ color: '#6c757d', fontWeight: 500, fontSize: '1.1rem' }} >Hello , {loginUser} !</div>
               <button onClick={handleSignOut} className={user ? 'sign-out-button' : 'sign-out-button hidden'}>Sign Out</button>
             </div>
           </div>
