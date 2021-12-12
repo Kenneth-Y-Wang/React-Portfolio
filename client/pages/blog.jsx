@@ -6,12 +6,19 @@ export default class Blog extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      sign: ''
+      sign: '',
+      blogOpen: false,
+      signInAlert: false
 
     };
     this.signIn = this.signIn.bind(this);
     this.signUp = this.signUp.bind(this);
     this.exitAuth = this.exitAuth.bind(this);
+    this.openBlog = this.openBlog.bind(this);
+  }
+
+  openBlog() {
+    this.setState({ blogOpen: !this.state.blogOpen });
   }
 
   signIn() {
@@ -49,7 +56,12 @@ export default class Blog extends React.Component {
             </div>
           </div>
           <div className="post-creation-holder col-full">
-           <div className="post-button">Create a Post</div>
+            <div className="shadow-holder col-full">
+             <div onClick={this.openBlog} className="post-button">Create a Post</div>
+            </div>
+          </div>
+          <div className={this.state.blogOpen ? 'blog-form-holder blog-form-open' : 'blog-form-holder'}>
+
           </div>
         </div>
       </div>
