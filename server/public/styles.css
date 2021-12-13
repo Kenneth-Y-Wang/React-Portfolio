@@ -475,7 +475,7 @@ font-family: 'Montserrat', sans-serif; */
 }
 
 .blog-form-open {
-  height: 300px;
+  height: 400px;
   background-color: white;
 }
 
@@ -625,6 +625,7 @@ font-family: 'Montserrat', sans-serif; */
   animation: fade-in linear 2s;
   font-family: Montserrat, sans-serif;
   padding: 1rem 0.75rem;
+  text-align: center;
 }
 
 .blog-form label,
@@ -633,12 +634,12 @@ font-family: 'Montserrat', sans-serif; */
 }
 
 .blog-form > label {
-  font-weight: bold;
+  font-weight: 400;
   margin-bottom: 0.75rem;
-  margin-top: 0.75rem;
+  margin-top: 1.2rem;
 }
 
-.blog-form > input {
+.blog-form-input {
   width: 100%;
   border: none;
   border-bottom: 2px solid #495057;
@@ -648,18 +649,44 @@ font-family: 'Montserrat', sans-serif; */
   font-size: 0.9rem;
 }
 
-.image-input {
-  margin-bottom: 0.5rem;
+/* #image {
+  border: 1px solid #495057;
+  width: 40%;
+  margin: 0.5rem auto;
+} */
+
+.blog-form textarea {
+  width: 100%;
+  height: 100px;
+  overflow-y: auto;
+  border-radius: 2px;
+  border: 2px solid #495057;
   font-family: Montserrat, sans-serif;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
+}
+
+.blog-form-input::placeholder,
+.blog-form textarea::placeholder {
+  color: #adb5bd;
+  font-style: italic;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.7rem;
 }
 
 input[type="file"]::-webkit-file-upload-button {
   background-color: transparent;
   font-family: Montserrat, sans-serif;
   padding: 0.25rem 0.5rem;
-  border: none;
-  border-bottom: 1px solid 495057;
+  border: 1px solid #495057;
   cursor: pointer;
+  margin-right: 0.75rem;
+  font-size: 0.8rem;
+}
+
+#image {
+  margin: 0.5rem auto;
+  font-family: Montserrat, sans-serif;
 }
 
 .post-button-holder {
@@ -677,8 +704,10 @@ input[type="file"]::-webkit-file-upload-button {
   transition-duration: 0.5s;
   color: #495057;
   border: none;
-  border-bottom: 2px solid #495057;
+  border-bottom: 1px solid #495057;
   cursor: pointer;
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
 }
 
 .post-submit-button:hover {
