@@ -1,21 +1,29 @@
 import React from 'react';
 import AppContext from '../lib/app-context';
 import AuthForm from '../components/auth-form';
+import BlogForm from '../components/blog-form';
 
 export default class Blog extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      sign: ''
+      sign: '',
+      blogOpen: false,
+      signInAlert: false
 
     };
     this.signIn = this.signIn.bind(this);
     this.signUp = this.signUp.bind(this);
     this.exitAuth = this.exitAuth.bind(this);
+    this.openBlog = this.openBlog.bind(this);
+  }
+
+  openBlog() {
+    this.setState({ blogOpen: !this.state.blogOpen });
   }
 
   signIn() {
-    this.setState({ sign: 'signIn' });
+    this.setState({ sign: 'signIn', signInAlert: false });
   }
 
   signUp() {
@@ -49,7 +57,21 @@ export default class Blog extends React.Component {
             </div>
           </div>
           <div className="post-creation-holder col-full">
-           <div className="post-button">Create a Post</div>
+            <div className="shadow-holder col-full">
+              <div className="col-two-fifth">
+                <div onClick={() => {
+                  if (user) {
+                    this.openBlog();
+                  } else {
+                    this.setState({ signInAlert: true });
+                  }
+                }} className="post-button">Create a Post</div>
+                <div style={{ color: '#f8f9fa', fontSize: '.8rem', marginTop: '.5rem', marginBottom: 0, animation: 'fade-in linear 0.7s' }} className={this.state.signInAlert ? '' : 'hidden'}>Please sign in to continue..</div>
+             </div>
+            </div>
+          </div>
+          <div className={this.state.blogOpen ? 'blog-form-holder blog-form-open' : 'blog-form-holder'}>
+            <BlogForm blogOpen={this.state.blogOpen} openBlog={this.openBlog} />
           </div>
         </div>
       </div>

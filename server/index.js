@@ -7,6 +7,7 @@ const jwt = require('jsonwebtoken');
 const errorMiddleware = require('./error-middleware');
 const staticMiddleware = require('./static-middleware');
 const authorizationMiddleware = require('./authorization-middleware');
+const uploadsMiddleware = require('./uploads-middleware');
 
 const db = new pg.Pool({
   connectionString: process.env.DATABASE_URL,
@@ -108,6 +109,34 @@ app.post('/api/auth/signIn', (req, res, next) => {
 });
 
 app.use(authorizationMiddleware);
+
+// create post
+
+app.post('/api/posts/create', uploadsMiddleware, (req, res, next) => {
+  const { userId } = req.user;
+  const { title, content, time } = req.body;
+
+  if (!title || !content) {
+    throw new ClientError(400, 'title and content are required fields');
+  }
+
+  let imageUrl;
+  if (req.file) {
+    imageUrl = req.file.location;
+  }
+  const sql = `
+  insert into "posts" ("userId","title","createdAt","content","imageUrl")
+  values ($1,$2,$3,$4,$5)
+  returning "postId","title","content","userId","createdAt","imageUrl"
+  `;
+  const params = [userId, title, time, content, imageUrl];
+  db.query(sql, params)
+    .then(result => {
+      const [newPost] = result.rows;
+      res.json(newPost);
+    })
+    .catch(err => next(err));
+});
 
 app.use(errorMiddleware);
 
