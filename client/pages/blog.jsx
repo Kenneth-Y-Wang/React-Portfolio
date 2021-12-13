@@ -1,6 +1,7 @@
 import React from 'react';
 import AppContext from '../lib/app-context';
 import AuthForm from '../components/auth-form';
+import BlogForm from '../components/blog-form';
 
 export default class Blog extends React.Component {
   constructor(props) {
@@ -70,7 +71,7 @@ export default class Blog extends React.Component {
             </div>
           </div>
           <div className={this.state.blogOpen ? 'blog-form-holder blog-form-open' : 'blog-form-holder'}>
-
+            <BlogForm blogOpen={this.state.blogOpen} />
           </div>
         </div>
       </div>

@@ -618,6 +618,73 @@ font-family: 'Montserrat', sans-serif; */
   margin-top: 1rem;
 }
 
+/* blog form */
+
+.blog-form {
+  margin: 0 auto;
+  animation: fade-in linear 2s;
+  font-family: Montserrat, sans-serif;
+  padding: 1rem 0.75rem;
+}
+
+.blog-form label,
+.blog-form input {
+  display: block;
+}
+
+.blog-form > label {
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.blog-form > input {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #495057;
+  margin-bottom: 1.25rem;
+  padding-left: 0.5rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.image-input {
+  margin-bottom: 0.5rem;
+  font-family: Montserrat, sans-serif;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+  background-color: transparent;
+  font-family: Montserrat, sans-serif;
+  padding: 0.25rem 0.5rem;
+  border: none;
+  border-bottom: 1px solid 495057;
+  cursor: pointer;
+}
+
+.post-button-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.post-submit-button {
+  font-family: Montserrat, sans-serif;
+  background-color: transparent;
+  font-size: 1rem;
+  padding: 0.25rem 0.75rem;
+  transition-duration: 0.5s;
+  color: #495057;
+  border: none;
+  border-bottom: 2px solid #495057;
+  cursor: pointer;
+}
+
+.post-submit-button:hover {
+  transform: scale(1.2);
+}
+
 @media screen and (min-width: 768px) {
   .about-content-holder,
   .button-content,
