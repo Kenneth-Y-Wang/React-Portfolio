@@ -71,7 +71,7 @@ export default class Blog extends React.Component {
             </div>
           </div>
           <div className={this.state.blogOpen ? 'blog-form-holder blog-form-open' : 'blog-form-holder'}>
-            <BlogForm blogOpen={this.state.blogOpen} />
+            <BlogForm blogOpen={this.state.blogOpen} openBlog={this.openBlog} />
           </div>
         </div>
       </div>

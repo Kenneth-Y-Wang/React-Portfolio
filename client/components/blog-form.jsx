@@ -11,6 +11,8 @@ export default class BlogForm extends React.Component {
     };
 
     this.fileInputRef = React.createRef();
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(event) {
@@ -43,9 +45,11 @@ export default class BlogForm extends React.Component {
           title: data.title,
           createdAt: data.createdAt,
           content: data.content,
+          imageUrl: data.imageUrl,
           username: this.context.user.username
         };
         this.setState({ allPosts: this.state.allPosts.concat(newPost) });
+
       })
       .catch(error => {
         console.error('error', error);
@@ -55,18 +59,20 @@ export default class BlogForm extends React.Component {
       title: '',
       content: ''
     });
+    this.fileInputRef.current.value = null;
+    this.props.openBlog();
   }
 
   render() {
     return (
-      <form className={this.props.blogOpen ? 'blog-form col-four-fifth' : 'hidden'}>
+      <form onSubmit={this.handleSubmit} className={this.props.blogOpen ? 'blog-form col-four-fifth' : 'hidden'}>
         <label htmlFor="title">Post Title</label>
-        <input className="blog-form-input" required value={this.state.title} id="title" name="title" type="text" placeholder="Please enter your post title..."></input>
-        <textarea required value={this.state.content} id="content" name="content" placeholder="Please enter your post..."></textarea>
+        <input onChange={this.handleChange} className="blog-form-input" required value={this.state.title} id="title" name="title" type="text" placeholder="Please enter your post title..."></input>
+        <textarea required onChange={this.handleChange} value={this.state.content} id="content" name="content" placeholder="Please enter your post..."></textarea>
         <label htmlFor="image">Post Image</label>
         <input className="image-input col-one-third" id="image" type="file" name="image" ref={this.fileInputRef} accept=".png, .jpg, .jpeg, .gif" />
         <div className="post-button-holder">
-          <button onClick={this.formOpen} className="post-submit-button" type="button">BACK</button>
+          <button onClick={this.props.openBlog} className="post-submit-button" type="button">BACK</button>
           <button className="post-submit-button" type="submit">POST</button>
         </div>
       </form>
