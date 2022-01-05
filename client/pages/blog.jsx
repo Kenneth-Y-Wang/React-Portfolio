@@ -2,6 +2,7 @@ import React from 'react';
 import AppContext from '../lib/app-context';
 import AuthForm from '../components/auth-form';
 import BlogForm from '../components/blog-form';
+import Posts from '../components/post-display';
 
 export default class Blog extends React.Component {
   constructor(props) {
@@ -9,13 +10,31 @@ export default class Blog extends React.Component {
     this.state = {
       sign: '',
       blogOpen: false,
-      signInAlert: false
+      signInAlert: false,
+      allPosts: []
 
     };
     this.signIn = this.signIn.bind(this);
     this.signUp = this.signUp.bind(this);
     this.exitAuth = this.exitAuth.bind(this);
     this.openBlog = this.openBlog.bind(this);
+  }
+
+  componentDidMount() {
+    fetch('/api/posts/allPosts', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+        this.setState({ allPosts: data });
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
   }
 
   openBlog() {
@@ -73,6 +92,7 @@ export default class Blog extends React.Component {
           <div className={this.state.blogOpen ? 'blog-form-holder blog-form-open' : 'blog-form-holder'}>
             <BlogForm blogOpen={this.state.blogOpen} openBlog={this.openBlog} />
           </div>
+          <Posts />
         </div>
       </div>
 
