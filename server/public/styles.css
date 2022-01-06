@@ -714,6 +714,49 @@ input[type="file"]::-webkit-file-upload-button {
   transform: scale(1.2);
 }
 
+/* post display */
+
+.post-row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.post-holder {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 3px 5px 5px -2px rgb(81 81 81 / 70%);
+  font-family: Montserrat, sans-serif;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.post-image-holder {
+  height: 200px;
+  position: relative;
+}
+
+.post-image-holder > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  transition-duration: 0.5s;
+}
+
+.post-content-holder {
+  padding: 0.5rem 2.75rem;
+  color: #495057;
+}
+
+.post-content-holder h3,
+.post-content-holder h5,
+.post-content-holder h6 {
+  margin: 0.25rem;
+  font-weight: normal;
+}
+
 @media screen and (min-width: 768px) {
   .about-content-holder,
   .button-content,

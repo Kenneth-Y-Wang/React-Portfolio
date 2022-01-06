@@ -6,8 +6,8 @@ export default class BlogForm extends React.Component {
     super(props);
     this.state = {
       title: '',
-      content: '',
-      allPosts: []
+      content: ''
+
     };
 
     this.fileInputRef = React.createRef();
@@ -48,7 +48,7 @@ export default class BlogForm extends React.Component {
           imageUrl: data.imageUrl,
           username: this.context.user.username
         };
-        this.setState({ allPosts: this.state.allPosts.concat(newPost) });
+        this.props.saveNewPost(newPost);
 
       })
       .catch(error => {

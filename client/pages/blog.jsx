@@ -18,6 +18,7 @@ export default class Blog extends React.Component {
     this.signUp = this.signUp.bind(this);
     this.exitAuth = this.exitAuth.bind(this);
     this.openBlog = this.openBlog.bind(this);
+    this.saveNewPost = this.saveNewPost.bind(this);
   }
 
   componentDidMount() {
@@ -35,6 +36,10 @@ export default class Blog extends React.Component {
       .catch(error => {
         console.error('Error:', error);
       });
+  }
+
+  saveNewPost(newPost) {
+    this.setState({ allPosts: this.state.allPosts.concat(newPost) });
   }
 
   openBlog() {
@@ -90,7 +95,7 @@ export default class Blog extends React.Component {
             </div>
           </div>
           <div className={this.state.blogOpen ? 'blog-form-holder blog-form-open' : 'blog-form-holder'}>
-            <BlogForm blogOpen={this.state.blogOpen} openBlog={this.openBlog} />
+            <BlogForm blogOpen={this.state.blogOpen} openBlog={this.openBlog} saveNewPost={this.saveNewPost} />
           </div>
           <Posts allPosts={this.state.allPosts} />
         </div>

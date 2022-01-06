@@ -58,6 +58,7 @@ body {
 .col-three-fifth,
 .col-four-fifth,
 .col-two-fifth,
+.col-forty-five,
 .col-full {
   width: 100%;
   padding: 0;
@@ -158,6 +159,10 @@ body {
     width: 40%;
   }
 
+  .col-forty-five {
+    width: 45%;
+  }
+
   .col-nine-tenth {
     width: 90%;
   }
@@ -216,6 +221,10 @@ body {
 
   .col-two-fifth {
     width: 40%;
+  }
+
+  .col-forty-five {
+    width: 45%;
   }
 
   .col-nine-tenth {
