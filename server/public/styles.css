@@ -507,6 +507,7 @@ font-family: 'Montserrat', sans-serif; */
   justify-content: center;
   align-items: center;
   z-index: 5;
+  padding: 0.5rem;
 }
 
 .signin-block {
