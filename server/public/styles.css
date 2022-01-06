@@ -747,13 +747,14 @@ input[type="file"]::-webkit-file-upload-button {
 }
 
 .post-content-holder {
-  padding: 0.5rem 2.75rem;
+  padding: 1rem 2.75rem;
   color: #495057;
 }
 
 .post-content-holder h3,
 .post-content-holder h5,
-.post-content-holder h6 {
+.post-content-holder h6,
+.post-content-holder h1 {
   margin: 0.25rem;
   font-weight: normal;
 }
@@ -767,6 +768,24 @@ input[type="file"]::-webkit-file-upload-button {
 
 .post-detail-button:hover {
   transform: scale(1.2);
+}
+
+.detail-img-holder {
+  height: 300px;
+  width: 100%;
+}
+
+.detail-img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  transition-duration: 0.5s;
+}
+
+.detail-content-holder {
+  padding: 0;
+  margin: 2rem 0;
+  text-align: justify;
 }
 
 @media screen and (min-width: 768px) {

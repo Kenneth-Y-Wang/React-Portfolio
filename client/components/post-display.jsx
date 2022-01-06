@@ -9,6 +9,16 @@ export default class Posts extends React.Component {
     };
     this.detailHover = this.detailHover.bind(this);
     this.detailHoverLeft = this.detailHoverLeft.bind(this);
+    this.detailPost = this.detailPost.bind(this);
+    this.exitPost = this.exitPost.bind(this);
+  }
+
+  detailPost(postId) {
+    this.setState({ detailPost: postId });
+  }
+
+  exitPost() {
+    this.setState({ detailPost: '' });
   }
 
   detailHover(postId) {
@@ -32,23 +42,33 @@ export default class Posts extends React.Component {
          <img className={this.state.detailHover === postId ? 'img-hover' : ''} src={imageUrl}></img>
          <div className={this.state.detailHover === postId ? 'hover-button-holder' : 'hover-button-holder hidden'}>
             <div className="col-four-fifth button-content-holder">
-              <div className="post-detail-button" >Post Details</div>
+              <div onClick={() => this.detailPost(postId)} className="post-detail-button" >Post Details</div>
             </div>
          </div>
        </div>
        <div className="post-content-holder">
          <h3>{title}</h3>
-            <h5>Published by <span style={{ fontWeight: 550, color: '#6c757d' }}>{username}</span></h5>
+         <h5>Published by <span style={{ fontWeight: 550, color: '#6c757d' }}>{username}</span></h5>
          <h6>{date}</h6>
        </div>
-
-        {/* <ul>
-          <li>{title}</li>
-          <li>{content}</li>
-          <li><img src={imageUrl}></img></li>
-          <li>{username}</li>
-          <li>{date}</li>
-        </ul> */}
+       <div className={this.state.detailPost === postId ? 'signin-modal-holder' : 'signin-modal-holder hidden'}>
+         <div className="col-four-fifth signin-block">
+           <div className="detail-img-holder">
+             <img className="detail-img" src={imageUrl}></img>
+           </div>
+           <div className="post-content-holder" style={{ textAlign: 'start', borderBottom: '1px #495057 solid', paddingLeft: 0 }}>
+            <h1>{title}</h1>
+            <h3>Published by <span style={{ fontWeight: 500, color: '#6c757d' }}>{username}</span></h3>
+            <h6>{date}</h6>
+           </div>
+           <div className="detail-content-holder">
+             <p>{content}</p>
+           </div>
+           <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+             <button onClick={this.exitPost} style={{ margin: 0 }} className="contact-button">Exit</button>
+           </div>
+         </div>
+       </div>
       </div>
       );
 
