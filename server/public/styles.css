@@ -722,6 +722,7 @@ input[type="file"]::-webkit-file-upload-button {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 3rem;
 }
 
 .post-holder {
@@ -755,6 +756,17 @@ input[type="file"]::-webkit-file-upload-button {
 .post-content-holder h6 {
   margin: 0.25rem;
   font-weight: normal;
+}
+
+.post-detail-button {
+  color: #495057;
+  font-size: 1rem;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+.post-detail-button:hover {
+  transform: scale(1.2);
 }
 
 @media screen and (min-width: 768px) {

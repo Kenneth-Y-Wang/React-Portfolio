@@ -4,8 +4,19 @@ export default class Posts extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      detailPost: ''
+      detailPost: '',
+      detailHover: ''
     };
+    this.detailHover = this.detailHover.bind(this);
+    this.detailHoverLeft = this.detailHoverLeft.bind(this);
+  }
+
+  detailHover(postId) {
+    this.setState({ detailHover: postId });
+  }
+
+  detailHoverLeft() {
+    this.setState({ detailHover: '' });
   }
 
   render() {
@@ -16,12 +27,12 @@ export default class Posts extends React.Component {
       const date = createdAt.slice(0, 10) + ' ' + createdAt.slice(11, 16);
 
       return (
-      <div key={postId} className="post-holder col-forty-five">
+      <div key={postId} onMouseEnter={() => this.detailHover(postId)} onMouseLeave={this.detailHoverLeft} className="post-holder col-forty-five">
        <div className="post-image-holder">
-         <img src={imageUrl}></img>
-         <div className="hover-button-holder">
+         <img className={this.state.detailHover === postId ? 'img-hover' : ''} src={imageUrl}></img>
+         <div className={this.state.detailHover === postId ? 'hover-button-holder' : 'hover-button-holder hidden'}>
             <div className="col-four-fifth button-content-holder">
-              <div style={{ color: '#495057' }} className="button-content">Post Details</div>
+              <div className="post-detail-button" >Post Details</div>
             </div>
          </div>
        </div>
