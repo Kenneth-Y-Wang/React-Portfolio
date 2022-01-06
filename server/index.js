@@ -46,7 +46,7 @@ app.post('/api/messages/create', (req, res, next) => {
     .catch(err => next(err));
 });
 
-// user-signup
+// user-signup/signin
 
 app.post('/api/auth/signUp', (req, res, next) => {
   const { username, password, email } = req.body;
@@ -104,6 +104,30 @@ app.post('/api/auth/signIn', (req, res, next) => {
           const token = jwt.sign(payload, process.env.TOKEN_SECRET);
           res.json({ token, user: payload });
         });
+    })
+    .catch(err => next(err));
+});
+
+// get all posts
+
+app.get('/api/posts/allPosts', (req, res, next) => {
+  const sql = `
+  select "userId",
+         "username",
+         "postId",
+         "title",
+         "posts"."createdAt" as "createdAt",
+         "content",
+         "imageUrl"
+    from "posts"
+    join "users" using ("userId")
+    order by "postId" desc
+  `;
+
+  db.query(sql)
+    .then(result => {
+      const allPosts = result.rows;
+      res.json(allPosts);
     })
     .catch(err => next(err));
 });

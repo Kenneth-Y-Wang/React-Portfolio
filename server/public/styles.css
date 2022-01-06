@@ -507,6 +507,7 @@ font-family: 'Montserrat', sans-serif; */
   justify-content: center;
   align-items: center;
   z-index: 5;
+  padding: 0.5rem;
 }
 
 .signin-block {
@@ -712,6 +713,80 @@ input[type="file"]::-webkit-file-upload-button {
 
 .post-submit-button:hover {
   transform: scale(1.2);
+}
+
+/* post display */
+
+.post-row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.post-holder {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 3px 5px 5px -2px rgb(81 81 81 / 70%);
+  font-family: Montserrat, sans-serif;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.post-image-holder {
+  height: 200px;
+  position: relative;
+}
+
+.post-image-holder > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  transition-duration: 0.5s;
+}
+
+.post-content-holder {
+  padding: 1rem 2.75rem;
+  color: #495057;
+}
+
+.post-content-holder h3,
+.post-content-holder h5,
+.post-content-holder h6,
+.post-content-holder h1 {
+  margin: 0.25rem;
+  font-weight: normal;
+}
+
+.post-detail-button {
+  color: #495057;
+  font-size: 1rem;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+.post-detail-button:hover {
+  transform: scale(1.2);
+}
+
+.detail-img-holder {
+  height: 300px;
+  width: 100%;
+}
+
+.detail-img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  transition-duration: 0.5s;
+}
+
+.detail-content-holder {
+  padding: 0;
+  margin: 2rem 0;
+  text-align: justify;
 }
 
 @media screen and (min-width: 768px) {

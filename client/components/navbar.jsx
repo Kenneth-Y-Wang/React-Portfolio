@@ -6,7 +6,7 @@ export default class Navbar extends React.Component {
     const { route } = this.context;
     return (
       <>
-       <div ref={this.props.pageTop} className="nav-bar">
+      <div ref={this.props.pageTop} className="nav-bar">
        <h3 className="name-title">Kenneth Wang</h3>
        <div className="anchor-holder col-one-fifth">
          <a className={route.path === 'blog' ? 'anchor-tag hidden' : 'anchor-tag'} onClick={() => this.props.scroll(this.props.myWorks)}>Works</a>
