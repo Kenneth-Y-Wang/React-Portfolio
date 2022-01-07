@@ -789,6 +789,25 @@ input[type="file"]::-webkit-file-upload-button {
   text-align: justify;
 }
 
+.edit-delete-row {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 0.25rem;
+}
+
+.edit-button {
+  margin-left: 0.5rem;
+  font-family: Montserrat, sans-serif;
+  background-color: transparent;
+  font-size: 0.8rem;
+  padding: 0.25rem 0.5rem;
+  transition-duration: 0.5s;
+  color: #495057;
+  border: none;
+  cursor: pointer;
+}
+
 @media screen and (min-width: 768px) {
   .about-content-holder,
   .button-content,

@@ -47,9 +47,13 @@ export default class Posts extends React.Component {
          </div>
        </div>
        <div className="post-content-holder">
-         <h3>{title}</h3>
+         <h3 style={{ marginBottom: '.75rem' }} >{title}</h3>
          <h5>Published by <span style={{ fontWeight: 550, color: '#6c757d' }}>{username}</span></h5>
          <h6>{date}</h6>
+         <div className="edit-delete-row col-full">
+              <button className="edit-button">Edit</button>
+              <button className="edit-button">Delete</button>
+         </div>
        </div>
        <div className={this.state.detailPost === postId ? 'signin-modal-holder' : 'signin-modal-holder hidden'}>
          <div className="col-four-fifth signin-block">
