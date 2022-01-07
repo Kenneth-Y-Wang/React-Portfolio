@@ -162,6 +162,31 @@ app.post('/api/posts/create', uploadsMiddleware, (req, res, next) => {
     .catch(err => next(err));
 });
 
+// edit post
+app.patch('/api/posts/editPost/:postId', (req, res, next) => {
+  const postId = Number(req.params.postId);
+  const { title, content } = req.body;
+
+  if (!title || !content) {
+    throw new ClientError(400, 'title and post content are required fields');
+  }
+  const sql = `
+update "posts"
+   set "title"=$1,
+       "content"=$2
+where  "postId"=$3
+returning "postId","title","content"
+`;
+  const params = [title, content, postId];
+  db.query(sql, params)
+    .then(result => {
+      const [updatedPost] = result.rows;
+      res.json(updatedPost);
+    })
+    .catch(err => next(err));
+
+});
+
 app.use(errorMiddleware);
 
 app.listen(process.env.PORT, () => {

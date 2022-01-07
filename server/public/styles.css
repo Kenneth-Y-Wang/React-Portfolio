@@ -791,6 +791,7 @@ input[type="file"]::-webkit-file-upload-button {
   margin: 1rem 0;
   text-align: justify;
   overflow-y: auto;
+  max-height: 300px;
   color: #495057;
 }
 

@@ -19,6 +19,7 @@ export default class Blog extends React.Component {
     this.exitAuth = this.exitAuth.bind(this);
     this.openBlog = this.openBlog.bind(this);
     this.saveNewPost = this.saveNewPost.bind(this);
+    this.editPostDisplay = this.editPostDisplay.bind(this);
   }
 
   componentDidMount() {
@@ -40,6 +41,26 @@ export default class Blog extends React.Component {
 
   saveNewPost(newPost) {
     this.setState({ allPosts: this.state.allPosts.concat(newPost) });
+  }
+
+  editPostDisplay(data) {
+    for (let i = 0; i < this.state.allPosts.length; i++) {
+      if (data.postId === this.state.allPosts[i].postId) {
+        const { userId, username, createdAt, postId, imageUrl } = this.state.allPosts[i];
+        const updatedPost = {
+          userId: userId,
+          username: username,
+          imageUrl: imageUrl,
+          title: data.title,
+          content: data.content,
+          createdAt: createdAt,
+          postId: postId
+        };
+        const newState = this.state.allPosts.slice(0, i).concat(updatedPost, this.state.allPosts.slice(i + 1));
+        this.setState({ allPosts: newState });
+        break;
+      }
+    }
   }
 
   openBlog() {
@@ -97,7 +118,7 @@ export default class Blog extends React.Component {
           <div className={this.state.blogOpen ? 'blog-form-holder blog-form-open' : 'blog-form-holder'}>
             <BlogForm blogOpen={this.state.blogOpen} openBlog={this.openBlog} saveNewPost={this.saveNewPost} />
           </div>
-          <Posts allPosts={this.state.allPosts} />
+          <Posts allPosts={this.state.allPosts} editPostDisplay={this.editPostDisplay} />
         </div>
       </div>
 

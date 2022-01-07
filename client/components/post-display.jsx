@@ -88,7 +88,7 @@ export default class Posts extends React.Component {
             <h6>{date}</h6>
            </div>
            <div className="detail-content-holder">
-             <p>{content}</p>
+             <div>{content}</div>
            </div>
            <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
              <button onClick={this.exitPost} style={{ margin: 0 }} className="contact-button">Exit</button>
@@ -96,7 +96,7 @@ export default class Posts extends React.Component {
          </div>
        </div>
        <div className={this.state.editPost === postId ? 'signin-modal-holder' : 'signin-modal-holder hidden'}>
-         <EditPost title={title} content={content} exitEditPost={this.exitEditPost} />
+            <EditPost title={title} content={content} postId={postId} exitEditPost={this.exitEditPost} editPostDisplay={this.props.editPostDisplay} />
        </div>
       </div>
       );
