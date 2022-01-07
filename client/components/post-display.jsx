@@ -69,7 +69,7 @@ export default class Posts extends React.Component {
          </div>
        </div>
        <div className="post-content-holder">
-         <h3 style={{ marginBottom: '.75rem' }} >{title}</h3>
+         <h3 style={{ marginBottom: '.75rem', height: '50px' }} >{title}</h3>
          <h5>Published by <span style={{ fontWeight: 550, color: '#6c757d' }}>{username}</span></h5>
          <h6>{date}</h6>
          <div className= 'edit-delete-row col-full' >
@@ -88,7 +88,7 @@ export default class Posts extends React.Component {
             <h6>{date}</h6>
            </div>
            <div className="detail-content-holder">
-             <div>{content}</div>
+             <div style={{ whiteSpace: 'break-spaces' }}>{content}</div>
            </div>
            <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
              <button onClick={this.exitPost} style={{ margin: 0 }} className="contact-button">Exit</button>
