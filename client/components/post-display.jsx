@@ -1,16 +1,21 @@
 import React from 'react';
+import AppContext from '../lib/app-context';
+import EditPost from './edit-post';
 
 export default class Posts extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       detailPost: '',
-      detailHover: ''
+      detailHover: '',
+      editPost: ''
     };
     this.detailHover = this.detailHover.bind(this);
     this.detailHoverLeft = this.detailHoverLeft.bind(this);
     this.detailPost = this.detailPost.bind(this);
     this.exitPost = this.exitPost.bind(this);
+    this.editPost = this.editPost.bind(this);
+    this.exitEditPost = this.exitEditPost.bind(this);
   }
 
   detailPost(postId) {
@@ -19,6 +24,14 @@ export default class Posts extends React.Component {
 
   exitPost() {
     this.setState({ detailPost: '' });
+  }
+
+  editPost(postId) {
+    this.setState({ editPost: postId });
+  }
+
+  exitEditPost() {
+    this.setState({ editPost: '' });
   }
 
   detailHover(postId) {
@@ -30,8 +43,17 @@ export default class Posts extends React.Component {
   }
 
   render() {
-    const allPosts = this.props.allPosts;
+    // let loginUsername;
+    // if (this.context.user) {
+    //   loginUsername = this.context.user.username;
+    // } else {
+    //   loginUsername = '';
+    // }
 
+    const loginUsername = this.context.user
+      ? this.context.user.username
+      : '';
+    const allPosts = this.props.allPosts;
     const postsList = allPosts.map(post => {
       const { postId, title, createdAt, content, imageUrl, username } = post;
       const date = createdAt.slice(0, 10) + ' ' + createdAt.slice(11, 16);
@@ -50,9 +72,9 @@ export default class Posts extends React.Component {
          <h3 style={{ marginBottom: '.75rem' }} >{title}</h3>
          <h5>Published by <span style={{ fontWeight: 550, color: '#6c757d' }}>{username}</span></h5>
          <h6>{date}</h6>
-         <div className="edit-delete-row col-full">
-              <button className="edit-button">Edit</button>
-              <button className="edit-button">Delete</button>
+         <div className= 'edit-delete-row col-full' >
+              <button className={loginUsername === username ? 'edit-button' : 'edit-button hidden'}><i onClick={() => this.editPost(postId)} className="far fa-edit"></i></button>
+              <button className={loginUsername === username ? 'edit-button' : 'edit-button hidden'}><i className="far fa-trash-alt"></i></button>
          </div>
        </div>
        <div className={this.state.detailPost === postId ? 'signin-modal-holder' : 'signin-modal-holder hidden'}>
@@ -73,6 +95,9 @@ export default class Posts extends React.Component {
            </div>
          </div>
        </div>
+       <div className={this.state.editPost === postId ? 'signin-modal-holder' : 'signin-modal-holder hidden'}>
+         <EditPost title={title} content={content} exitEditPost={this.exitEditPost} />
+       </div>
       </div>
       );
 
@@ -89,3 +114,5 @@ export default class Posts extends React.Component {
     );
   }
 }
+
+Posts.contextType = AppContext;
