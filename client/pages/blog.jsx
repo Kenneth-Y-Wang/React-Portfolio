@@ -20,6 +20,7 @@ export default class Blog extends React.Component {
     this.openBlog = this.openBlog.bind(this);
     this.saveNewPost = this.saveNewPost.bind(this);
     this.editPostDisplay = this.editPostDisplay.bind(this);
+    this.deletePost = this.deletePost.bind(this);
   }
 
   componentDidMount() {
@@ -60,6 +61,27 @@ export default class Blog extends React.Component {
         this.setState({ allPosts: newState });
         break;
       }
+    }
+  }
+
+  deletePost(postId) {
+    const token = window.localStorage.getItem('react-context-jwt');
+    fetch(`/api/posts/allPosts/${postId}`, {
+      method: 'DELETE',
+      headers: {
+        'react-context-jwt': token,
+        'Content-Type': 'application/json'
+      },
+      body: null
+    });
+
+    for (let i = 0; i < this.state.allPosts.length; i++) {
+      if (postId === this.state.allPosts[i].postId) {
+        const newState = this.state.allPosts.slice(0, i).concat(this.state.allPosts.slice(i + 1));
+        this.setState({ allPosts: newState });
+        break;
+      }
+
     }
   }
 
@@ -118,7 +140,7 @@ export default class Blog extends React.Component {
           <div className={this.state.blogOpen ? 'blog-form-holder blog-form-open' : 'blog-form-holder'}>
             <BlogForm blogOpen={this.state.blogOpen} openBlog={this.openBlog} saveNewPost={this.saveNewPost} />
           </div>
-          <Posts allPosts={this.state.allPosts} editPostDisplay={this.editPostDisplay} />
+          <Posts allPosts={this.state.allPosts} editPostDisplay={this.editPostDisplay} deletePost={this.deletePost} />
         </div>
       </div>
 

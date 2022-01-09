@@ -187,6 +187,33 @@ returning "postId","title","content"
 
 });
 
+// delete post
+
+app.delete('/api/posts/allPosts/:postId', (req, res, next) => {
+  const postId = Number(req.params.postId);
+
+  const sql = `
+  delete from "posts"
+  where "postId"=$1
+  returning *
+  `;
+  const params = [postId];
+
+  db.query(sql, params)
+    .then(result => {
+      const post = result.rows[0];
+      if (!post) {
+
+        throw new ClientError(400, `cannot find content with postId ${postId}`);
+      } else {
+
+        res.sendStatus(204);
+      }
+    })
+    .catch(err => next(err));
+
+});
+
 app.use(errorMiddleware);
 
 app.listen(process.env.PORT, () => {
