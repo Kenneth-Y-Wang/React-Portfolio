@@ -42,8 +42,8 @@ export default class EditPost extends React.Component {
     return (
     <form onSubmit={this.handleSubmit} className="col-four-fifth  blog-edit">
       <label style={{ marginBottom: '2rem', display: 'block', fontSize: '1.2rem' }} htmlFor="title">Post Title</label>
-      <input onChange={this.handleChange} style={{ color: '#495057', fontFamily: 'Montserrat, sans-serif', fontSize: ' 1rem' }} onChange={this.handleChange} className="blog-form-input" required value={this.state.title} id="title" name="title" type="text" placeholder="Please enter your post title..."></input>
-      <textarea onChange={this.handleChange} style={{ color: '#495057', fontFamily: 'Montserrat, sans-serif', fontSize: ' 1rem', height: '300px' }}required onChange={this.handleChange} value={this.state.content} id="content" name="content" placeholder="Please enter your post..."></textarea>
+      <input onChange={this.handleChange} style={{ color: '#495057', fontFamily: 'Montserrat, sans-serif', fontSize: ' 1rem' }} className="blog-form-input" required value={this.state.title} id="title" name="title" type="text" placeholder="Please enter your post title..."></input>
+      <textarea onChange={this.handleChange} style={{ color: '#495057', fontFamily: 'Montserrat, sans-serif', fontSize: ' 1rem', height: '300px' }}required value={this.state.content} id="content" name="content" placeholder="Please enter your post..."></textarea>
       <div className="post-button-holder">
         <button onClick={this.props.exitEditPost} className="post-submit-button" type="button">BACK</button>
         <button className="post-submit-button" type="submit">SAVE</button>
