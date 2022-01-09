@@ -118,14 +118,17 @@ export default class Posts extends React.Component {
       );
 
     });
+
+    const postDisplay = this.props.allPosts.length === 0
+      ? <div style={{ textAlign: 'center', fontFamily: 'Montserrat, sans-serif', color: '#495057' }}><h2 style={{ fontWeight: '400' }} >No recent post...</h2></div>
+      : <div className="post-row">{postsList}</div>;
     return (
+
       <div className="container ">
         <div style={{ paddingBottom: '1.25rem' }} className="title-row col-full">
           <h1>Recent Posts</h1>
         </div>
-        <div className="post-row">
-         {postsList}
-        </div>
+        {postDisplay}
       </div>
     );
   }
