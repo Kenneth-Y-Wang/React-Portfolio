@@ -56,12 +56,6 @@ export default class Posts extends React.Component {
   }
 
   render() {
-    // let loginUsername;
-    // if (this.context.user) {
-    //   loginUsername = this.context.user.username;
-    // } else {
-    //   loginUsername = '';
-    // }
 
     const loginUsername = this.context.user
       ? this.context.user.username
@@ -86,8 +80,8 @@ export default class Posts extends React.Component {
          <h5>Published by <span style={{ fontWeight: 550, color: '#6c757d' }}>{username}</span></h5>
          <h6>{date}</h6>
          <div className= 'edit-delete-row col-full' >
-              <button className={loginUsername === username ? 'edit-button' : 'edit-button hidden'}><i onClick={() => this.editPost(postId)} className="far fa-edit"></i></button>
-              <button className={loginUsername === username ? 'edit-button' : 'edit-button hidden'}><i onClick={() => this.deletePost(postId)} className="far fa-trash-alt"></i></button>
+              <button className={loginUsername === username ? 'edit-button' : 'edit-button non-visible'}><i onClick={() => this.editPost(postId)} className="far fa-edit"></i></button>
+              <button className={loginUsername === username ? 'edit-button' : 'edit-button non-visible'}><i onClick={() => this.deletePost(postId)} className="far fa-trash-alt"></i></button>
          </div>
        </div>
        <div className={this.state.detailPost === postId ? 'signin-modal-holder' : 'signin-modal-holder hidden'}>
@@ -126,7 +120,7 @@ export default class Posts extends React.Component {
     });
     return (
       <div className="container ">
-        <div className="title-row col-full">
+        <div style={{ paddingBottom: '1.25rem' }} className="title-row col-full">
           <h1>Recent Posts</h1>
         </div>
         <div className="post-row">

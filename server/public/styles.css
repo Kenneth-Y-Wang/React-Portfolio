@@ -800,7 +800,6 @@ input[type="file"]::-webkit-file-upload-button {
   justify-content: flex-end;
   align-items: center;
   margin-top: 0.25rem;
-  height: 25px;
 }
 
 .edit-button {
