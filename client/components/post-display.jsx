@@ -113,7 +113,7 @@ export default class Posts extends React.Component {
        </div>
        <div className={this.state.deletePost === postId ? 'signin-modal-holder' : 'signin-modal-holder hidden'}>
          <div style={{ padding: '3rem', textAlign: 'center' }} className="col-three-fifth signin-block">
-          <h1 style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 'normal', marginBottom: '2rem', color: '#495057' }}>Confirm to delete?</h1>
+          <h1 style={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 'normal', marginBottom: '2rem', color: '#495057' }}>Please confirm to delete</h1>
           <div style={{ marginTop: 0 }} className="post-button-holder">
             <button onClick={this.exitDeletePost} className="post-submit-button" type="button">BACK</button>
             <button onClick={() => this.props.deletePost(postId)} className="post-submit-button" type="submit">DELETE</button>
