@@ -751,7 +751,7 @@ input[type="file"]::-webkit-file-upload-button {
 }
 
 .post-content-holder {
-  padding: 1rem 2.75rem;
+  padding: 1.5rem 2.75rem;
   color: #495057;
 }
 
@@ -787,7 +787,7 @@ input[type="file"]::-webkit-file-upload-button {
 }
 
 .detail-content-holder {
-  padding: 0;
+  padding: 1rem 0;
   margin: 1rem 0;
   text-align: justify;
   overflow-y: auto;

@@ -1,6 +1,7 @@
 import React from 'react';
 import AppContext from '../lib/app-context';
 import EditPost from './edit-post';
+import Comments from './comments';
 
 export default class Posts extends React.Component {
   constructor(props) {
@@ -98,6 +99,7 @@ export default class Posts extends React.Component {
              <div style={{ whiteSpace: 'break-spaces' }}>{content}</div>
            </div>
            <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+             <Comments postId={postId} />
              <button onClick={this.exitPost} style={{ margin: 0 }} className="contact-button">Exit</button>
            </div>
          </div>
@@ -118,14 +120,16 @@ export default class Posts extends React.Component {
       );
 
     });
+
+    const postDisplay = this.props.allPosts.length === 0
+      ? <div style={{ textAlign: 'center', fontFamily: 'Montserrat, sans-serif', color: '#495057' }}><h2 style={{ fontWeight: '400' }} >No recent post...</h2></div>
+      : <div className="post-row">{postsList}</div>;
     return (
       <div className="container ">
         <div style={{ paddingBottom: '1.25rem' }} className="title-row col-full">
           <h1>Recent Posts</h1>
         </div>
-        <div className="post-row">
-         {postsList}
-        </div>
+        {postDisplay}
       </div>
     );
   }
