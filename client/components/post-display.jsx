@@ -99,7 +99,7 @@ export default class Posts extends React.Component {
              <div style={{ whiteSpace: 'break-spaces' }}>{content}</div>
            </div>
            <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-             <Comments postId={postId} />
+             {/* <Comments postId={postId} /> */}
              <button onClick={this.exitPost} style={{ margin: 0 }} className="contact-button">Exit</button>
            </div>
          </div>

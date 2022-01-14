@@ -1,6 +1,7 @@
 body {
   background-color: #f8f9fa;
   max-height: 100vh;
+  animation: fade-in linear 1s;
 }
 
 .container {
@@ -8,6 +9,7 @@ body {
   margin: 0 auto;
   background-color: transparent;
   z-index: 10;
+  animation: fade-in linear 1s;
 }
 
 /*
@@ -238,4 +240,9 @@ body {
   .col-full {
     width: 100%;
   }
+}
+
+@keyframes fade-in {
+  0% { opacity: 0%; }
+  100% { opacity: 100%; }
 }
