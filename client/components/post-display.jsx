@@ -23,7 +23,9 @@ export default class Posts extends React.Component {
   }
 
   detailPost(postId) {
+
     this.setState({ detailPost: postId });
+
   }
 
   exitPost() {
@@ -68,22 +70,22 @@ export default class Posts extends React.Component {
 
       return (
       <div key={postId} onMouseEnter={() => this.detailHover(postId)} onMouseLeave={this.detailHoverLeft} className="post-holder col-forty-five">
-       <div className="post-image-holder">
+       <div onClick={() => this.detailPost(postId)}className="post-image-holder">
          <img className={this.state.detailHover === postId ? 'img-hover' : ''} src={imageUrl}></img>
          <div className={this.state.detailHover === postId ? 'hover-button-holder' : 'hover-button-holder hidden'}>
             <div className="col-four-fifth button-content-holder">
-              <div onClick={() => this.detailPost(postId)} className="post-detail-button" >Post Details</div>
+              <div className="post-detail-button">Post Details</div>
             </div>
          </div>
        </div>
-       <div className="post-content-holder">
+       <div onClick={() => this.detailPost(postId)} className="post-content-holder">
          <h3 style={{ marginBottom: '.75rem', height: '50px' }} >{title}</h3>
          <h5>Published by <span style={{ fontWeight: 550, color: '#6c757d' }}>{username}</span></h5>
          <h6>{date}</h6>
-         <div className= 'edit-delete-row col-full' >
-              <button className={loginUsername === username ? 'edit-button' : 'edit-button non-visible'}><i onClick={() => this.editPost(postId)} className="far fa-edit"></i></button>
-              <button className={loginUsername === username ? 'edit-button' : 'edit-button non-visible'}><i onClick={() => this.deletePost(postId)} className="far fa-trash-alt"></i></button>
-         </div>
+       </div>
+       <div className='edit-delete-row col-full' >
+        <button className={loginUsername === username ? 'edit-button' : 'edit-button non-visible'}><i onClick={() => this.editPost(postId)} className="far fa-edit"></i></button>
+        <button className={loginUsername === username ? 'edit-button' : 'edit-button non-visible'}><i onClick={() => this.deletePost(postId)} className="far fa-trash-alt"></i></button>
        </div>
        <div className={this.state.detailPost === postId ? 'signin-modal-holder' : 'signin-modal-holder hidden'}>
          <div className="col-four-fifth signin-block">
