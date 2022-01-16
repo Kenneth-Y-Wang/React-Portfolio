@@ -5,6 +5,7 @@ export default class ContactForm extends React.Component {
     super(props);
     this.state = {
       formOpen: false,
+      commentBold: false,
       sender: '',
       email: '',
       msgTitle: '',
@@ -14,10 +15,15 @@ export default class ContactForm extends React.Component {
     this.openForm = this.openForm.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.commentBold = this.commentBold.bind(this);
   }
 
   openForm() {
     this.setState({ formOpen: !this.state.formOpen, msgStatus: false });
+  }
+
+  commentBold() {
+    this.setState({ commentBold: !this.state.commentBold });
   }
 
   handleChange(event) {
@@ -76,8 +82,9 @@ export default class ContactForm extends React.Component {
            </div>
          </div>
         </form>
-        <div className="col-three-fifth form-content-image">
-          <p className=" contact-info col-three-fifth">For business inquiries and collaborations please contact me above and leave a link to your website or portfolio. I am looking forward to hearing from you!</p>
+        <div onMouseEnter={this.commentBold} onMouseLeave={this.commentBold} className="col-three-fifth form-content-image">
+          <div className={this.state.commentBold ? 'contact-info-img img-hover' : 'contact-info-img'}></div>
+          <p className={this.state.commentBold ? ' contact-info col-four-fifth comment-bold' : 'contact-info col-four-fifth'} style={{ zIndex: 5, transition: '0.5s' }}>For business inquiries and collaborations <br></br>please contact me above. <br></br>I am looking forward to hearing from you!</p>
         </div>
         <button onClick={() => this.props.scroll(this.props.pageTop)} className="contact-button" style={{ borderBottom: '2px solid #495057' }}>Back to Top</button>
       </div>

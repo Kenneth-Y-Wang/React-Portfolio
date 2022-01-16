@@ -379,14 +379,31 @@ font-family: 'Montserrat', sans-serif; */
 .form-content-image {
   margin: 0 auto;
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
   padding: 0.5rem;
   height: 100px;
+  margin-bottom: 3rem;
+}
+
+.contact-info-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100px;
   background-image: url("./images/pexels-fauxels-3184450.jpg");
   background-position: center;
   background-size: cover;
-  margin-bottom: 3rem;
+  z-index: 0;
+  transition: 1.5s;
+}
+
+.comment-bold {
+  font-weight: 500;
+  transform: scale(1.1);
 }
 
 .msg-status {
