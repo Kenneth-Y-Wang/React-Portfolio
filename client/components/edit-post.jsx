@@ -41,6 +41,7 @@ export default class EditPost extends React.Component {
   render() {
     return (
     <form onSubmit={this.handleSubmit} className="col-four-fifth  blog-edit">
+      <h1 style={{ fontWeight: 400, fontFamily: 'Montserrat, sans-serif', textAlign: 'center', marginTop: '0.25rem', color: '#495057' }}>Edit Post</h1>
       <label style={{ marginBottom: '2rem', display: 'block', fontSize: '1.2rem' }} htmlFor="title">Post Title</label>
       <input onChange={this.handleChange} style={{ color: '#495057', fontFamily: 'Montserrat, sans-serif', fontSize: ' 1rem' }} className="blog-form-input" required value={this.state.title} id="title" name="title" type="text" placeholder="Please enter your post title..."></input>
       <textarea onChange={this.handleChange} style={{ color: '#495057', fontFamily: 'Montserrat, sans-serif', fontSize: ' 1rem', height: '300px' }}required value={this.state.content} id="content" name="content" placeholder="Please enter your post..."></textarea>
