@@ -401,8 +401,11 @@ font-family: 'Montserrat', sans-serif; */
   transition: 1.5s;
 }
 
+.comment-hover {
+  opacity: 40%;
+}
+
 .comment-bold {
-  font-weight: 500;
   transform: scale(1.1);
 }
 

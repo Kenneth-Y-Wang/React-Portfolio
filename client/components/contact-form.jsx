@@ -83,7 +83,7 @@ export default class ContactForm extends React.Component {
          </div>
         </form>
         <div onMouseEnter={this.commentBold} onMouseLeave={this.commentBold} className="col-three-fifth form-content-image">
-          <div className={this.state.commentBold ? 'contact-info-img img-hover' : 'contact-info-img'}></div>
+          <div className={this.state.commentBold ? 'contact-info-img comment-hover' : 'contact-info-img'}></div>
           <p className={this.state.commentBold ? ' contact-info col-four-fifth comment-bold' : 'contact-info col-four-fifth'} style={{ zIndex: 5, transition: '0.5s' }}>For business inquiries and collaborations <br></br>please contact me above. <br></br>I am looking forward to hearing from you!</p>
         </div>
         <button onClick={() => this.props.scroll(this.props.pageTop)} className="contact-button" style={{ borderBottom: '2px solid #495057' }}>Back to Top</button>
