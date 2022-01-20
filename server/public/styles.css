@@ -441,11 +441,14 @@ font-family: 'Montserrat', sans-serif; */
   margin-top: 0.5rem;
   margin-bottom: 1rem;
   text-decoration: none;
-  font-size: 0.45rem;
+  font-size: 0.6rem;
   transition-duration: 0.5s;
 }
 
-.footer-content:hover {
+.footer-content:hover,
+.fa-linkedin-in:hover,
+.fa-github:hover,
+.fa-envelope:hover {
   color: #adb5bd;
 }
 
@@ -747,6 +750,7 @@ input[type="file"]::-webkit-file-upload-button {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 3rem;
+  padding: 0 0.5rem;
 }
 
 .post-holder {
@@ -779,11 +783,28 @@ input[type="file"]::-webkit-file-upload-button {
 }
 
 .post-content-holder h3,
+.post-content-holder h4,
 .post-content-holder h5,
 .post-content-holder h6,
-.post-content-holder h1 {
+.post-content-holder h2 {
   margin: 0.25rem;
   font-weight: normal;
+}
+
+.post-content-holder h2 {
+  font-size: 1.2rem;
+}
+
+.post-content-holder h3 {
+  font-size: 0.9rem;
+}
+
+.post-content-holder h4 {
+  font-size: 1rem;
+}
+
+.post-content-holder h6 {
+  font-size: 0.7rem;
 }
 
 .post-detail-button {
@@ -816,6 +837,11 @@ input[type="file"]::-webkit-file-upload-button {
   overflow-y: auto;
   max-height: 300px;
   color: #495057;
+}
+
+.post-detail-content {
+  white-space: break-spaces;
+  font-size: 0.8rem;
 }
 
 .edit-delete-row {
@@ -853,8 +879,25 @@ input[type="file"]::-webkit-file-upload-button {
   .about-content-holder,
   .button-content,
   .project-content-holder,
-  .name-title {
+  .name-title,
+  .post-detail-content {
     font-size: 1rem;
+  }
+
+  .post-content-holder h2 {
+    font-size: 1.5rem;
+  }
+
+  .post-content-holder h3 {
+    font-size: 1.1rem;
+  }
+
+  .post-content-holder h4 {
+    font-size: 1.1rem;
+  }
+
+  .post-content-holder h6 {
+    font-size: 0.8rem;
   }
 
   .anchor-tag,

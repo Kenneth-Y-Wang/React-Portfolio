@@ -79,7 +79,7 @@ export default class Posts extends React.Component {
          </div>
        </div>
        <div onClick={() => this.detailPost(postId)} className="post-content-holder">
-         <h3 style={{ marginBottom: '.75rem', height: '50px' }} >{title}</h3>
+         <h4 style={{ marginBottom: '.75rem', height: '50px' }} >{title}</h4>
          <h5>Published by <span style={{ fontWeight: 550, color: '#6c757d' }}>{username}</span></h5>
          <h6>{date}</h6>
        </div>
@@ -93,12 +93,12 @@ export default class Posts extends React.Component {
              <img className="detail-img" src={imageUrl}></img>
            </div>
            <div className="post-content-holder" style={{ textAlign: 'start', borderBottom: '1px #495057 solid', paddingLeft: 0 }}>
-            <h1>{title}</h1>
+            <h2 style={{ marginBottom: '1rem', fontWeight: 500 }}>{title}</h2>
             <h3>Published by <span style={{ fontWeight: 500, color: '#6c757d' }}>{username}</span></h3>
             <h6>{date}</h6>
            </div>
            <div className="detail-content-holder">
-             <div style={{ whiteSpace: 'break-spaces' }}>{content}</div>
+             <div className="post-detail-content" >{content}</div>
            </div>
            <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
              {/* <Comments postId={postId} /> */}
