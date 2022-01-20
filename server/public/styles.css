@@ -890,6 +890,10 @@ input[type="file"]::-webkit-file-upload-button {
 }
 
 @media screen and (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
+
   .about-content-holder,
   .button-content,
   .project-content-holder,

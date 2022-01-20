@@ -25,7 +25,7 @@ export default class Navbar extends React.Component {
          <a className={route.path === 'blog' ? 'anchor-tag hidden' : 'anchor-tag'} onClick={() => this.props.scroll(this.props.contactMe)} >Contact</a>
          <a className={route.path === 'blog' ? 'anchor-tag' : 'anchor-tag hidden' } href="#" >Home</a>
          <a className="anchor-tag" href="#blog">Blog</a>
-         <button className="anchor-tag menu-button"><i onClick={this.openMenu} className="fas fa-bars"></i></button>
+         <button className="anchor-tag menu-button hidden"><i onClick={this.openMenu} className="fas fa-bars"></i></button>
        </div>
       </div>
       <div className={this.state.menuOpen ? 'menu-modal-holder' : 'menu-modal-holder hidden'}></div>
