@@ -26,6 +26,7 @@ export default class Navbar extends React.Component {
          <a className={route.path === 'blog' ? 'anchor-tag' : 'anchor-tag hidden' } href="#" >Home</a>
          <a className="anchor-tag" href="#blog">Blog</a>
          <button className="anchor-tag menu-button hidden"><i onClick={this.openMenu} className="fas fa-bars"></i></button>
+         <div className="slide-menu"></div>
        </div>
       </div>
       <div className={this.state.menuOpen ? 'menu-modal-holder' : 'menu-modal-holder hidden'}></div>
