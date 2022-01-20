@@ -18,6 +18,7 @@ export default class Navbar extends React.Component {
     const { route } = this.context;
     return (
       <>
+
       <div ref={this.props.pageTop} className="nav-bar">
        <h3 className="name-title">Kenneth Wang</h3>
        <div className="anchor-holder col-one-fifth">
@@ -30,6 +31,7 @@ export default class Navbar extends React.Component {
        </div>
       </div>
       <div className={this.state.menuOpen ? 'menu-modal-holder' : 'menu-modal-holder hidden'}></div>
+
 
       </>
     );
