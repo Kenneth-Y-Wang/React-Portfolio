@@ -893,6 +893,12 @@ input[type="file"]::-webkit-file-upload-button {
   font-family: Montserrat, sans-serif;
 }
 
+@media screen and (max-width: 768px) {
+  .anchor-holder {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .menu-button {
     display: none;

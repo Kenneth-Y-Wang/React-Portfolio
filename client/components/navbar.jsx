@@ -18,7 +18,6 @@ export default class Navbar extends React.Component {
     const { route } = this.context;
     return (
       <>
-
       <div ref={this.props.pageTop} className="nav-bar">
        <h3 className="name-title">Kenneth Wang</h3>
        <div className="anchor-holder col-one-fifth">
@@ -26,12 +25,14 @@ export default class Navbar extends React.Component {
          <a className={route.path === 'blog' ? 'anchor-tag hidden' : 'anchor-tag'} onClick={() => this.props.scroll(this.props.contactMe)} >Contact</a>
          <a className={route.path === 'blog' ? 'anchor-tag' : 'anchor-tag hidden' } href="#" >Home</a>
          <a className="anchor-tag" href="#blog">Blog</a>
-         <button className="anchor-tag menu-button hidden"><i onClick={this.openMenu} className="fas fa-bars"></i></button>
-         <div className="slide-menu"></div>
+
+         <div className="slide-menu">
+            <div className="menu-holder"></div>
+         </div>
        </div>
+       <button className="anchor-tag menu-button"><i onClick={this.openMenu} className="fas fa-bars"></i></button>
       </div>
       <div className={this.state.menuOpen ? 'menu-modal-holder' : 'menu-modal-holder hidden'}></div>
-
 
       </>
     );
