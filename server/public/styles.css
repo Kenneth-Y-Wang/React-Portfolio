@@ -46,6 +46,10 @@ font-family: 'Montserrat', sans-serif; */
   position: fixed;
 }
 
+.slide-menu {
+  color: white;
+}
+
 /* hero-section */
 
 .hero-section-holder {
