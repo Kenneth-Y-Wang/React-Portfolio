@@ -25,17 +25,35 @@ font-family: 'Montserrat', sans-serif; */
   font-size: 0.6rem;
 }
 
+.slide-tag {
+  display: block;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: #343a40;
+  cursor: pointer;
+  transition-duration: 0.5s;
+  font-size: 1rem;
+  line-height: 35px;
+}
+
 .menu-button {
   border: none;
   background-color: transparent;
 }
 
-.anchor-tag:visited {
+.anchor-tag:visited,
+.slide-tag:visited {
   color: #6c757d;
 }
 
-.anchor-tag:hover {
+.anchor-tag:hover,
+.slide-tag:hover {
   color: #adb5bd;
+}
+
+.slide-tag:hover {
+  border-bottom: 1px solid #343a40;
+  transform: translateX(1rem);
 }
 
 .menu-modal-holder {
@@ -52,16 +70,17 @@ font-family: 'Montserrat', sans-serif; */
   background-color: white;
   position: absolute;
   top: 0;
-  right: -260px;
+  right: -999px;
   width: 220px;
   height: 100vh;
   z-index: 5;
   transition: 0.5s;
   padding: 0 1rem;
+  font-family: Montserrat, sans-serif;
 }
 
 .slide-menu-in {
-  transform: translateX(-260px);
+  transform: translateX(-999px);
 }
 
 .menu-title-holder {
@@ -72,9 +91,12 @@ font-family: 'Montserrat', sans-serif; */
   align-items: center;
   padding: 0.5rem 0;
   color: #343a40;
-  font-family: Montserrat, sans-serif;
   border-bottom: 2px solid #343a40;
   margin-bottom: 3rem;
+}
+
+.menu-title-holder > h2 {
+  font-size: 1.2rem;
 }
 
 .slide-menu-exit {
@@ -83,15 +105,11 @@ font-family: 'Montserrat', sans-serif; */
   font-size: 1.2rem;
   font-weight: 400;
   transition: 0.5s;
+  color: #343a40;
 }
 
 .slide-menu-exit:hover {
   color: #adb5bd;
-}
-
-.slide-tag {
-  display: block;
-  margin-bottom: 1rem;
 }
 
 /* hero-section */

@@ -28,16 +28,16 @@ export default class Navbar extends React.Component {
          <a className={route.path === 'blog' ? 'anchor-tag' : 'anchor-tag hidden' } href="#" >Home</a>
          <a className="anchor-tag" href="#blog">Blog</a>
        </div>
-       <button className="anchor-tag menu-button"><i onClick={this.openMenu} className="fas fa-bars"></i></button>
+       <button className="anchor-tag menu-button"><i onClick={this.openMenu} style={{ fontSize: '1rem' }} className="fas fa-bars"></i></button>
        <div onClick={this.openMenu} className={this.state.menuOpen ? 'slide-menu slide-menu-in' : 'slide-menu'}>
         <div className="menu-title-holder">
           <h2 style={{ fontWeight: 400 }} >MENU</h2>
           <button className="slide-menu-exit"><i className="fas fa-times"></i></button>
         </div>
-        <a className={route.path === 'blog' ? 'anchor-tag slide-tag hidden' : 'anchor-tag slide-tag '} onClick={() => this.props.scroll(this.props.myWorks)}>Works</a>
-        <a className={route.path === 'blog' ? 'anchor-tag slide-tag hidden' : 'anchor-tag slide-tag'} onClick={() => this.props.scroll(this.props.contactMe)} >Contact</a>
-        <a className={route.path === 'blog' ? 'anchor-tag slide-tag' : 'anchor-tag hidden slide-tag'} href="#" >Home</a>
-        <a className="anchor-tag slide-tag" href="#blog">Blog</a>
+        <a className={route.path === 'blog' ? ' slide-tag hidden' : ' slide-tag '} onClick={() => this.props.scroll(this.props.myWorks)}>Works</a>
+        <a className={route.path === 'blog' ? ' slide-tag hidden' : ' slide-tag'} onClick={() => this.props.scroll(this.props.contactMe)} >Contact</a>
+        <a className={route.path === 'blog' ? ' slide-tag' : ' hidden slide-tag'} href="#" >Home</a>
+        <a className=" slide-tag" href="#blog">Blog</a>
        </div>
        <div onClick={this.openMenu} className={this.state.menuOpen ? 'menu-modal-holder' : 'menu-modal-holder hidden'}></div>
       </div>
