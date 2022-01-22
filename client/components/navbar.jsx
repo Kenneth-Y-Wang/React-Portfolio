@@ -29,7 +29,7 @@ export default class Navbar extends React.Component {
          <a className="anchor-tag" href="#blog">Blog</a>
        </div>
        <button className="anchor-tag menu-button"><i onClick={this.openMenu} style={{ fontSize: '1rem' }} className="fas fa-bars"></i></button>
-       <div onClick={this.openMenu} className={this.state.menuOpen ? 'slide-menu slide-menu-in' : 'slide-menu'}>
+       <div onClick={this.openMenu} className={this.state.menuOpen ? 'slide-menu open' : 'slide-menu'}>
         <div className="menu-title-holder">
           <h2 style={{ fontWeight: 400 }} >MENU</h2>
           <button className="slide-menu-exit"><i className="fas fa-times"></i></button>
