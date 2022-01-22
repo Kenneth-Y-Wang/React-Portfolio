@@ -9,7 +9,8 @@ font-family: 'Montserrat', sans-serif; */
   font-size: 0.8rem;
 }
 
-.anchor-holder {
+.anchor-holder,
+.footer-anchor-holder {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -24,17 +25,35 @@ font-family: 'Montserrat', sans-serif; */
   font-size: 0.6rem;
 }
 
+.slide-tag {
+  display: block;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: #343a40;
+  cursor: pointer;
+  transition-duration: 0.5s;
+  font-size: 1rem;
+  line-height: 35px;
+}
+
 .menu-button {
   border: none;
   background-color: transparent;
 }
 
-.anchor-tag:visited {
+.anchor-tag:visited,
+.slide-tag:visited {
   color: #6c757d;
 }
 
-.anchor-tag:hover {
+.anchor-tag:hover,
+.slide-tag:hover {
   color: #adb5bd;
+}
+
+.slide-tag:hover {
+  border-bottom: 1px solid #343a40;
+  transform: translateX(1rem);
 }
 
 .menu-modal-holder {
@@ -44,10 +63,53 @@ font-family: 'Montserrat', sans-serif; */
   bottom: 0;
   background-color: rgb(0 0 0 / 40%);
   position: fixed;
+  z-index: 1;
 }
 
 .slide-menu {
-  color: white;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  right: -999px;
+  width: 220px;
+  height: 100vh;
+  z-index: 5;
+  transition: 0.5s;
+  padding: 0 1rem;
+  font-family: Montserrat, sans-serif;
+}
+
+.slide-menu-in {
+  transform: translateX(-999px);
+}
+
+.menu-title-holder {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  color: #343a40;
+  border-bottom: 2px solid #343a40;
+  margin-bottom: 3rem;
+}
+
+.menu-title-holder > h2 {
+  font-size: 1.2rem;
+}
+
+.slide-menu-exit {
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 400;
+  transition: 0.5s;
+  color: #343a40;
+}
+
+.slide-menu-exit:hover {
+  color: #adb5bd;
 }
 
 /* hero-section */
@@ -891,6 +953,12 @@ input[type="file"]::-webkit-file-upload-button {
   border-radius: 3px;
   animation: fade-in linear 0.7s;
   font-family: Montserrat, sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+  .anchor-holder {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 768px) {
