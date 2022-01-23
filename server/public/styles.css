@@ -970,6 +970,14 @@ input[type="file"]::-webkit-file-upload-button {
   .post-content-holder h3 {
     font-size: 0.8rem;
   }
+
+  .detail-content-holder {
+    max-height: 250px;
+  }
+
+  .post-detail-content {
+    font-size: 0.7rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
