@@ -961,6 +961,11 @@ input[type="file"]::-webkit-file-upload-button {
   .anchor-holder {
     display: none;
   }
+
+  .detail-img-holder,
+  .detail-img {
+    height: 200px;
+  }
 }
 
 @media screen and (min-width: 768px) {
