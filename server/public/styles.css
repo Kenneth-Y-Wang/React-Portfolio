@@ -957,6 +957,21 @@ input[type="file"]::-webkit-file-upload-button {
   font-family: Montserrat, sans-serif;
 }
 
+@media screen and (max-width: 450px) {
+  .detail-img-holder,
+  .detail-img {
+    height: 130px;
+  }
+
+  .post-content-holder h2 {
+    font-size: 1rem;
+  }
+
+  .post-content-holder h3 {
+    font-size: 0.8rem;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .anchor-holder {
     display: none;
