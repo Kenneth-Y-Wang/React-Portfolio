@@ -960,7 +960,11 @@ input[type="file"]::-webkit-file-upload-button {
 @media screen and (max-width: 450px) {
   .detail-img-holder,
   .detail-img {
-    height: 130px;
+    height: 100px;
+  }
+
+  .post-content-holder {
+    padding-top: 0.25rem;
   }
 
   .post-content-holder h2 {
@@ -968,11 +972,15 @@ input[type="file"]::-webkit-file-upload-button {
   }
 
   .post-content-holder h3 {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
+  }
+
+  .post-content-holder h6 {
+    font-size: 0.5rem;
   }
 
   .detail-content-holder {
-    max-height: 250px;
+    max-height: 220px;
   }
 
   .post-detail-content {
