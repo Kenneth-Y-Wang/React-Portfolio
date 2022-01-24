@@ -88,21 +88,24 @@ export default class Posts extends React.Component {
         <button className={loginUsername === username ? 'edit-button' : 'edit-button non-visible'}><i onClick={() => this.deletePost(postId)} className="far fa-trash-alt"></i></button>
        </div>
        <div className={this.state.detailPost === postId ? 'signin-modal-holder' : 'signin-modal-holder hidden'}>
-         <div className="col-four-fifth signin-block">
+         <div className="col-four-fifth signin-block" >
            <div className="detail-img-holder">
              <img className="detail-img" src={imageUrl}></img>
            </div>
-           <div className="post-content-holder" style={{ textAlign: 'start', borderBottom: '1px #495057 solid', paddingLeft: 0 }}>
+           <div className="post-content-holder" style={{ textAlign: 'start', borderBottom: '1px #495057 solid', paddingLeft: 0, paddingRight: 0 }}>
             <h2 style={{ marginBottom: '1rem', fontWeight: 500 }}>{title}</h2>
             <h3>Published by <span style={{ fontWeight: 500, color: '#6c757d' }}>{username}</span></h3>
-            <h6>{date}</h6>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+
+              <h6>{date}</h6>
+              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+               <button onClick={this.exitPost} style={{ margin: 0, marginRight: '0.3rem' }} className="contact-button" id="comment-button">Comment</button>
+               <button onClick={this.exitPost} style={{ margin: 0 }} className="contact-button" id="comment-button">Exit</button>
+              </div>
+            </div>
            </div>
            <div className="detail-content-holder">
              <div className="post-detail-content" >{content}</div>
-           </div>
-           <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-             {/* <Comments postId={postId} /> */}
-             <button onClick={this.exitPost} style={{ margin: 0 }} className="contact-button">Exit</button>
            </div>
          </div>
        </div>

@@ -885,7 +885,8 @@ input[type="file"]::-webkit-file-upload-button {
   font-size: 1rem;
 }
 
-.post-content-holder h6 {
+.post-content-holder h6,
+#comment-button {
   font-size: 0.7rem;
 }
 
@@ -917,7 +918,7 @@ input[type="file"]::-webkit-file-upload-button {
   margin: 1rem 0;
   text-align: justify;
   overflow-y: auto;
-  max-height: 300px;
+  max-height: 350px;
   color: #495057;
 }
 
@@ -967,7 +968,8 @@ input[type="file"]::-webkit-file-upload-button {
     padding-top: 0.25rem;
   }
 
-  .post-content-holder h2 {
+  .post-content-holder h2,
+  .contact-button {
     font-size: 1rem;
   }
 
@@ -975,7 +977,8 @@ input[type="file"]::-webkit-file-upload-button {
     font-size: 0.6rem;
   }
 
-  .post-content-holder h6 {
+  .post-content-holder h6,
+  #comment-button {
     font-size: 0.5rem;
   }
 
@@ -1024,7 +1027,8 @@ input[type="file"]::-webkit-file-upload-button {
     font-size: 1.1rem;
   }
 
-  .post-content-holder h6 {
+  .post-content-holder h6,
+  #comment-button {
     font-size: 0.8rem;
   }
 
