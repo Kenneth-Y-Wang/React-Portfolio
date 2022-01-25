@@ -81,6 +81,11 @@ body {
   padding: 0;
 }
 
+.col-four-fifth-p {
+  width: 95%;
+  padding: 0;
+}
+
 .col-one-tenth {
   width: 20%;
   padding: 0;
@@ -141,6 +146,7 @@ body {
   .col-one-fifth,
   .col-three-fifth,
   .col-four-fifth,
+  .col-four-fifth-p,
   .col-two-fifth,
   .col-nine-tenth,
   .col-full {
@@ -163,7 +169,8 @@ body {
     width: 50%;
   }
 
-  .col-four-fifth {
+  .col-four-fifth,
+  .col-four-fifth-p {
     width: 80%;
   }
 
@@ -205,6 +212,7 @@ body {
   .col-one-tenth,
   .col-three-fifth,
   .col-four-fifth,
+  .col-four-fifth-p,
   .col-two-fifth,
   .col-nine-tenth,
   .col-full {
@@ -227,7 +235,8 @@ body {
     width: 50%;
   }
 
-  .col-four-fifth {
+  .col-four-fifth,
+  .col-four-fifth-p {
     width: 80%;
   }
 
