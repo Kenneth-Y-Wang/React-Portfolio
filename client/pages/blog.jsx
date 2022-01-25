@@ -39,6 +39,26 @@ export default class Blog extends React.Component {
       });
   }
 
+  componentDidUpdate(prevProps, prevState) {
+
+    if (prevState.allPosts !== this.state.allPosts) {
+      fetch('/api/posts/allPosts', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+        .then(response => response.json())
+        .then(data => {
+          this.setState({ allPosts: data });
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+    }
+
+  }
+
   saveNewPost(newPost) {
     this.setState({ allPosts: this.state.allPosts.concat(newPost) });
   }

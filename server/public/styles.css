@@ -975,6 +975,54 @@ input[type="file"]::-webkit-file-upload-button {
   margin-right: auto;
 }
 
+/* comments */
+
+.comment-col {
+  padding: 0.25rem 0;
+  animation: fade-in linear 1s;
+  font-family: Montserrat, sans-serif;
+}
+
+.comment-input {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid black;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.8rem;
+}
+
+.comment-input::placeholder {
+  color: #adb5bd;
+  font-style: italic;
+}
+
+.recent-comment > h4 {
+  margin-bottom: 0.25rem;
+}
+
+.comment-list {
+  max-height: 350px;
+  overflow-y: auto;
+  list-style: none;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #495057;
+  font-family: Montserrat, sans-serif;
+  padding-left: 1rem;
+}
+
+.comment-detail {
+  color: #495057;
+  font-weight: 600;
+  font-family: Montserrat, sans-serif;
+}
+
+.comment-date {
+  color: #0d3b66;
+  font-weight: bold;
+  font-size: 0.6rem;
+}
+
 @media screen and (max-width: 450px) {
   .detail-img-holder,
   .detail-img {
@@ -999,11 +1047,13 @@ input[type="file"]::-webkit-file-upload-button {
     font-size: 0.5rem;
   }
 
-  .detail-content-holder {
+  .detail-content-holder,
+  .comment-list {
     max-height: 250px;
   }
 
-  .post-detail-content {
+  .post-detail-content,
+  .comment-list {
     font-size: 0.7rem;
   }
 }
@@ -1028,7 +1078,8 @@ input[type="file"]::-webkit-file-upload-button {
   .button-content,
   .project-content-holder,
   .name-title,
-  .post-detail-content {
+  .post-detail-content,
+  .comment-list {
     font-size: 1rem;
   }
 
