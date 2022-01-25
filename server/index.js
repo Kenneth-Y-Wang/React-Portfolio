@@ -132,6 +132,28 @@ app.get('/api/posts/allPosts', (req, res, next) => {
     .catch(err => next(err));
 });
 
+// get all comments
+app.get('/api/comments/allComments/:postId', (req, res, next) => {
+  const postId = Number(req.params.postId);
+  const sql = `
+  select "username",
+         "comments"."createdAt" as "createdAt",
+         "content",
+         "commentId"
+    from "comments"
+    join "users" using ("userId")
+    where "postId"=$1
+    order by "commentId"
+  `;
+  const params = [postId];
+  db.query(sql, params)
+    .then(result => {
+      const allComments = result.rows;
+      res.json(allComments);
+    })
+    .catch(err => next(err));
+});
+
 app.use(authorizationMiddleware);
 
 // create post
@@ -205,6 +227,60 @@ app.delete('/api/posts/allPosts/:postId', (req, res, next) => {
       if (!post) {
 
         throw new ClientError(400, `cannot find content with postId ${postId}`);
+      } else {
+
+        res.sendStatus(204);
+      }
+    })
+    .catch(err => next(err));
+
+});
+
+// create Comment
+
+app.post('/api/comments/create', (req, res, next) => {
+  const { userId } = req.user;
+  const { content, postId, time } = req.body;
+
+  if (!content) {
+    throw new ClientError(400, 'comment content is required fields');
+  }
+
+  const sql = `
+   insert into "comments" ("userId","content","postId", "createdAt")
+   values ($1,$2,$3,$4)
+   returning *
+  `;
+
+  const params = [userId, content, postId, time];
+  db.query(sql, params)
+    .then(result => {
+      const [newComment] = result.rows;
+      res.json(newComment);
+    })
+    .catch(err => next(err));
+});
+
+// delete comments
+
+app.delete('/api/comments/allCommentsToDelete/:commentId', (req, res, next) => {
+  const commentId = Number(req.params.commentId);
+  const { userId } = req.user;
+
+  const sql = `
+  delete from "comments"
+  where "commentId"=$1
+  and "userId"=$2
+  returning *
+  `;
+  const params = [commentId, userId];
+
+  db.query(sql, params)
+    .then(result => {
+      const comment = result.rows[0];
+      if (!comment) {
+
+        throw new ClientError(404, `cannot find content with commentId ${commentId}`);
       } else {
 
         res.sendStatus(204);

@@ -10,45 +10,69 @@ export default class Comments extends React.Component {
       input: ''
 
     };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  // componentDidMount() {
+  componentDidMount() {
 
-  //   fetch(`/api/comments/allComments/${this.props.postId}`, {
-  //     method: 'GET',
-  //     headers: {
-  //       'Content-Type': 'application/json'
-  //     }
+    fetch(`/api/comments/allComments/${this.props.postId}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      }
 
-  //   })
-  //     .then(response => response.json())
-  //     .then(data => {
-  //       this.setState({ allComments: data });
-  //     })
-  //     .catch(error => {
-  //       console.error('Error:', error);
-  //     });
-  // }
+    })
+      .then(response => response.json())
+      .then(data => {
+        this.setState({ allComments: data });
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  }
 
-  // componentDidUpdate(prevProps, prevState) {
-  //   if (prevState.allComments !== this.state.allComments) {
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.allComments !== this.state.allComments) {
 
-  //     fetch(`/api/comments/allComments/${this.props.postId}`, {
-  //       method: 'GET',
-  //       headers: {
-  //         'Content-Type': 'application/json'
-  //       }
+      fetch(`/api/comments/allComments/${this.props.postId}`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json'
+        }
 
-  //     })
-  //       .then(response => response.json())
-  //       .then(data => {
-  //         this.setState({ allComments: data });
-  //       })
-  //       .catch(error => {
-  //         console.error('Error:', error);
-  //       });
-  //   }
-  // }
+      })
+        .then(response => response.json())
+        .then(data => {
+          this.setState({ allComments: data });
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+    }
+  }
+
+  handleDelete(commentId) {
+    const token = window.localStorage.getItem('react-context-jwt');
+    fetch(`/api/comments/allCommentsToDelete/${commentId}`, {
+      method: 'DELETE',
+      headers: {
+        'react-context-jwt': token,
+        'Content-Type': 'application/json'
+      },
+      body: null
+    });
+
+    for (let i = 0; i < this.state.allComments.length; i++) {
+      if (commentId === this.state.allComments[i].commentId) {
+        const newState = this.state.allComments.slice(0, i).concat(this.state.allComments.slice(i + 1));
+        this.setState({ allComments: newState });
+        break;
+      }
+
+    }
+  }
 
   handleChange(event) {
     this.setState({ input: event.target.value });
@@ -92,12 +116,14 @@ export default class Comments extends React.Component {
     const allComments = this.state.allComments;
     const commentList = allComments.map(comment => {
       const { commentId, content, createdAt, username } = comment;
-      const checkedUser = this.context.user.username;
+      const checkedUser = this.context.user
+        ? this.context.user.username
+        : '';
       const date = createdAt.slice(0, 10) + ' ' + createdAt.slice(11, 16);
 
       return (
-        <li key={commentId}>{username}<span className="comment-date"> {date}</span> : <span className="comment-detail">{content}</span>
-          {/* <button onClick={() => this.handleDelete(commentId)} type="button" className={username === checkedUser ? 'comment-delete-button' : 'comment-delete-button hidden'}>DELETE</button> */}
+        <li className="comment-detail-list" key={commentId}>{username}<span className="comment-date"> {date}</span> : <span className="comment-detail">{content}</span>
+          <button onClick={() => this.handleDelete(commentId)} type="button" className={username === checkedUser ? 'comment-delete-button' : 'comment-delete-button hidden'}>DELETE</button>
         </li>
       );
     });
