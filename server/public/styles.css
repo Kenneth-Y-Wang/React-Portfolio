@@ -915,7 +915,8 @@ input[type="file"]::-webkit-file-upload-button {
 
 .detail-content-holder {
   padding: 1rem 0;
-  margin: 1rem 0;
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
   text-align: justify;
   overflow-y: auto;
   max-height: 350px;
@@ -958,6 +959,22 @@ input[type="file"]::-webkit-file-upload-button {
   font-family: Montserrat, sans-serif;
 }
 
+.post-block {
+  padding: 1.25rem 1rem;
+  background-color: white;
+  text-align: center;
+  border-radius: 3px;
+  animation: fade-in linear 0.7s;
+  font-family: Montserrat, sans-serif;
+  position: fixed;
+  z-index: 10;
+  top: 2rem;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media screen and (max-width: 450px) {
   .detail-img-holder,
   .detail-img {
@@ -965,7 +982,7 @@ input[type="file"]::-webkit-file-upload-button {
   }
 
   .post-content-holder {
-    padding-top: 0.25rem;
+    padding: 0.25rem 1.25rem;
   }
 
   .post-content-holder h2,
@@ -983,7 +1000,7 @@ input[type="file"]::-webkit-file-upload-button {
   }
 
   .detail-content-holder {
-    max-height: 220px;
+    max-height: 250px;
   }
 
   .post-detail-content {
