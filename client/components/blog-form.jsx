@@ -1,5 +1,6 @@
 import React from 'react';
 import { format } from 'date-fns';
+import AppContext from '../lib/app-context';
 
 export default class BlogForm extends React.Component {
   constructor(props) {
@@ -79,3 +80,5 @@ export default class BlogForm extends React.Component {
     );
   }
 }
+
+BlogForm.contextType = AppContext;

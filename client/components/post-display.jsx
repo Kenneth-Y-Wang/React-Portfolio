@@ -10,7 +10,8 @@ export default class Posts extends React.Component {
       detailPost: '',
       detailHover: '',
       editPost: '',
-      deletePost: ''
+      deletePost: '',
+      displayComment: false
     };
     this.detailHover = this.detailHover.bind(this);
     this.detailHoverLeft = this.detailHoverLeft.bind(this);
@@ -20,6 +21,7 @@ export default class Posts extends React.Component {
     this.exitEditPost = this.exitEditPost.bind(this);
     this.deletePost = this.deletePost.bind(this);
     this.exitDeletePost = this.exitDeletePost.bind(this);
+    this.displayComment = this.displayComment.bind(this);
   }
 
   detailPost(postId) {
@@ -56,6 +58,10 @@ export default class Posts extends React.Component {
 
   detailHoverLeft() {
     this.setState({ detailHover: '' });
+  }
+
+  displayComment() {
+    this.setState({ displayComment: !this.state.displayComment });
   }
 
   render() {
@@ -98,13 +104,17 @@ export default class Posts extends React.Component {
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <h6>{date}</h6>
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <button onClick={this.exitPost} style={{ margin: 0, marginRight: '0.3rem' }} className="contact-button" id="comment-button">Comment</button>
+            <button onClick={this.displayComment} style={{ margin: 0, marginRight: '0.3rem' }} className={!this.state.displayComment ? 'contact-button' : 'contact-button hidden'} id="comment-button">Comment</button>
+            <button onClick={this.displayComment} style={{ margin: 0, marginRight: '0.3rem' }} className={this.state.displayComment ? 'contact-button' : 'contact-button hidden'} id="comment-button">Detail</button>
             <button onClick={this.exitPost} style={{ margin: 0 }} className="contact-button" id="comment-button">Exit</button>
           </div>
         </div>
         </div>
         <div className="detail-content-holder">
-          <div className="post-detail-content" >{content}</div>
+          <div className={!this.state.displayComment ? 'post-detail-content' : 'post-detail-content hidden'} >{content}</div>
+          <div className={this.state.displayComment ? 'comment-col' : 'comment-col hidden'}>
+            <Comments postId={postId}/>
+          </div>
         </div>
        </div>
        <div className={this.state.editPost === postId ? 'signin-modal-holder' : 'signin-modal-holder hidden'}>

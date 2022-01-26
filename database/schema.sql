@@ -18,6 +18,17 @@ CREATE TABLE "public"."users" (
   OIDS=FALSE
 );
 
+CREATE TABLE "public"."comments" (
+	"userId" integer NOT NULL,
+	"createdAt" timestamptz(6) not null default now(),
+	"content" TEXT NOT NULL,
+	"updatedAt" timestamptz(6) not null default now(),
+	"postId" integer NOT NULL,
+  "commentId" serial NOT NULL,
+	CONSTRAINT "comments_pk" PRIMARY KEY ("commentId")
+) WITH (
+  OIDS=FALSE
+);
 
 
 CREATE TABLE "public"."messages" (
@@ -48,6 +59,7 @@ CREATE TABLE "public"."posts" (
 
 
 
-
+ALTER TABLE "comments" ADD CONSTRAINT "comments_fk0" FOREIGN KEY ("userId") REFERENCES "users"("userId");
+ALTER TABLE "comments" ADD CONSTRAINT "comments_fk1" FOREIGN KEY ("postId") REFERENCES "posts"("postId");
 
 ALTER TABLE "posts" ADD CONSTRAINT "posts_fk0" FOREIGN KEY ("userId") REFERENCES "users"("userId");
