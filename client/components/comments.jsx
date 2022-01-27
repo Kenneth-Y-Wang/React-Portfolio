@@ -8,7 +8,8 @@ export default class Comments extends React.Component {
     this.state = {
       allComments: [],
       input: '',
-      inputError: false
+      inputError: false,
+      displayComment: this.props.displayComment
 
     };
     this.handleChange = this.handleChange.bind(this);
@@ -51,6 +52,10 @@ export default class Comments extends React.Component {
         .catch(error => {
           console.error('Error:', error);
         });
+    }
+
+    if (prevProps.displayComment !== this.props.displayComment) {
+      this.setState({ inputError: false });
     }
   }
 
