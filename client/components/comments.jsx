@@ -7,7 +7,8 @@ export default class Comments extends React.Component {
     super(props);
     this.state = {
       allComments: [],
-      input: ''
+      input: '',
+      inputError: false
 
     };
     this.handleChange = this.handleChange.bind(this);
@@ -53,6 +54,10 @@ export default class Comments extends React.Component {
     }
   }
 
+  componentWillUnmount() {
+    this.setState({ inputError: false });
+  }
+
   handleDelete(commentId) {
     const token = window.localStorage.getItem('react-context-jwt');
     fetch(`/api/comments/allCommentsToDelete/${commentId}`, {
@@ -75,41 +80,52 @@ export default class Comments extends React.Component {
   }
 
   handleChange(event) {
+    if (this.context.user) {
+      this.setState({ inputError: false });
+    }
     this.setState({ input: event.target.value });
   }
 
   handleSubmit(event) {
     event.preventDefault();
-    const token = window.localStorage.getItem('react-context-jwt');
-    const newTime = format(new Date(), 'yyyy-MM-dd HH:mm');
+    if (!this.context.user) {
+      this.setState({ inputError: true, input: '' });
+    } else {
 
-    const newComment = {
-      content: this.state.input,
-      postId: this.props.postId,
-      time: newTime
-    };
-    fetch('/api/comments/create', {
-      method: 'POST',
-      headers: {
-        'react-context-jwt': token,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(newComment)
-    })
-      .then(response => response.json())
-      .then(data => {
-        const newSavedComment = {
-          commentId: data.commentId,
-          content: data.content,
-          createdAt: data.createdAt,
-          username: this.context.user.username
-        };
-        this.setState({ allComments: this.state.allComments.concat(newSavedComment) });
+      const token = window.localStorage.getItem('react-context-jwt');
+      const newTime = format(new Date(), 'yyyy-MM-dd HH:mm');
+
+      const newComment = {
+        content: this.state.input,
+        postId: this.props.postId,
+        time: newTime
+      };
+      fetch('/api/comments/create', {
+        method: 'POST',
+        headers: {
+          'react-context-jwt': token,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(newComment)
       })
-      .catch(error => {
-        console.error('error', error);
-      });
-    this.setState({ input: '' });
+        .then(response => response.json())
+        .then(data => {
+          const newSavedComment = {
+            commentId: data.commentId,
+            content: data.content,
+            createdAt: data.createdAt,
+            username: this.context.user.username
+          };
+          this.setState({
+            allComments: this.state.allComments.concat(newSavedComment),
+            inputError: false
+          });
+        })
+        .catch(error => {
+          console.error('error', error);
+        });
+      this.setState({ input: '' });
+    }
   }
 
   render() {
@@ -132,6 +148,7 @@ export default class Comments extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <input className="comment-input" onChange={this.handleChange} type="text" id="comment" name="comment" value={this.state.input}
             placeholder="please enter your comment..."></input>
+          <div className={this.state.inputError ? 'comment-error-message' : 'comment-error-message hidden'}>Please sign in first to leave comment...</div>
         </form>
         <h4 className="recent-comment" style={{ fontWeight: 500 }}>Recent Comments:</h4>
         <ul className="comment-list">

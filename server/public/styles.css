@@ -1046,6 +1046,14 @@ input[type="file"]::-webkit-file-upload-button {
   border-left: 1px solid #9b2226;
 }
 
+.comment-error-message {
+  color: #e63946;
+  font-size: 0.6rem;
+  padding: 0;
+  margin-top: 0.25rem;
+  font-family: Montserrat, sans-serif;
+}
+
 @media screen and (max-width: 450px) {
   .detail-img-holder,
   .detail-img {
