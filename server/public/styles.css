@@ -76,7 +76,7 @@ font-family: 'Montserrat', sans-serif; */
   width: 220px;
   height: 100vh;
   z-index: 5;
-  transition: transform 0.5s;
+  transition: 1s ease;
   padding: 0 1rem;
   font-family: Montserrat, sans-serif;
 }
