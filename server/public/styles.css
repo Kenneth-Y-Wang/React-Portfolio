@@ -76,7 +76,7 @@ font-family: 'Montserrat', sans-serif; */
   width: 220px;
   height: 100vh;
   z-index: 5;
-  transition: transform 0.5s;
+  transition: 1s ease;
   padding: 0 1rem;
   font-family: Montserrat, sans-serif;
 }
@@ -1044,6 +1044,14 @@ input[type="file"]::-webkit-file-upload-button {
   font-weight: 450;
   margin-left: 0.5rem;
   border-left: 1px solid #9b2226;
+}
+
+.comment-error-message {
+  color: #e63946;
+  font-size: 0.6rem;
+  padding: 0;
+  margin-top: 0.25rem;
+  font-family: Montserrat, sans-serif;
 }
 
 @media screen and (max-width: 450px) {

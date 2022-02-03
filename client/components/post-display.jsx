@@ -113,7 +113,7 @@ export default class Posts extends React.Component {
         <div className="detail-content-holder">
           <div className={!this.state.displayComment ? 'post-detail-content' : 'post-detail-content hidden'} >{content}</div>
           <div className={this.state.displayComment ? 'comment-col' : 'comment-col hidden'} style={{ textAlign: 'left' }}>
-            <Comments postId={postId}/>
+            <Comments postId={postId} displayComment={this.state.displayComment}/>
           </div>
         </div>
        </div>
