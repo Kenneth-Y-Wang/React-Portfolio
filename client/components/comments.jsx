@@ -202,7 +202,7 @@ export default function Comments(props) {
 
   useEffect(() => {
     setInputError(false);
-    console.log('hello');
+    // console.log('hello');
   }, [displayComment]);
 
   const handleDelete = commentId => {

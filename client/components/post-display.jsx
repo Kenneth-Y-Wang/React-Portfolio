@@ -150,7 +150,7 @@
 
 // Posts.contextType = AppContext;
 
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import AppContext from '../lib/app-context';
 import EditPost from './edit-post';
 import Comments from './comments';
