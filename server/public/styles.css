@@ -137,6 +137,16 @@ font-family: 'Montserrat', sans-serif; */
   font-family: Montserrat, sans-serif;
   font-weight: 400;
   color: #e9ecef;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 2rem auto;
+}
+
+.self-intro-typing {
+  border-right: 0.15em solid white;
+  animation:
+    typewriter 4s steps(44) 1s 1 normal both,
+    blinkTextCursor 500ms steps(44) infinite normal;
 }
 
 .self-intro > span {
@@ -147,8 +157,30 @@ font-family: 'Montserrat', sans-serif; */
 .self-intro-sub {
   color: #e9ecef;
   font-family: Montserrat, sans-serif;
-  margin-top: 0;
   font-weight: 300;
+  overflow: hidden;
+  border-right: 0.15em solid white;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation:
+    typewriter 4s steps(44) 1s 1 normal both,
+    blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+.type-writer-holder {
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blinkTextCursor {
+  from,
+  to { border-color: transparent; }
+  50% { border-color: white; }
 }
 
 /* about-me */
@@ -399,7 +431,7 @@ font-family: 'Montserrat', sans-serif; */
 }
 
 .form-open {
-  height: 470px;
+  height: 500px;
 }
 
 .contact-button {
