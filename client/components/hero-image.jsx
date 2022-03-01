@@ -17,9 +17,9 @@ export default function HeroImage(props) {
   };
 
   useEffect(() => {
-    const timeone = setTimeout(() => showLineOne(), 1000);
-    const timeThree = setTimeout(() => lineOneNoAni(), 6500);
-    const timetwo = setTimeout(() => showLineTwo(), 6600);
+    setTimeout(() => showLineOne(), 1000);
+    setTimeout(() => lineOneNoAni(), 6500);
+    setTimeout(() => showLineTwo(), 6600);
 
   }, []);
 
