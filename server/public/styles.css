@@ -151,6 +151,33 @@ font-family: 'Montserrat', sans-serif; */
   font-weight: 300;
 }
 
+.type-writer-holder {
+  display: flex;
+  justify-content: center;
+}
+
+.type-writer-holder h3 {
+  overflow: hidden;
+  border-right: 0.15em solid white;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation:
+    typewriter 4s steps(44) 1s 1 normal both,
+    blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blinkTextCursor {
+  from,
+  to { border-color: transparent; }
+  50% { border-color: white; }
+}
+
 /* about-me */
 
 .about-row {
