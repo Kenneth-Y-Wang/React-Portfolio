@@ -172,6 +172,14 @@ font-family: 'Montserrat', sans-serif; */
   justify-content: center;
 }
 
+.h1-container {
+  width: 520px;
+}
+
+.h3-container {
+  width: 280px;
+}
+
 @keyframes typewriter {
   from { width: 0; }
   to { width: 100%; }
@@ -1101,11 +1109,27 @@ input[type="file"]::-webkit-file-upload-button {
     font-size: 1rem;
   }
 
+  .self-intro {
+    font-size: 1.2rem;
+  }
+
   .post-content-holder h3,
   .comment-input::placeholder,
   .comment-detail-list,
   .comment-delete-button {
     font-size: 0.6rem;
+  }
+
+  .self-intro-sub {
+    font-size: 0.8rem;
+  }
+
+  .h1-container {
+    width: 300px;
+  }
+
+  .h3-container {
+    width: 200px;
   }
 
   .recent-comment {
@@ -1134,6 +1158,24 @@ input[type="file"]::-webkit-file-upload-button {
 
   .comment-detail-list {
     margin-bottom: 0.3rem;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .self-intro {
+    font-size: 1.2rem;
+  }
+
+  .self-intro-sub {
+    font-size: 0.8rem;
+  }
+
+  .h1-container {
+    width: 300px;
+  }
+
+  .h3-container {
+    width: 200px;
   }
 }
 
