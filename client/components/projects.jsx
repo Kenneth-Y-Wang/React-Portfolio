@@ -80,22 +80,25 @@ export default function Projects(props) {
 
   const thriveVox = useRef(null);
   const thriveVoxImg = useRef(null);
+  const thriveVoxScale = useRef(null);
   const puppy = useRef(null);
   const puppyImg = useRef(null);
 
   const showThriveButton = () => {
     thriveVox.current.className = 'project-button-holder';
     thriveVoxImg.current.className = ' overlay';
+    thriveVoxScale.current.className = 'image-scale';
   };
 
   const hideThriveButton = () => {
     thriveVox.current.className = 'project-button-holder hidden';
     thriveVoxImg.current.className = 'overlay hidden';
+    thriveVoxScale.current.className = '';
   };
 
   const showPuppyButton = () => {
     puppy.current.className = 'project-button-holder';
-    puppyImg.current.className = ' img-hover';
+    puppyImg.current.className = ' img-hover image-scale';
   };
 
   const hidePuppyButton = () => {
@@ -114,7 +117,7 @@ export default function Projects(props) {
     </div>
     <div className="about-row">
       <div onMouseEnter={showThriveButton} onMouseLeave={hideThriveButton} className="col-half project-image-holder">
-        <img src="./images/150-1508074_black-and-white-music-headphones-life-hd-grayscale.jpg"></img>
+        <img ref={thriveVoxScale} src="./images/150-1508074_black-and-white-music-headphones-life-hd-grayscale.jpg"></img>
         <div ref={thriveVoxImg} className="overlay hidden"></div>
         <div ref={thriveVox} className="project-button-holder hidden">
           <h1 className="col-four-fifth">ThriveVox</h1>

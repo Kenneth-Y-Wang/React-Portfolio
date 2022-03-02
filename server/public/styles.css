@@ -341,6 +341,7 @@ font-family: 'Montserrat', sans-serif; */
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow: hidden;
 }
 
 .project-image-holder > img {
@@ -348,6 +349,10 @@ font-family: 'Montserrat', sans-serif; */
   width: 100%;
   object-fit: cover;
   transition-duration: 0.5s;
+}
+
+.image-scale {
+  transform: scale(1.2);
 }
 
 .project-button-holder {
@@ -507,6 +512,7 @@ font-family: 'Montserrat', sans-serif; */
   padding: 0.5rem;
   height: 100px;
   margin-bottom: 3rem;
+  overflow: hidden;
 }
 
 .contact-info-img {
@@ -525,6 +531,7 @@ font-family: 'Montserrat', sans-serif; */
 
 .comment-hover {
   opacity: 40%;
+  transform: scale(1.1);
 }
 
 .comment-bold {
