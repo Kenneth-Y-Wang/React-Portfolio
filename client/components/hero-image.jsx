@@ -17,9 +17,9 @@ export default function HeroImage(props) {
   };
 
   useEffect(() => {
-    const timeone = setTimeout(() => showLineOne(), 1000);
-    const timeThree = setTimeout(() => lineOneNoAni(), 6500);
-    const timetwo = setTimeout(() => showLineTwo(), 6600);
+    setTimeout(() => showLineOne(), 1000);
+    setTimeout(() => lineOneNoAni(), 6500);
+    setTimeout(() => showLineTwo(), 6600);
 
   }, []);
 
@@ -28,10 +28,10 @@ export default function HeroImage(props) {
      <div className="container">
        <div className="hero-image-holder">
          <div className="type-writer-holder">
-            <div div style={{ width: '520px' }}><h1 ref={lineOne} className="self-intro hidden"><span>Hello</span>, My Name is Kenneth!</h1></div>
+            <div className="h1-container" ><h1 ref={lineOne} className="self-intro hidden"><span>Hello</span>, My Name is Kenneth!</h1></div>
          </div>
          <div className="type-writer-holder">
-            <div style={{ width: '280px' }}><h3 ref={lineTwo} className="self-intro-sub hidden">Full-Stack Software Engineer</h3></div>
+            <div className="h3-container" ><h3 ref={lineTwo} className="self-intro-sub hidden">Full-Stack Software Engineer</h3></div>
          </div>
        </div>
      </div>
