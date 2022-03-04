@@ -193,7 +193,7 @@ export default function Posts(props) {
     return (
     <div key={postId} onMouseEnter={() => changeDetailHover(postId)} onMouseLeave={detailHoverLeft} className="post-holder col-forty-five">
       <div onClick={() => changeDetailPost(postId)} className="post-image-holder">
-        <img className={detailHover === postId ? 'img-hover' : ''} src={imageUrl}></img>
+        <img className={detailHover === postId ? 'img-hover img-scale' : ''} src={imageUrl}></img>
         <div className={detailHover === postId ? 'hover-button-holder' : 'hover-button-holder hidden'}>
           <div className="col-four-fifth button-content-holder">
             <div className="post-detail-button">Post Details</div>

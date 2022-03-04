@@ -895,6 +895,11 @@ input[type="file"]::-webkit-file-upload-button {
   height: 200px;
   position: relative;
   cursor: pointer;
+  overflow: hidden;
+}
+
+.img-scale {
+  transform: scale(1.1);
 }
 
 .post-image-holder > img {
