@@ -7,6 +7,7 @@ font-family: 'Montserrat', sans-serif; */
   font-family: Meddon, cursive;
   color: #343a40;
   font-size: 0.8rem;
+  cursor: pointer;
 }
 
 .anchor-holder,
@@ -895,6 +896,11 @@ input[type="file"]::-webkit-file-upload-button {
   height: 200px;
   position: relative;
   cursor: pointer;
+  overflow: hidden;
+}
+
+.img-scale {
+  transform: scale(1.1);
 }
 
 .post-image-holder > img {

@@ -66,7 +66,7 @@ export default function Navbar(props) {
 
   return (
   <div ref={props.pageTop} className="nav-bar">
-    <h3 className="name-title">Kenneth Wang</h3>
+    <a style={{ textDecoration: 'none' }} href="#" ><h3 className="name-title">Kenneth Wang</h3></a>
     <div className="anchor-holder col-one-fifth">
       <a className={route.path === 'blog' ? 'anchor-tag hidden' : 'anchor-tag'} onClick={() => props.scroll(props.myWorks)}>Works</a>
       <a className={route.path === 'blog' ? 'anchor-tag hidden' : 'anchor-tag'} onClick={() => props.scroll(props.contactMe)} >Contact</a>
