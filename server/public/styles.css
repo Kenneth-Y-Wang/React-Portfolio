@@ -7,6 +7,7 @@ font-family: 'Montserrat', sans-serif; */
   font-family: Meddon, cursive;
   color: #343a40;
   font-size: 0.8rem;
+  cursor: pointer;
 }
 
 .anchor-holder,
