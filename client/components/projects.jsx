@@ -83,6 +83,9 @@ export default function Projects(props) {
   const thriveVoxScale = useRef(null);
   const puppy = useRef(null);
   const puppyImg = useRef(null);
+  const metaEH = useRef(null);
+  const metaEHImg = useRef(null);
+  const meteEHScale = useRef(null);
 
   const showThriveButton = () => {
     thriveVox.current.className = 'project-button-holder';
@@ -105,6 +108,18 @@ export default function Projects(props) {
     puppy.current.className = 'project-button-holder hidden';
     puppyImg.current.className = '';
 
+  };
+
+  const showMetaButton = () => {
+    metaEH.current.className = 'project-button-holder';
+    metaEHImg.current.className = ' overlay';
+    meteEHScale.current.className = 'image-scale';
+  };
+
+  const hideMetaButton = () => {
+    metaEH.current.className = 'project-button-holder hidden';
+    metaEHImg.current.className = 'overlay hidden';
+    meteEHScale.current.className = '';
   };
 
   return (
@@ -138,6 +153,19 @@ export default function Projects(props) {
         </div>
       </div>
     </div>
+      <div className="about-row">
+        <div onMouseEnter={showMetaButton} onMouseLeave={hideMetaButton} className="col-half project-image-holder">
+          <img ref={meteEHScale} src="./images/facebook-nombre-metaverso-meta.jpeg"></img>
+          <div ref={metaEHImg} className="overlay hidden"></div>
+          <div ref={metaEH} className="project-button-holder hidden">
+            <h1 className="col-four-fifth">Meta - Educational Hub</h1>
+            <div style={{ color: '#f8f9fa' }} className=" project-content-holder">
+              <p>This is a collaborative project with Codazen Engineers aimed at creating the Education Hub section of Meta. </p>
+            </div>
+            <a target="_blank" href="https://www.facebook.com/fb/education/educator-hub" rel="noreferrer" className="skill-button">Enter App</a>
+          </div>
+        </div>
+      </div>
   </div>
   );
 }

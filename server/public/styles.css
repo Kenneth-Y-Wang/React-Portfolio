@@ -1245,6 +1245,10 @@ input[type="file"]::-webkit-file-upload-button {
   .footer {
     padding: 0.5rem 2rem;
   }
+
+  .about-row {
+    margin-bottom: 3rem;
+  }
 }
 
 @media screen and (min-width: 1280px) {
