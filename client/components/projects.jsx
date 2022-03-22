@@ -160,7 +160,7 @@ export default function Projects(props) {
           <div ref={metaEH} className="project-button-holder hidden">
             <h1 className="col-four-fifth">Meta - Educational Hub</h1>
             <div style={{ color: '#f8f9fa' }} className=" project-content-holder">
-              <p>A collaborative project with Codazen Engineers aimed at creating the Education Hub section of Meta. </p>
+              <p>A collaborative project with Codazen Engineers aimed at creating the Education Hub section of Meta.</p>
             </div>
             <a target="_blank" href="https://www.facebook.com/fb/education/educator-hub" rel="noreferrer" className="skill-button">Enter App</a>
           </div>
