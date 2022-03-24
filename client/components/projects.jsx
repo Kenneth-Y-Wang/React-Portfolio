@@ -86,6 +86,8 @@ export default function Projects(props) {
   const metaEH = useRef(null);
   const metaEHImg = useRef(null);
   const meteEHScale = useRef(null);
+  const aeris = useRef(null);
+  const aerisImg = useRef(null);
 
   const showThriveButton = () => {
     thriveVox.current.className = 'project-button-holder';
@@ -120,6 +122,17 @@ export default function Projects(props) {
     metaEH.current.className = 'project-button-holder hidden';
     metaEHImg.current.className = 'overlay hidden';
     meteEHScale.current.className = '';
+  };
+
+  const showAerisButton = () => {
+    aeris.current.className = 'project-button-holder';
+    aerisImg.current.className = ' img-hover image-scale';
+  };
+
+  const hideAerisButton = () => {
+    aeris.current.className = 'project-button-holder hidden';
+    aerisImg.current.className = '';
+
   };
 
   return (
@@ -162,10 +175,21 @@ export default function Projects(props) {
             <div style={{ color: '#f8f9fa' }} className=" project-content-holder">
               <p>A collaborative project with Codazen Engineers aimed at creating the Education Hub section of Meta.</p>
             </div>
-            <a target="_blank" href="https://www.facebook.com/fb/education/educator-hub" rel="noreferrer" className="skill-button">Enter App</a>
+            <a target="_blank" href="https://www.facebook.com/fb/education/educator-hub" rel="noreferrer" className="skill-button">Enter Site</a>
+          </div>
+        </div>
+        <div onMouseEnter={showAerisButton} onMouseLeave={hideAerisButton} className="col-half project-image-holder">
+          <img ref={aerisImg} src="./images/home_hero_D.jpeg"></img>
+          <div ref={aeris} className="project-button-holder hidden">
+            <h1 style={{ color: '#495057' }} className="col-four-fifth">Aeris iRobot</h1>
+            <div className=" project-content-holder">
+              <p>A collaborative project with Codazen Engineers aimed at creating the Aeris iRobot home website.</p>
+            </div>
+            <a target="_blank" href="https://aeris.irobot.com/?gclid=CjwKCAjwiuuRBhBvEiwAFXKaNN9u5J87Aekx1RKaX7u1WGBf6kRiz9eB0gUEAhdYqsjN2OWk41uWsxoCHtoQAvD_BwE" rel="noreferrer" className="about-button">Enter Site</a>
           </div>
         </div>
       </div>
+
   </div>
   );
 }
