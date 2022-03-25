@@ -173,7 +173,7 @@ export default function Projects(props) {
           <div ref={metaEH} className="project-button-holder hidden">
             <h1 className="col-four-fifth">Meta - Educational Hub</h1>
             <div style={{ color: '#f8f9fa' }} className=" project-content-holder">
-              <p>A collaborative project with Codazen Engineers aimed at creating the Education Hub section of Meta.</p>
+              <p>A collaborative project being worked with Codazen Engineers aimed at creating the Education Hub section of Meta.</p>
             </div>
             <a target="_blank" href="https://www.facebook.com/fb/education/educator-hub" rel="noreferrer" className="skill-button">Enter Site</a>
           </div>
@@ -183,7 +183,7 @@ export default function Projects(props) {
           <div ref={aeris} className="project-button-holder hidden">
             <h1 style={{ color: '#495057' }} className="col-four-fifth">Aeris iRobot</h1>
             <div className=" project-content-holder">
-              <p>A collaborative project with Codazen Engineers aimed at creating the Aeris iRobot home website.</p>
+              <p>A collaborative project being worked with Codazen Engineers aimed at creating the Aeris iRobot home website.</p>
             </div>
             <a target="_blank" href="https://aeris.irobot.com/?gclid=CjwKCAjwiuuRBhBvEiwAFXKaNN9u5J87Aekx1RKaX7u1WGBf6kRiz9eB0gUEAhdYqsjN2OWk41uWsxoCHtoQAvD_BwE" rel="noreferrer" className="about-button">Enter Site</a>
           </div>
