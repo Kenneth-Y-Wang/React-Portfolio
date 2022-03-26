@@ -1246,9 +1246,9 @@ input[type="file"]::-webkit-file-upload-button {
     padding: 0.5rem 2rem;
   }
 
-  .about-row {
+  /* .about-row {
     margin-bottom: 1rem;
-  }
+  } */
 }
 
 @media screen and (min-width: 1280px) {
