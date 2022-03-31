@@ -290,6 +290,28 @@ app.delete('/api/comments/allCommentsToDelete/:commentId', (req, res, next) => {
 
 });
 
+// get all messages
+
+app.get('/api/messages/allMessages', (req, res, next) => {
+  const sql = `
+  select "messageId",
+         "email",
+         "sender",
+         "msgTitle",
+         "createdAt",
+         "content"
+    from "messages"
+    order by "messageId" desc
+  `;
+
+  db.query(sql)
+    .then(result => {
+      const allMessages = result.rows;
+      res.json(allMessages);
+    })
+    .catch(err => next(err));
+});
+
 app.use(errorMiddleware);
 
 app.listen(process.env.PORT, () => {

@@ -92,6 +92,7 @@ import AppContext from './lib/app-context';
 import parseRoute from './lib/parse-route';
 import decodeToken from './lib/decode-token';
 import Blog from './pages/blog';
+import Admin from './pages/admin';
 
 export default function App() {
 
@@ -149,6 +150,10 @@ export default function App() {
 
     if (path === 'blog') {
       return < Blog />;
+    }
+
+    if (path === 'admin') {
+      return <Admin />;
     }
   };
   const { user, isAuthorizing } = userVerify;
