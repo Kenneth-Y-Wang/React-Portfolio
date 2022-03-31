@@ -1107,6 +1107,29 @@ input[type="file"]::-webkit-file-upload-button {
   font-family: Montserrat, sans-serif;
 }
 
+/* message quote  */
+
+.message-container {
+  padding: 1.25rem 1rem;
+  font-family: Montserrat, sans-serif;
+  box-shadow: 3px 5px 5px -2px rgb(81 81 81 / 70%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: white;
+  margin: 1rem auto;
+}
+
+.message-content {
+  color: #495057;
+  margin-bottom: 0.75rem;
+  font-family: Montserrat, sans-serif;
+}
+
+.message-content span {
+  color: #014f86;
+}
+
 @media screen and (max-width: 450px) {
   .detail-img-holder,
   .detail-img {
