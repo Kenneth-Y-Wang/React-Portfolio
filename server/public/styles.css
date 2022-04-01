@@ -249,7 +249,7 @@ font-family: 'Montserrat', sans-serif; */
 .button-content-holder > a {
   width: 40%;
   background-color: transparent;
-  font-size: 1rem;
+  font-size: 0.7rem;
   padding: 0.25rem 0.5rem;
   transition-duration: 0.5s;
   cursor: pointer;
@@ -290,6 +290,10 @@ font-family: 'Montserrat', sans-serif; */
   color: #495057;
   text-align: center;
   animation: fade-in linear 1s;
+  font-size: 0.7rem;
+}
+
+.about-content-holder p {
   font-size: 0.7rem;
 }
 
@@ -1130,6 +1134,27 @@ input[type="file"]::-webkit-file-upload-button {
   color: #014f86;
 }
 
+.view-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.view-button {
+  color: #495057;
+  padding: 0.15rem 0.25rem;
+  margin: 1rem 0.5rem;
+  background-color: transparent;
+  font-family: Montserrat, sans-serif;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.view-button:hover {
+  transform: scale(1.2);
+}
+
 @media screen and (max-width: 450px) {
   .detail-img-holder,
   .detail-img {
@@ -1224,9 +1249,29 @@ input[type="file"]::-webkit-file-upload-button {
   .detail-img {
     height: 200px;
   }
+
+  .title-content h1,
+  .contact-title,
+  .project-button-holder h1 {
+    font-size: 1.4rem;
+  }
+
+  .post-button {
+    font-size: 1rem;
+  }
+
+  .message-content,
+  .post-submit-button {
+    font-size: 0.8rem;
+  }
+
+  .sign-out-button,
+  .title-sub {
+    font-size: 0.7rem;
+  }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .menu-button {
     display: none;
   }
@@ -1237,7 +1282,9 @@ input[type="file"]::-webkit-file-upload-button {
   .comment-detail-list,
   .name-title,
   .post-detail-content,
-  .comment-list {
+  .comment-list,
+  .about-content-holder p,
+  .button-content-holder > a {
     font-size: 1rem;
   }
 

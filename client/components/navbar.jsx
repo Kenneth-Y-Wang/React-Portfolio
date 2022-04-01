@@ -90,7 +90,7 @@ export default function Navbar(props) {
       <a className={route.path === 'blog' || route.path === 'admin' ? ' slide-tag hidden' : ' slide-tag'} onClick={() => props.scroll(props.contactMe)} >Contact</a>
       <a className={route.path === 'blog' || route.path === 'admin' ? ' slide-tag' : ' hidden slide-tag'} href="#" >Home</a>
       <a className=" slide-tag" href="#blog">Blog</a>
-      <a className={username === 'admin123' ? ' slide-tag' : ' hidden slide-tag'} href="#admin"><i className="fas fa-users-cog"></i></a>
+      <a className={username === 'admin123' ? ' slide-tag' : ' hidden slide-tag'} href="#admin"><i onClick={openMenu} className="fas fa-users-cog"></i></a>
     </div>
     <div onClick={openMenu} className={menuOpen ? 'menu-modal-holder' : 'menu-modal-holder hidden'}></div>
   </div>
