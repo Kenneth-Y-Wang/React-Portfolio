@@ -312,6 +312,25 @@ app.get('/api/messages/allMessages', (req, res, next) => {
     .catch(err => next(err));
 });
 
+// get all users
+app.get('/api/users/allUsers', (req, res, next) => {
+  const sql = `
+  select "userId",
+         "username",
+         "email",
+         "createdAt"
+    from "users"
+    order by "userId" desc
+  `;
+
+  db.query(sql)
+    .then(result => {
+      const allUsers = result.rows;
+      res.json(allUsers);
+    })
+    .catch(err => next(err));
+});
+
 app.use(errorMiddleware);
 
 app.listen(process.env.PORT, () => {

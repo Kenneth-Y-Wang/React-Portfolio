@@ -302,7 +302,7 @@ export default function Comments(props) {
      <ul className="comment-list">
        {allComments.length !== 0
          ? commentList
-         : <li>No comment for this post...</li>}
+         : <li className="comment-detail-list">No comment for this post...</li>}
      </ul>
    </>
   );

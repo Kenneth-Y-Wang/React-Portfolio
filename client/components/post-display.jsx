@@ -256,7 +256,7 @@ export default function Posts(props) {
   return (
     <div className="container ">
       <div style={{ paddingBottom: '1.25rem' }} className="title-row col-full">
-        <h1>Recent Posts</h1>
+        <div className="title-content"><h1>Recent Posts</h1></div>
       </div>
       {postDisplay}
     </div>
