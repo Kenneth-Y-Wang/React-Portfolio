@@ -88,6 +88,8 @@ export default function Projects(props) {
   const meteEHScale = useRef(null);
   const aeris = useRef(null);
   const aerisImg = useRef(null);
+  const quest = useRef(null);
+  const questImg = useRef(null);
 
   const showThriveButton = () => {
     thriveVox.current.className = 'project-button-holder';
@@ -133,6 +135,16 @@ export default function Projects(props) {
     aeris.current.className = 'project-button-holder hidden';
     aerisImg.current.className = '';
 
+  };
+
+  const showQuestButton = () => {
+    quest.current.className = 'project-button-holder';
+    questImg.current.className = ' img-hover image-scale';
+  };
+
+  const hideQuestButton = () => {
+    quest.current.className = 'project-button-holder hidden';
+    questImg.current.className = '';
   };
 
   return (
@@ -188,8 +200,17 @@ export default function Projects(props) {
             <a target="_blank" href="https://aeris.irobot.com/?gclid=CjwKCAjwiuuRBhBvEiwAFXKaNN9u5J87Aekx1RKaX7u1WGBf6kRiz9eB0gUEAhdYqsjN2OWk41uWsxoCHtoQAvD_BwE" rel="noreferrer" className="about-button">Enter Site</a>
           </div>
         </div>
+        <div onMouseEnter={showQuestButton} onMouseLeave={hideQuestButton} className="col-half project-image-holder">
+          <img ref={questImg} src="./images/meta-quest.png"></img>
+          <div ref={quest} className="project-button-holder hidden">
+            <h1 style={{ color: '#495057' }} className="col-four-fifth">Meta Quest</h1>
+            <div className=" project-content-holder">
+              <p>A collaborative project being worked with Codazen/Meta Engineers aimed at creating the Meta Quest home website</p>
+            </div>
+            <a target="_blank" href="https://www.oculus.com/" rel="noreferrer" className="about-button">Enter App</a>
+          </div>
+        </div>
       </div>
-
   </div>
   );
 }
