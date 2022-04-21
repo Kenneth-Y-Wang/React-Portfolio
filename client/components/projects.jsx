@@ -75,6 +75,7 @@
 // }
 
 import React, { useRef } from 'react';
+import SingleProject from './single-project';
 
 export default function Projects(props) {
 
@@ -88,6 +89,8 @@ export default function Projects(props) {
   const meteEHScale = useRef(null);
   const aeris = useRef(null);
   const aerisImg = useRef(null);
+  const quest = useRef(null);
+  const questImg = useRef(null);
 
   const showThriveButton = () => {
     thriveVox.current.className = 'project-button-holder';
@@ -135,6 +138,16 @@ export default function Projects(props) {
 
   };
 
+  const showQuestButton = () => {
+    quest.current.className = 'project-button-holder';
+    questImg.current.className = ' img-hover image-scale';
+  };
+
+  const hideQuestButton = () => {
+    quest.current.className = 'project-button-holder hidden';
+    questImg.current.className = '';
+  };
+
   return (
   <div className="container">
     <div ref={props.myWorks} className="title-row col-full">
@@ -144,7 +157,7 @@ export default function Projects(props) {
       </div>
     </div>
     <div className="about-row">
-      <div onMouseEnter={showThriveButton} onMouseLeave={hideThriveButton} className="col-half project-image-holder">
+      {/* <div onMouseEnter={showThriveButton} onMouseLeave={hideThriveButton} className="col-half project-image-holder">
         <img ref={thriveVoxScale} src="./images/150-1508074_black-and-white-music-headphones-life-hd-grayscale.jpg"></img>
         <div ref={thriveVoxImg} className="overlay hidden"></div>
         <div ref={thriveVox} className="project-button-holder hidden">
@@ -154,8 +167,12 @@ export default function Projects(props) {
           </div>
           <a target="_blank" href="https://thrive-vox.herokuapp.com/" rel="noreferrer" className="skill-button">Enter App</a>
         </div>
-      </div>
-      <div onMouseEnter={showPuppyButton} onMouseLeave={hidePuppyButton} className="col-half project-image-holder">
+      </div> */}
+      <SingleProject showHandler={showThriveButton} hideHandler={hideThriveButton} refScale={thriveVoxScale} refImage={thriveVoxImg}
+          refButton={thriveVox} imgSrc="./images/150-1508074_black-and-white-music-headphones-life-hd-grayscale.jpg"
+          projectTitle="ThriveVox" projectDes="A full-stack web application for musicians and music lovers who want to find single/band members, share and discuss their musical interests and favorites"
+          projectLink="https://thrive-vox.herokuapp.com" />
+      {/* <div onMouseEnter={showPuppyButton} onMouseLeave={hidePuppyButton} className="col-half project-image-holder">
         <img ref={puppyImg} src="./images/GettyImages-1133605325-scaled-e1617227898456.jpg"></img>
         <div ref={puppy} className="project-button-holder hidden">
           <h1 style={{ color: '#495057' }} className="col-four-fifth">Puppy Paradise</h1>
@@ -164,7 +181,11 @@ export default function Projects(props) {
           </div>
           <a target="_blank" href="https://kenneth-y-wang.github.io/puppy-paradise/" rel="noreferrer" className="about-button">Enter App</a>
         </div>
-      </div>
+      </div> */}
+      <SingleProject showHandler={showPuppyButton} hideHandler={hidePuppyButton} refImage={puppyImg}
+          refButton={puppy} imgSrc="./images/GettyImages-1133605325-scaled-e1617227898456.jpg"
+          projectTitle="Puppy Paradise" projectDes="A front-end web application for puppy lovers who seek entertainment from cute pictures, fun games, and organize their own pets’ daily activities"
+          projectLink="https://kenneth-y-wang.github.io/puppy-paradise/" />
     </div>
       <div className="about-row">
         <div onMouseEnter={showMetaButton} onMouseLeave={hideMetaButton} className="col-half project-image-holder">
@@ -188,8 +209,17 @@ export default function Projects(props) {
             <a target="_blank" href="https://aeris.irobot.com/?gclid=CjwKCAjwiuuRBhBvEiwAFXKaNN9u5J87Aekx1RKaX7u1WGBf6kRiz9eB0gUEAhdYqsjN2OWk41uWsxoCHtoQAvD_BwE" rel="noreferrer" className="about-button">Enter Site</a>
           </div>
         </div>
+        <div onMouseEnter={showQuestButton} onMouseLeave={hideQuestButton} className="col-half project-image-holder">
+          <img ref={questImg} src="./images/meta-quest.png"></img>
+          <div ref={quest} className="project-button-holder hidden">
+            <h1 style={{ color: '#495057' }} className="col-four-fifth">Meta Quest</h1>
+            <div className=" project-content-holder">
+              <p>A collaborative project being worked with Codazen/Meta Engineers aimed at creating the Meta Quest home website</p>
+            </div>
+            <a target="_blank" href="https://www.oculus.com/" rel="noreferrer" className="about-button">Enter App</a>
+          </div>
+        </div>
       </div>
-
   </div>
   );
 }
