@@ -75,6 +75,7 @@
 // }
 
 import React, { useRef } from 'react';
+import SingleProject from './single-project';
 
 export default function Projects(props) {
 
@@ -156,7 +157,7 @@ export default function Projects(props) {
       </div>
     </div>
     <div className="about-row">
-      <div onMouseEnter={showThriveButton} onMouseLeave={hideThriveButton} className="col-half project-image-holder">
+      {/* <div onMouseEnter={showThriveButton} onMouseLeave={hideThriveButton} className="col-half project-image-holder">
         <img ref={thriveVoxScale} src="./images/150-1508074_black-and-white-music-headphones-life-hd-grayscale.jpg"></img>
         <div ref={thriveVoxImg} className="overlay hidden"></div>
         <div ref={thriveVox} className="project-button-holder hidden">
@@ -166,8 +167,12 @@ export default function Projects(props) {
           </div>
           <a target="_blank" href="https://thrive-vox.herokuapp.com/" rel="noreferrer" className="skill-button">Enter App</a>
         </div>
-      </div>
-      <div onMouseEnter={showPuppyButton} onMouseLeave={hidePuppyButton} className="col-half project-image-holder">
+      </div> */}
+      <SingleProject showHandler={showThriveButton} hideHandler={hideThriveButton} refScale={thriveVoxScale} refImage={thriveVoxImg}
+          refButton={thriveVox} imgSrc="./images/150-1508074_black-and-white-music-headphones-life-hd-grayscale.jpg"
+          projectTitle="ThriveVox" projectDes="A full-stack web application for musicians and music lovers who want to find single/band members, share and discuss their musical interests and favorites"
+          projectLink="https://thrive-vox.herokuapp.com" />
+      {/* <div onMouseEnter={showPuppyButton} onMouseLeave={hidePuppyButton} className="col-half project-image-holder">
         <img ref={puppyImg} src="./images/GettyImages-1133605325-scaled-e1617227898456.jpg"></img>
         <div ref={puppy} className="project-button-holder hidden">
           <h1 style={{ color: '#495057' }} className="col-four-fifth">Puppy Paradise</h1>
@@ -176,7 +181,11 @@ export default function Projects(props) {
           </div>
           <a target="_blank" href="https://kenneth-y-wang.github.io/puppy-paradise/" rel="noreferrer" className="about-button">Enter App</a>
         </div>
-      </div>
+      </div> */}
+      <SingleProject showHandler={showPuppyButton} hideHandler={hidePuppyButton} refImage={puppyImg}
+          refButton={puppy} imgSrc="./images/GettyImages-1133605325-scaled-e1617227898456.jpg"
+          projectTitle="Puppy Paradise" projectDes="A front-end web application for puppy lovers who seek entertainment from cute pictures, fun games, and organize their own pets’ daily activities"
+          projectLink="https://kenneth-y-wang.github.io/puppy-paradise/" />
     </div>
       <div className="about-row">
         <div onMouseEnter={showMetaButton} onMouseLeave={hideMetaButton} className="col-half project-image-holder">
