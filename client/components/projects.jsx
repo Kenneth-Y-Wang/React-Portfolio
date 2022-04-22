@@ -188,7 +188,7 @@ export default function Projects(props) {
           projectLink="https://kenneth-y-wang.github.io/puppy-paradise/" />
     </div>
       <div className="about-row">
-        <div onMouseEnter={showMetaButton} onMouseLeave={hideMetaButton} className="col-half project-image-holder">
+        {/* <div onMouseEnter={showMetaButton} onMouseLeave={hideMetaButton} className="col-half project-image-holder">
           <img ref={meteEHScale} src="./images/facebook-nombre-metaverso-meta.jpeg"></img>
           <div ref={metaEHImg} className="overlay hidden"></div>
           <div ref={metaEH} className="project-button-holder hidden">
@@ -198,8 +198,12 @@ export default function Projects(props) {
             </div>
             <a target="_blank" href="https://www.facebook.com/fb/education/educator-hub" rel="noreferrer" className="skill-button">Enter Site</a>
           </div>
-        </div>
-        <div onMouseEnter={showAerisButton} onMouseLeave={hideAerisButton} className="col-half project-image-holder">
+        </div> */}
+        <SingleProject showHandler={showMetaButton} hideHandler={hideMetaButton} refScale={meteEHScale} refImage={metaEHImg}
+          refButton={metaEH} imgSrc="./images/facebook-nombre-metaverso-meta.jpeg"
+          projectTitle="Meta - Educational Hub" projectDes="A collaborative project being worked with Codazen/Meta Engineers aimed at creating the Education Hub section of Meta"
+          projectLink="https://www.facebook.com/fb/education/educator-hub" />
+        {/* <div onMouseEnter={showAerisButton} onMouseLeave={hideAerisButton} className="col-half project-image-holder">
           <img ref={aerisImg} src="./images/home_hero_D.jpeg"></img>
           <div ref={aeris} className="project-button-holder hidden">
             <h1 style={{ color: '#495057' }} className="col-four-fifth">Aeris iRobot</h1>
@@ -208,8 +212,12 @@ export default function Projects(props) {
             </div>
             <a target="_blank" href="https://aeris.irobot.com/?gclid=CjwKCAjwiuuRBhBvEiwAFXKaNN9u5J87Aekx1RKaX7u1WGBf6kRiz9eB0gUEAhdYqsjN2OWk41uWsxoCHtoQAvD_BwE" rel="noreferrer" className="about-button">Enter Site</a>
           </div>
-        </div>
-        <div onMouseEnter={showQuestButton} onMouseLeave={hideQuestButton} className="col-half project-image-holder">
+        </div> */}
+        <SingleProject showHandler={showAerisButton} hideHandler={hideAerisButton} refImage={aerisImg}
+          refButton={aeris} imgSrc="./images/home_hero_D.jpeg"
+          projectTitle="Aeris iRobot" projectDes="A collaborative project being worked with Codazen/Meta Engineers aimed at creating the Aeris iRobot home website"
+          projectLink="https://aeris.irobot.com" />
+        {/* <div onMouseEnter={showQuestButton} onMouseLeave={hideQuestButton} className="col-half project-image-holder">
           <img ref={questImg} src="./images/meta-quest.png"></img>
           <div ref={quest} className="project-button-holder hidden">
             <h1 style={{ color: '#495057' }} className="col-four-fifth">Meta Quest</h1>
@@ -218,7 +226,11 @@ export default function Projects(props) {
             </div>
             <a target="_blank" href="https://www.oculus.com/" rel="noreferrer" className="about-button">Enter App</a>
           </div>
-        </div>
+        </div> */}
+        <SingleProject showHandler={showQuestButton} hideHandler={hideQuestButton} refImage={questImg}
+          refButton={quest} imgSrc="./images/meta-quest.png"
+          projectTitle="Meta Quest" projectDes="A collaborative project being worked with Codazen/Meta Engineers aimed at creating the Meta Quest home website"
+          projectLink="https://www.oculus.com/" />
       </div>
   </div>
   );
