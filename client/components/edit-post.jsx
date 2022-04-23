@@ -53,3 +53,29 @@ export default class EditPost extends React.Component {
     );
   }
 }
+
+// import * as React from "react";
+// import { useState } from 'react';
+
+// export default function EditPost({
+//   title,
+//   content,
+//   postId,
+//   exitEditPost,
+//   editPostDisplay
+
+// }){
+
+//   const [post, setPost]=useState({
+//     title: title,
+//     content: content
+//   })
+
+//   const handleChange = event =>{
+//     setPost(prestate=>({
+//       ...prestate,
+//       [event.target.name]: event.target.value
+//     }))
+//   }
+
+// }
