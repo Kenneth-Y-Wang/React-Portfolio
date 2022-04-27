@@ -91,6 +91,8 @@ export default function Projects(props) {
   const aerisImg = useRef(null);
   const quest = useRef(null);
   const questImg = useRef(null);
+  const dolly = useRef(null);
+  const dollyImg = useRef(null);
 
   const showThriveButton = () => {
     thriveVox.current.className = 'project-button-holder';
@@ -146,6 +148,16 @@ export default function Projects(props) {
   const hideQuestButton = () => {
     quest.current.className = 'project-button-holder hidden';
     questImg.current.className = '';
+  };
+
+  const showDollyButton = () => {
+    dolly.current.className = 'project-button-holder';
+    dollyImg.current.className = ' img-hover image-scale';
+  };
+
+  const hideDollyButton = () => {
+    dolly.current.className = 'project-button-holder hidden';
+    dollyImg.current.className = '';
   };
 
   return (
@@ -229,8 +241,12 @@ export default function Projects(props) {
         </div> */}
         <SingleProject showHandler={showQuestButton} hideHandler={hideQuestButton} refImage={questImg}
           refButton={quest} imgSrc="./images/meta-quest.png"
-          projectTitle="Meta Quest" projectDes="A collaborative project being worked with Codazen/Meta Engineers aimed at creating the Meta Quest home website"
+          projectTitle="Oculus Quest" projectDes="A collaborative project being worked with Codazen/Meta Engineers aimed at creating the Meta Quest home website"
           projectLink="https://www.oculus.com/" />
+        <SingleProject showHandler={showDollyButton} hideHandler={hideDollyButton} refImage={dollyImg}
+          refButton={dolly} imgSrc="./images/meta-store.png"
+          projectTitle="Meta Store" projectDes="A collaborative project being worked with Codazen/Meta Engineers aimed at creating the Meta Store website"
+          projectLink="https://about.facebook.com/" />
       </div>
   </div>
   );

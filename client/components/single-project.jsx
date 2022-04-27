@@ -47,7 +47,7 @@ const SingleProject = function ({
       {imgTags}
       <div ref={refButton} className="project-button-holder hidden">
         {projectContent}
-        <a target="_blank" href={projectLink} rel="noreferrer" className={buttonClass}>Enter App</a>
+        <a target="_blank" href={projectLink} rel="noreferrer" className={buttonClass}>Enter Site</a>
       </div>
     </div>
   );
