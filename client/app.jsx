@@ -13,8 +13,6 @@ export default function App() {
   const myWorks = useRef(null);
   const contactMe = useRef(null);
   const pageTop = useRef(null);
-  // const [user, setUser] = useState(null);
-  // const [isAuthorizing, setAuthorizing] = useState(true);
   const [userVerify, setUser] = useState({
     user: null,
     isAuthorizing: true
