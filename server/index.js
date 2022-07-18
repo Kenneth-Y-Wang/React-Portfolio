@@ -22,7 +22,7 @@ app.use(staticMiddleware);
 const jsonMiddleware = express.json();
 app.use(jsonMiddleware);
 
-// visiter send message
+// visiter send message w/o logining
 
 app.post('/api/messages/create', (req, res, next) => {
   const { sender, email, msgTitle, content } = req.body;
