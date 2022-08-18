@@ -5,13 +5,18 @@ import Projects from '../components/projects';
 import ContactForm from '../components/contact-form';
 import JumpLinks from '../components/jumplink';
 
-export default function Home(props) {
+export default function Home({
+  myWorks,
+  scroll,
+  pageTop,
+  contactMe
+}) {
   return (
     <>
       < HeroImage />
       < AboutMe />
-      < Projects myWorks={props.myWorks} />
-      <ContactForm scroll={props.scroll} pageTop={props.pageTop} contactMe={props.contactMe} />
+      < Projects myWorks={myWorks} />
+      <ContactForm scroll={scroll} pageTop={pageTop} contactMe={contactMe} />
     </>
   );
 }
