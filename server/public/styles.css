@@ -410,6 +410,20 @@ font-family: 'Montserrat', sans-serif; */
   margin: 1rem auto;
 }
 
+.project-choice-row {
+  display: flex;
+  position: relative;
+  width: 80px;
+  margin: 1rem auto;
+  justify-content: space-between;
+}
+
+.choice-icon {
+  height: 30px;
+  width: 30px;
+  color: #495057;
+}
+
 /* contact  */
 
 .contact-title {
