@@ -2,22 +2,22 @@ import * as React from 'react';
 import { useState, useRef } from 'react';
 
 const ProjectChoice = ({
-  brief,
-  detail
+  setLayout,
+  detailLayout
 }) => {
 
-  const [projectLayout, setProjectLayout] = useState('all');
-  const detailLayout = useRef(null);
+  // const [projectLayout, setProjectLayout] = useState('all');
+  // const detailLayout = useRef(null);
 
-  const setLayout = () => {
-    if (projectLayout === 'all') {
-      setProjectLayout('detail');
-      detailLayout.current.className = 'choice-button choice-button-right';
-    } else {
-      setProjectLayout('all');
-      detailLayout.current.className = 'choice-button';
-    }
-  };
+  // const setLayout = () => {
+  //   if (projectLayout === 'all') {
+  //     setProjectLayout('detail');
+  //     detailLayout.current.className = 'choice-button choice-button-right';
+  //   } else {
+  //     setProjectLayout('all');
+  //     detailLayout.current.className = 'choice-button';
+  //   }
+  // };
 
   return (
     <section className="project-choice-row">

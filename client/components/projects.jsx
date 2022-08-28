@@ -19,7 +19,18 @@ export default function Projects(props) {
   const dolly = useRef(null);
   const dollyImg = useRef(null);
 
-  const projectView = useState('brief');
+  const [projectView, setProjectView] = useState('brief');
+  const detailLayout = useRef(null);
+
+  const setLayout = () => {
+    if (projectView === 'brief') {
+      setProjectView('detail');
+      detailLayout.current.className = 'choice-button choice-button-right';
+    } else {
+      setProjectView('brief');
+      detailLayout.current.className = 'choice-button';
+    }
+  };
 
   const showThriveButton = () => {
     thriveVox.current.className = 'project-button-holder';
@@ -93,7 +104,7 @@ export default function Projects(props) {
       <div ref={props.myWorks} className="container title-row col-full">
         <div className="title-content">
           <h1>My Works</h1>
-          <ProjectChoice />
+          <ProjectChoice setLayout={setLayout} detailLayout={detailLayout} />
           <div className="title-sub">Click Image for Details</div>
         </div>
       </div>
