@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { useState, useRef } from 'react';
 
 const ProjectChoice = ({
   setLayout,
