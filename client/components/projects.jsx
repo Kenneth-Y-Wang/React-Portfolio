@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import SingleProject from './single-project';
 import ProjectChoice from './project-choice';
+import ProjectDetailView from './project-detail-view';
 
 export default function Projects(props) {
 
@@ -192,6 +193,9 @@ export default function Projects(props) {
               projectLink="https://about.facebook.com/" />
           </div>
         </>)}
+        {projectView === 'detail' && (
+          <ProjectDetailView />
+        )}
       </div>
     </>
   );
