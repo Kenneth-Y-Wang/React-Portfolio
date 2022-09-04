@@ -5,9 +5,13 @@ const ProjectDetailView = () => {
 
   const [projectDisplay, setProjectDisplay] = useState('puppyParadise');
 
+  const chooseProject = event => {
+    setProjectDisplay(event.target.name);
+  };
+
   return (
   <div className="container">
-    Hello world
+
   </div>
   );
 
