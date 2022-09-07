@@ -120,6 +120,14 @@ body {
   text-decoration: none;
 }
 
+.row-padding {
+  padding: 0 16px;
+}
+
+.row-wrapping {
+  flex-wrap: wrap;
+}
+
 @media screen and (max-width: 768px) {
   .nav-bar {
     display: flex;
@@ -192,6 +200,16 @@ body {
 
   .col-full {
     width: 100%;
+  }
+
+  .row-padding {
+    padding: 0 24px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .row-padding {
+    padding: 0 36px;
   }
 }
 
