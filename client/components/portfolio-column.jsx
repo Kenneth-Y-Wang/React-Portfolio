@@ -12,8 +12,8 @@ export default function Column({
   const offsetClass = classConvert(offset);
 
   return (
-    <div className="row">
-      <div className={offsetClass}></div>
+    <div className="row-100">
+      <div className={offsetClass} style={{ height: '100%' }}></div>
       <div className={columnClass} style={style}>
         {children}
       </div>

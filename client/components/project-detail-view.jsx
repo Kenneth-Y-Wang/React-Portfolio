@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { useState } from 'react';
 import Row from './portfolio-row';
+import Column from './portfolio-column';
 
 const ProjectDetailView = () => {
 
@@ -12,8 +13,10 @@ const ProjectDetailView = () => {
 
   return (
   <div className="container">
-    <Row rowPadding={false} isWrapped={false}>
-      Hello World
+    <Row rowPadding={true} isWrapped={false}>
+      <Column offset={'mobile:0,tablet:0,desktop:5'} span={'mobile:6,tablet:6,desktop:7'}>
+          <div style={{ backgroundColor: '#495057', width: '100%', height: '100px' }} />
+      </Column>
     </Row>
   </div>
   );

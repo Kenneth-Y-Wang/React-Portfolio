@@ -1192,6 +1192,14 @@ input[type="file"]::-webkit-file-upload-button {
   transform: scale(1.2);
 }
 
+/* row and column  */
+
+.background {
+  background-color: #0f1110;
+  width: 100%;
+  height: 100px;
+}
+
 @media screen and (max-width: 450px) {
   .detail-img-holder,
   .detail-img {
