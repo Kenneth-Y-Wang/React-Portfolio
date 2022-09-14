@@ -17,6 +17,10 @@ export default function Box({
   backgroundColor,
   width,
   height,
+  minWidth,
+  maxWidth,
+  minHeight,
+  maxHeight,
   children,
   className
 }) {
@@ -35,6 +39,10 @@ export default function Box({
   const [paddingBottomMobile, paddingBottomTablet] = valueConvert(paddingBottom);
   const [heightMobile, heightTablet] = valueConvert(height);
   const [widthMobile, widthTablet] = valueConvert(width);
+  const [minWidthMobile, minWidthTablet] = valueConvert(minWidth);
+  const [maxWidthMobile, maxWidthTablet] = valueConvert(maxWidth);
+  const [minHeightMobile, minHeightTablet] = valueConvert(minHeight);
+  const [maxHeightMobile, maxHeightTablet] = valueConvert(maxHeight);
   const [backgroundColorMobile, backgroundColorTablet] = valueConvert(backgroundColor);
 
   const boxStyle = {
@@ -43,6 +51,10 @@ export default function Box({
       backgroundColor: isTablet ? backgroundColorTablet : backgroundColorMobile,
       width: isTablet ? widthTablet : widthMobile,
       height: isTablet ? heightTablet : heightMobile,
+      minWidth: isTablet ? minWidthTablet : minWidthMobile,
+      maxWidth: isTablet ? maxWidthTablet : maxWidthMobile,
+      minHeight: isTablet ? minHeightTablet : minHeightMobile,
+      maxHeight: isTablet ? maxHeightTablet : maxHeightMobile,
       alignItems: isTablet ? alignItemsTablet : alighItemsMobile,
       justifyContent: isTablet ? justifyContentTablet : justifyContentMobile,
       marginRight: isTablet ? marginRightTablet : marginRightMobile,
