@@ -133,6 +133,16 @@ body {
   flex-wrap: wrap;
 }
 
+.container-horizontal-padding {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.container-vertical-padding {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
 .mobile-col-1 {
   width: 8.3%;
 }
@@ -259,6 +269,16 @@ body {
     padding: 0 24px;
   }
 
+  .container-horizontal-padding {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .container-vertical-padding {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
   .tablet-col-1 {
     width: 8.3%;
   }
@@ -311,6 +331,16 @@ body {
 @media screen and (min-width: 1024px) {
   .row-padding {
     padding: 0 36px;
+  }
+
+  .container-horizontal-padding {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+
+  .container-vertical-padding {
+    padding-top: 36px;
+    padding-bottom: 36px;
   }
 
   .desktop-col-1 {
