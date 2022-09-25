@@ -2,7 +2,7 @@ const classConvert = str => {
   const classHolder = [];
 
   if (!str) {
-    return;
+    return '';
   }
   if (str.includes(',')) {
     const data = str.split(',');

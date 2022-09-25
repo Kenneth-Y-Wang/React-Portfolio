@@ -9,7 +9,8 @@ export default function BackgroundImage({
   imageSize,
   width,
   height,
-  className
+  className,
+  children
 }) {
   const isTablet = useMediaQuery('(min-width: 768px)');
   const [urlMobile, urlTablet] = valueConvert(url);
@@ -31,7 +32,9 @@ export default function BackgroundImage({
   };
 
   return (
-   <div style={backgroundStyle.box(isTablet)} className = {className} />
+   <div style={backgroundStyle.box(isTablet)} className = {className} >
+     {children}
+   </div>
   );
 
 }
