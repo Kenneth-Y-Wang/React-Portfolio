@@ -12,7 +12,7 @@ export default function Row({
 
   const hasWrapping = ifWrapping => ifWrapping ? 'row-wrapping' : '';
 
-  const rowClass = ` row ${hasPadding(rowPadding)} ${hasWrapping(isWrapped)} `;
+  const rowClass = ` row-100 ${hasPadding(rowPadding)} ${hasWrapping(isWrapped)} `;
 
   return (
     <div className={rowClass} style={{ rowStyle }}>
