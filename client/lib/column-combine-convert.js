@@ -1,9 +1,5 @@
-import * as React from 'react';
 import arryExtend from './array-extend';
 import strToArr from './string-to-array';
-
-const dataOne = 'mobile:12,tablet:1,desktop:3';
-const dataTwo = 'mobile:12,tablet:8';
 
 const columnCombine = (dataOne, dataTwo) => {
 
@@ -68,8 +64,15 @@ const columnCombine = (dataOne, dataTwo) => {
 
   classMap.forEach((value, key) => {
     if (value >= 12) {
-      columnClassArr;
+      columnClassArr.push(`${key}-col-12`);
+    } else {
+      columnClassArr.push(`${key}-col-${value}`);
     }
   });
 
+  const className = columnClassArr.join(' ');
+  return className;
+
 };
+
+export default columnCombine;
