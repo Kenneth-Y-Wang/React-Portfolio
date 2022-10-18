@@ -1,5 +1,7 @@
 import * as React from 'react';
 import classConvert from '../lib/column-class-convert';
+import columnCombine from '../lib/column-combine-convert';
+import strToArr from '../lib/string-to-array';
 
 export default function Column({
   offset,
