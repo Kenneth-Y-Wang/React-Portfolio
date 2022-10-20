@@ -17,16 +17,10 @@ const ProjectDetailView = () => {
   return (
   <div className="container">
     <Row rowPadding={true} isWrapped={true}>
-      <Column span={'mobile:12,tablet:7'}>
+      <Column span={'mobile:12,tablet:10'} offset={'mobile:0,tablet:2'}>
         {/* <div style={{ backgroundColor: '#495057', width: '100%', height: '100px' }} /> */}
-        <Box backgroundColor={'mobile:#495057,tablet:white'} width={'mobile:50%,tablet:100%'} height={'100px'} >
+        <Box backgroundColor={'mobile:#495057,tablet:white'} width={'100%'} height={'100px'} >
           {/* <Heading type={'h5'} weight={'200'} size={'2rem'} color={'blue'} textAlign={'center'}>Hello Jimin</Heading> */}
-        </Box>
-      </Column>
-
-      <Column span={'mobile:12,tablet:2'}>
-         <Box backgroundColor={'mobile:blue,tablet:red'} width={'mobile:50%,tablet:100%'} height={'100px'} >
-          {/* <Heading type={'h5'} weight={'200'} size={'2rem'} color={'#6c757d'} textAlign={'center'}>Hello Caleb</Heading> */}
         </Box>
       </Column>
     </Row>
