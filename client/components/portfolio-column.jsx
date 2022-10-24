@@ -17,16 +17,23 @@ export default function Column({
   }
 
   const columnTotal = offset ? columnCombine(offset, span) : columnCombine(offsetStr, span);
-  const columnClass = offset ? classConvert(span) : classConvert(spanStr);
+  // const columnClass = offset ? classConvert(span) : classConvert(spanStr);
+  const columnClass = classConvert(span);
   const offsetClass = classConvert(offset);
   const columnCombineClass = `row ${columnTotal}`;
 
   return (
-    <div className={columnCombineClass}>
+    // <div className={columnCombineClass}>
+    //   <div className={offsetClass} style={{ height: '100%' }}></div>
+    //   <div className={columnClass} style={style}>
+    //     {children}
+    //   </div>
+    // </div>
+    <>
       <div className={offsetClass} style={{ height: '100%' }}></div>
       <div className={columnClass} style={style}>
         {children}
       </div>
-    </div>
+    </>
   );
 }
