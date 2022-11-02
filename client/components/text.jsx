@@ -13,9 +13,26 @@ export default function Text({
 }) {
 
   const isTablet = useMediaQuery('(min-width: 768px)');
+  const [colorMobile, colorTablet] = valueConvert(color);
+  const [fontMobile, fontTablet] = valueConvert(font);
+  const [sizeMobile, sizeTablet] = valueConvert(size);
+  const [textAlignMobile, textAlignTablet] = valueConvert(textAlign);
+  const [weightMobile, weightTablet] = valueConvert(weight);
+
+  const textStyle = {
+    box: isTablet => ({
+      color: isTablet ? colorTablet : colorMobile,
+      fontFamily: isTablet ? fontTablet : fontMobile,
+      fontSize: isTablet ? sizeTablet : sizeMobile,
+      textAlign: isTablet ? textAlignTablet : textAlignMobile,
+      fontWeight: isTablet ? weightTablet : weightMobile
+    })
+  };
 
   return (
-    <div className={classes} style={{ color: color, fontFamily: font, textAlign: textAlign }}>{headingType(type)}</div>
+    <div className={classes} style={textStyle.box(isTablet)}>
+      {children}
+    </div>
   );
 
 }
