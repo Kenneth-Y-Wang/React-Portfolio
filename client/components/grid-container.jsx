@@ -10,9 +10,9 @@ export default function GridContainer({
 }) {
   const hasHorizontalPadding = ifPadding => ifPadding ? 'container-horizontal-padding' : '';
 
-  const hasVerticalWrapping = ifWrapping => ifWrapping ? 'container-vertical-padding' : '';
+  const hasVerticalPadding = ifPadding => ifPadding ? 'container-vertical-padding' : '';
 
-  const containerClass = `container ${classes} ${hasHorizontalPadding(horizontalPadding)} ${hasVerticalWrapping(verticalPadding)}`;
+  const containerClass = `container ${classes} ${hasHorizontalPadding(horizontalPadding)} ${hasVerticalPadding(verticalPadding)}`;
 
   return (
     <div className={containerClass} style={style}>

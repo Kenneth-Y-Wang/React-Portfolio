@@ -330,17 +330,17 @@ body {
 
 @media screen and (min-width: 1024px) {
   .row-padding {
-    padding: 0 36px;
+    padding: 0 32px;
   }
 
   .container-horizontal-padding {
-    padding-left: 36px;
-    padding-right: 36px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 
   .container-vertical-padding {
-    padding-top: 36px;
-    padding-bottom: 36px;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 
   .desktop-col-1 {
