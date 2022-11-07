@@ -11,7 +11,20 @@ export default function CarousalProject({
   children
 }) {
 
-  const [carousalDisplay, setCarousalDisplay] = useState(options[0]);
+  let carousalOptions;
+  options
+    ? carousalOptions = options
+    : carousalOptions = [];
+
+  const [carousalDisplay, setCarousalDisplay] = useState(carousalOptions[0]);
+
+  const optionDisplay = (carousalOptions, colorOptions) => {
+
+  };
+
+  const projectDisplay = carousalOptions => {
+
+  };
 
   return (
     <GridContainer horizontalPadding={true}>
