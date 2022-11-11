@@ -16,6 +16,8 @@ export default function CarousalProject({
     ? carousalOptions = options
     : carousalOptions = [];
 
+  const colorOptions = [];
+
   const [carousalDisplay, setCarousalDisplay] = useState(carousalOptions[0]);
 
   const optionDisplay = (carousalOptions, colorOptions) => {
