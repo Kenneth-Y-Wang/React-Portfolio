@@ -4,7 +4,7 @@ import Home from './pages/home';
 export default function AppPlayGround() {
 
   return (
-       <h1>Hello, World!</h1>
+       <h1>Hello, World! this is play ground</h1>
   );
 
 }
