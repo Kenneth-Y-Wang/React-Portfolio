@@ -16,14 +16,6 @@ export default function Navbar(props) {
     }
   };
 
-  const { user, route } = useContext(AppContext);
-  let username;
-  if (user) {
-    username = user.username;
-  } else {
-    username = '';
-  }
-
   return (
   <div ref={props.pageTop} className="nav-bar">
     <a style={{ textDecoration: 'none' }} href="#" ><h3 className="name-title">Kenneth Wang</h3></a>
