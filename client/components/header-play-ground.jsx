@@ -17,6 +17,9 @@ export default function Navbar(props) {
   };
 
   return (
+    <GridContainer horizontalPadding={true}>
+
+    </GridContainer>
 
   // <div ref={props.pageTop} className="nav-bar">
   //   <a style={{ textDecoration: 'none' }} href="#" ><h3 className="name-title">Kenneth Wang</h3></a>
