@@ -9,6 +9,14 @@ export default function BackgroundImage({
   imageSize,
   width,
   height,
+  paddingRight,
+  paddingLeft,
+  paddingTop,
+  paddingBottom,
+  marginRight,
+  marginLeft,
+  marginTop,
+  marginBottom,
   className,
   children
 }) {
@@ -19,6 +27,14 @@ export default function BackgroundImage({
   const [sizeMobile, sizeTablet] = valueConvert(imageSize);
   const [widthMobile, widthTablet] = valueConvert(width);
   const [heightMobile, heightTablet] = valueConvert(height);
+  const [paddingRightMobile, paddingRightTablet] = valueConvert(paddingRight);
+  const [paddingLeftMobile, paddingLeftTablet] = valueConvert(paddingLeft);
+  const [paddingTopMobile, paddingTopTablet] = valueConvert(paddingTop);
+  const [paddingBottomMobile, paddingBottomTablet] = valueConvert(paddingBottom);
+  const [marginRightMobile, marginRightTablet] = valueConvert(marginRight);
+  const [marginLeftMobile, marginLeftTablet] = valueConvert(marginLeft);
+  const [marginTopMobile, margainTopTablet] = valueConvert(marginTop);
+  const [marginBottomMobile, marginBottomTablet] = valueConvert(marginBottom);
 
   const backgroundStyle = {
     box: isTablet => ({
@@ -27,7 +43,15 @@ export default function BackgroundImage({
       backgroundPositionY: isTablet ? positionYTablet : positionYMobile,
       backgroundSize: isTablet ? sizeTablet : sizeMobile,
       height: isTablet ? heightTablet : heightMobile,
-      width: isTablet ? widthTablet : widthMobile
+      width: isTablet ? widthTablet : widthMobile,
+      paddingRight: isTablet ? paddingRightTablet : paddingRightMobile,
+      paddingLeft: isTablet ? paddingLeftTablet : paddingLeftMobile,
+      paddingTop: isTablet ? paddingTopTablet : paddingTopMobile,
+      paddingBottom: isTablet ? paddingBottomTablet : paddingBottomMobile,
+      marginRight: isTablet ? marginRightTablet : marginRightMobile,
+      marginLeft: isTablet ? marginLeftTablet : marginLeftMobile,
+      marginTop: isTablet ? margainTopTablet : marginTopMobile,
+      marginBottom: isTablet ? marginBottomTablet : marginBottomMobile
     })
   };
 

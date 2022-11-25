@@ -22,7 +22,8 @@ export default function Box({
   minHeight,
   maxHeight,
   children,
-  className
+  className,
+  ref
 }) {
 
   const isTablet = useMediaQuery('(min-width: 768px)');
@@ -69,7 +70,7 @@ export default function Box({
   };
 
   return (
-    <div className={className} style={boxStyle.box(isTablet)}>
+    <div className={className} style={boxStyle.box(isTablet)} ref={ref}>
       {children}
     </div>
   );
