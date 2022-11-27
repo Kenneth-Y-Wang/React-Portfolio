@@ -1200,6 +1200,22 @@ input[type="file"]::-webkit-file-upload-button {
   height: 100px;
 }
 
+/* playground */
+
+.playground-button {
+  margin: auto;
+  font-family: Montserrat, sans-serif;
+  background-color: transparent;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  transition-duration: 0.5s;
+  color: #495057;
+  border: 1px solid #495057;
+  cursor: pointer;
+  width: 140px;
+  border-radius: 0.25rem;
+}
+
 @media screen and (max-width: 450px) {
   .detail-img-holder,
   .detail-img {
