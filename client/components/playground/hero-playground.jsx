@@ -44,12 +44,12 @@ const HeroPlayground = () => {
           height={'500px'}
           paddingTop={'3rem'}>
             <Box width={'100%'} display={'flex'} justifyContent={'center'}>
-              <Box width={'600px'}>
+              <Box width={'mobile:350px,tablet:600px'}>
                 <h1 ref={lineOne} className="self-intro hidden"><span>Hello</span>, Welcome to my playground!</h1>
               </Box>
             </Box>
             <Box width={'100%'} display={'flex'} justifyContent={'center'}>
-              <Box width={'220px'}>
+              <Box width={'mobile:150px,tablet:220px'}>
                 <h3 ref={lineTwo} className="self-intro-sub hidden">Click the button below</h3>
               </Box>
             </Box>

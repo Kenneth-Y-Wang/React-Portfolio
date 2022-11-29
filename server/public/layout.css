@@ -117,6 +117,10 @@ body {
   margin-right: 0.75rem;
 }
 
+.mg-r-200 {
+  margin-right: 2rem;
+}
+
 .mg-l-75 {
   margin-left: 0.75rem;
 }
@@ -141,6 +145,10 @@ body {
 .container-vertical-padding {
   padding-top: 16px;
   padding-bottom: 16px;
+}
+
+.box-relative-position {
+  position: relative;
 }
 
 .mobile-col-1 {

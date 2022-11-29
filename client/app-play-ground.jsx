@@ -4,11 +4,13 @@ import HeroPlayground from './components/playground/hero-playground';
 import SubmitButton from './components/playground/submit-button';
 import getMultipleRandom from './lib/get-multiple-random';
 import ItemDisplay from './components/playground/item-display-container';
+import Footer from './components/footer';
 
 export default function AppPlayGround() {
 
   const [containerDisplay, setContainerDisplay] = useState(false);
-  const products = [];
+  const [products, setProducts] = useState([]);
+
   const handleSubmit = async event => {
     try {
       const response = await fetch('https://dummyjson.com/products', {
@@ -20,13 +22,11 @@ export default function AppPlayGround() {
       const data = await response.json();
       // console.log(data);
       if (data) {
-        const productArray = getMultipleRandom(data.products, 3);
-        for (const product of productArray) {
-          products.push(product);
-        }
+        const products = getMultipleRandom(data.products, 3);
+        setProducts(products);
         setContainerDisplay(true);
       }
-      console.log(products);
+      // console.log(products);
     } catch (error) {
       console.error('error', error);
     }
@@ -38,6 +38,7 @@ export default function AppPlayGround() {
         <HeroPlayground />
         <SubmitButton handleSubmit={handleSubmit} />
         <ItemDisplay products={products} containerDisplay={containerDisplay} />
+        <Footer />
       </>
   );
 
