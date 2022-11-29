@@ -1200,6 +1200,77 @@ input[type="file"]::-webkit-file-upload-button {
   height: 100px;
 }
 
+/* playground */
+
+.playground-button {
+  margin: auto;
+  font-family: Montserrat, sans-serif;
+  background-color: transparent;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  transition-duration: 0.5s;
+  color: #495057;
+  border: 1px solid #495057;
+  cursor: pointer;
+  width: 140px;
+  border-radius: 0.25rem;
+  transition: 1s;
+}
+
+.playground-button:hover {
+  color: white;
+  background-color: #495057;
+}
+
+.no-item-message {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-family: Montserrat, sans-serif;
+  color: #495057;
+  font-size: 1.5rem;
+  max-width: 300px;
+}
+
+.choice-button-thumbnail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 40%;
+  border: 1px solid #495057;
+  border-bottom: none;
+  z-index: -1;
+}
+
+.choice-button-name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #495057;
+  font-family: Montserrat, sans-serif;
+  z-index: 10;
+  font-size: 0.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: 1s;
+  padding: 0.75rem;
+}
+
+.choice-button-name:hover {
+  font-weight: 500;
+  transform: scale(1.1);
+}
+
+.item-detail-holder {
+  box-shadow: 3px 5px 5px -2px rgb(81 81 81 / 70%);
+}
+
 @media screen and (max-width: 450px) {
   .detail-img-holder,
   .detail-img {
@@ -1364,6 +1435,24 @@ input[type="file"]::-webkit-file-upload-button {
   /* .about-row {
     margin-bottom: 1rem;
   } */
+
+  .no-item-message {
+    top: 3rem;
+    right: 3rem;
+    font-size: 2rem;
+    max-width: 400px;
+  }
+
+  .choice-button-thumbnail {
+    opacity: 40%;
+    border: 2px solid #495057;
+    border-right: none;
+  }
+
+  .choice-button-name {
+    font-size: 1rem;
+    padding: 1rem;
+  }
 }
 
 @media screen and (min-width: 1280px) {

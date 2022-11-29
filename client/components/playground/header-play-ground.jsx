@@ -12,7 +12,7 @@ export default function HeaderPlayground() {
       <Row rowPadding={false} isWrapped={false}>
         <Column span={'12'}>
           <Box width={'100%'} display={'flex'} justifyContent={'center'} alignItems={'center'}>
-            <Heading type={'h3'} color={'#343a40'} font={'Meddon, cursive'}>Kenneth&apos;s Playground</Heading>
+            <Heading type={'h3'} color={'#343a40'} font={'Meddon, cursive'}>Kenneth &apos;s Playground</Heading>
           </Box>
         </Column>
       </Row>
