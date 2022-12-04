@@ -1,9 +1,6 @@
 import * as React from 'react';
-import { useState } from 'react';
 import GridContainer from '../grid-container';
 import Box from '../portfolio-box';
-import Row from '../portfolio-row';
-import Column from '../portfolio-column';
 import BackgroundImage from '../background-image';
 import ItemDisplayCarousal from './item-display-carousal';
 

@@ -1,5 +1,4 @@
 import * as React from 'react';
-import BackgroundImage from '../background-image';
 import Box from '../portfolio-box';
 import ItemImage from './item-image-carousal';
 import Text from '../text';
@@ -9,8 +8,6 @@ const ItemDetail = ({ product, index, itemDisplay }) => {
   const boxClass = itemDisplay === index
     ? ''
     : 'hidden';
-
-  console.log(product);
 
   return (
     <Box

@@ -4,7 +4,6 @@ import GridContainer from '../grid-container';
 import Box from '../portfolio-box';
 import Row from '../portfolio-row';
 import Column from '../portfolio-column';
-import BackgroundImage from '../background-image';
 import ItemChoice from './item-choice';
 import ItemDetail from './item-detail';
 
@@ -16,7 +15,6 @@ const ItemDisplayCarousal = ({ products }) => {
     setItemDisplay(index);
 
   };
-  console.log(itemDisplay);
 
   const choiceList = products.map((product, index) => {
 

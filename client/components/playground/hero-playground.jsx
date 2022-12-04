@@ -1,8 +1,6 @@
 import * as React from 'react';
-import { useState, useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import Box from '../portfolio-box';
-import Row from '../portfolio-row';
-import Column from '../portfolio-column';
 import GridContainer from '../grid-container';
 import BackgroundImage from '../background-image';
 
