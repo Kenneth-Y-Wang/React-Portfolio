@@ -20,13 +20,11 @@ export default function AppPlayGround() {
         }
       });
       const data = await response.json();
-      // console.log(data);
       if (data) {
         const products = getMultipleRandom(data.products, 3);
         setProducts(products);
         setContainerDisplay(true);
       }
-      // console.log(products);
     } catch (error) {
       console.error('error', error);
     }

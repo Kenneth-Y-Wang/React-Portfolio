@@ -3,7 +3,6 @@ import GridContainer from '../grid-container';
 import Row from '../portfolio-row';
 import Column from '../portfolio-column';
 import Box from '../portfolio-box';
-import Heading from '../heading';
 import Text from '../text';
 
 const SubmitButton = ({ handleSubmit }) => {

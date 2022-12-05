@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import * as React from 'react';
 import Row from '../portfolio-row';
 import Column from '../portfolio-column';
 import GridContainer from '../grid-container';
