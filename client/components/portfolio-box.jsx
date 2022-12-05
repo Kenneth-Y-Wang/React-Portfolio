@@ -4,6 +4,7 @@ import valueConvert from '../lib/mobile-tablet-value-convert';
 
 export default function Box({
   display,
+  flexDirection,
   alignItems,
   justifyContent,
   marginRight,
@@ -22,7 +23,10 @@ export default function Box({
   minHeight,
   maxHeight,
   children,
-  className
+  className,
+  ref,
+  position,
+  animation
 }) {
 
   const isTablet = useMediaQuery('(min-width: 768px)');
@@ -44,6 +48,9 @@ export default function Box({
   const [minHeightMobile, minHeightTablet] = valueConvert(minHeight);
   const [maxHeightMobile, maxHeightTablet] = valueConvert(maxHeight);
   const [backgroundColorMobile, backgroundColorTablet] = valueConvert(backgroundColor);
+  const [positionMobile, positionTablet] = valueConvert(position);
+  const [flexDirectionMobile, flexDirectionTablet] = valueConvert(flexDirection);
+  const [animationMobile, animationTablet] = valueConvert(animation);
 
   const boxStyle = {
     box: isTablet => ({
@@ -64,12 +71,15 @@ export default function Box({
       paddingRight: isTablet ? paddingRightTablet : paddingRightMobile,
       paddingLeft: isTablet ? paddingLeftTablet : paddingLeftMobile,
       paddingTop: isTablet ? paddingTopTablet : paddingTopMobile,
-      paddingBottom: isTablet ? paddingBottomTablet : paddingBottomMobile
+      paddingBottom: isTablet ? paddingBottomTablet : paddingBottomMobile,
+      position: isTablet ? positionTablet : positionMobile,
+      flexDirection: isTablet ? flexDirectionTablet : flexDirectionMobile,
+      animation: isTablet ? animationTablet : animationMobile
     })
   };
 
   return (
-    <div className={className} style={boxStyle.box(isTablet)}>
+    <div className={className} style={boxStyle.box(isTablet)} ref={ref}>
       {children}
     </div>
   );

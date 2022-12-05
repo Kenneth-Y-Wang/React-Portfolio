@@ -4,7 +4,7 @@ import App from './app';
 import AppPlayGround from './app-play-ground';
 
 ReactDOM.render(
-  <App />,
-  // <AppPlayGround />,
+  // <App />,
+  <AppPlayGround />,
   document.querySelector('#root')
 );
