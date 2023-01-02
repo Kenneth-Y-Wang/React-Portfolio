@@ -72,18 +72,18 @@ body {
 .col-two-fifth,
 .col-forty-five,
 .col-full {
-  width: 100%;
   padding: 0;
+  width: 100%;
 }
 
 .col-one-third {
-  width: 50%;
   padding: 0;
+  width: 50%;
 }
 
 .col-nine-tenth {
-  width: 90%;
   padding: 0;
+  width: 90%;
 }
 
 .col-four-fifth-p {
@@ -92,13 +92,13 @@ body {
 }
 
 .col-one-tenth {
-  width: 20%;
   padding: 0;
+  width: 20%;
 }
 
 .col-one-fifth {
-  width: 30%;
   padding: 0;
+  width: 30%;
 }
 
 .mg-b-1 {
