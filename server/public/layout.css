@@ -201,9 +201,9 @@ body {
 
 @media screen and (max-width: 768px) {
   .nav-bar {
+    align-items: center;
     display: flex;
     justify-content: center;
-    align-items: center;
     position: relative;
   }
 }
@@ -283,8 +283,8 @@ body {
   }
 
   .container-vertical-padding {
-    padding-top: 24px;
     padding-bottom: 24px;
+    padding-top: 24px;
   }
 
   .tablet-col-1 {
@@ -347,8 +347,8 @@ body {
   }
 
   .container-vertical-padding {
-    padding-top: 32px;
     padding-bottom: 32px;
+    padding-top: 32px;
   }
 
   .desktop-col-1 {
