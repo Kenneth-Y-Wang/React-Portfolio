@@ -38,10 +38,10 @@ font-family: 'Montserrat', sans-serif; */
 }
 
 .menu-button {
-  border: none;
   background-color: transparent;
-  position: absolute;
+  border: none;
   left: 0.5rem;
+  position: absolute;
 }
 
 .anchor-tag:visited,
@@ -60,12 +60,12 @@ font-family: 'Montserrat', sans-serif; */
 }
 
 .menu-modal-holder {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   background-color: rgb(0 0 0 / 40%);
+  bottom: 0;
+  left: 0;
   position: fixed;
+  right: 0;
+  top: 0;
   z-index: 1;
 }
 
