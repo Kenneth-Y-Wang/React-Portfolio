@@ -71,15 +71,15 @@ font-family: 'Montserrat', sans-serif; */
 
 .slide-menu {
   background-color: white;
+  font-family: Montserrat, sans-serif;
+  height: 100vh;
+  left: -999px;
+  padding: 0 1rem;
   position: absolute;
   top: 0;
-  left: -999px;
-  width: 220px;
-  height: 100vh;
-  z-index: 5;
   transition: 1s ease;
-  padding: 0 1rem;
-  font-family: Montserrat, sans-serif;
+  width: 220px;
+  z-index: 5;
 }
 
 .slide-menu.open {
