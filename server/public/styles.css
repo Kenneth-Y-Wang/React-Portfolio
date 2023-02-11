@@ -144,28 +144,28 @@ font-family: 'Montserrat', sans-serif; */
 }
 
 .self-intro-typing {
-  border-right: 0.15em solid white;
   animation:
     typewriter 4s steps(44) 1s 1 normal both,
     blinkTextCursor 500ms steps(44) infinite normal;
+  border-right: 0.15em solid white;
 }
 
 .self-intro > span {
-  font-family: Meddon, cursive;
   color: #e9ecef;
+  font-family: Meddon, cursive;
 }
 
 .self-intro-sub {
-  color: #e9ecef;
-  font-family: Montserrat, sans-serif;
-  font-weight: 300;
-  overflow: hidden;
-  border-right: 0.15em solid white;
-  white-space: nowrap;
-  margin: 0 auto;
   animation:
     typewriter 4s steps(44) 1s 1 normal both,
     blinkTextCursor 500ms steps(44) infinite normal;
+  border-right: 0.15em solid white;
+  color: #e9ecef;
+  font-family: Montserrat, sans-serif;
+  font-weight: 300;
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .type-writer-holder {
