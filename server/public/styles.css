@@ -247,26 +247,26 @@ font-family: 'Montserrat', sans-serif; */
 }
 
 .button-content-holder > a {
-  width: 40%;
   background-color: transparent;
+  cursor: pointer;
   font-size: 0.7rem;
   padding: 0.25rem 0.5rem;
-  transition-duration: 0.5s;
-  cursor: pointer;
   text-decoration: none;
+  transition-duration: 0.5s;
+  width: 40%;
 }
 
 .about-button {
-  color: #495057;
   border: none;
   border-bottom: 2px solid #495057;
+  color: #495057;
   display: inline-block;
 }
 
 .skill-button {
-  color: #f8f9fa;
   border: none;
   border-bottom: 2px solid #f8f9fa;
+  color: #f8f9fa;
   display: inline-block;
 }
 
