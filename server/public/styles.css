@@ -276,21 +276,21 @@ font-family: 'Montserrat', sans-serif; */
 }
 
 .about-content {
-  height: 300px;
+  align-items: center;
   background-color: white;
   display: flex;
+  height: 300px;
   justify-content: center;
-  align-items: center;
 }
 
 .about-content-holder {
-  font-family: Montserrat, sans-serif;
-  width: 80%;
-  line-height: 1.5rem;
-  color: #495057;
-  text-align: center;
   animation: fade-in linear 1s;
+  color: #495057;
+  font-family: Montserrat, sans-serif;
   font-size: 0.7rem;
+  line-height: 1.5rem;
+  text-align: center;
+  width: 80%;
 }
 
 .about-content-holder p {
