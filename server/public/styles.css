@@ -303,11 +303,11 @@ font-family: 'Montserrat', sans-serif; */
 }
 
 .skill-content {
-  height: 300px;
+  align-items: center;
   background-color: #dee2e6;
   display: flex;
+  height: 300px;
   justify-content: center;
-  align-items: center;
 }
 
 @keyframes fade-in {
@@ -318,14 +318,14 @@ font-family: 'Montserrat', sans-serif; */
 /* project  */
 
 .title-row {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  padding-bottom: 2rem;
   border-bottom: 2px solid #6c757d;
+  display: flex;
   font-family: Montserrat, sans-serif;
+  justify-content: center;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  padding-bottom: 2rem;
   text-align: center;
 }
 
