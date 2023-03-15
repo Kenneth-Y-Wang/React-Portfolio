@@ -330,9 +330,9 @@ font-family: 'Montserrat', sans-serif; */
 }
 
 .title-row h1 {
+  color: #495057;
   font-weight: 400;
   margin-bottom: 1rem;
-  color: #495057;
 }
 
 .title-sub {
@@ -341,19 +341,19 @@ font-family: 'Montserrat', sans-serif; */
 }
 
 .project-image-holder {
-  height: 400px;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  position: relative;
+  display: flex;
+  height: 400px;
+  justify-content: center;
   overflow: hidden;
+  position: relative;
 }
 
 .project-image-holder > img {
   height: 400px;
-  width: 100%;
   object-fit: cover;
   transition-duration: 0.5s;
+  width: 100%;
 }
 
 .image-scale {
