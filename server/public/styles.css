@@ -361,26 +361,26 @@ font-family: 'Montserrat', sans-serif; */
 }
 
 .project-button-holder {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 5;
   animation: fade-in linear 1s;
-  text-align: center;
-  padding-top: 3rem;
+  bottom: 0;
   font-family: Montserrat, sans-serif;
+  left: 0;
+  padding-top: 3rem;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  right: 0;
+  z-index: 5;
 }
 
 .project-button-holder > a {
-  width: 40%;
   background-color: transparent;
+  cursor: pointer;
   font-size: 1rem;
   padding: 0.25rem 0.5rem;
-  transition-duration: 0.5s;
-  cursor: pointer;
   text-decoration: none;
+  transition-duration: 0.5s;
+  width: 40%;
 }
 
 .project-content-holder {
