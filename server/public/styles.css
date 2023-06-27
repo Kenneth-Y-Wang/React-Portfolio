@@ -888,9 +888,9 @@ input[type="file"]::-webkit-file-upload-button {
 }
 
 .post-button-holder {
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
   margin-top: 2rem;
 }
 
