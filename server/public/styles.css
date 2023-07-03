@@ -384,14 +384,14 @@ font-family: 'Montserrat', sans-serif; */
 }
 
 .project-content-holder {
-  font-family: Montserrat, sans-serif;
-  width: 80%;
-  margin: 3rem auto;
-  line-height: 1.5rem;
-  color: #495057;
-  text-align: center;
   animation: fade-in linear 1s;
+  color: #495057;
+  font-family: Montserrat, sans-serif;
   font-size: 0.8rem;
+  line-height: 1.5rem;
+  margin: 3rem auto;
+  text-align: center;
+  width: 80%;
 }
 
 .overlay {
